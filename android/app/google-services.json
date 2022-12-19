@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "494902674827",
+    "project_id": "matter-of-movement",
+    "storage_bucket": "matter-of-movement.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:494902674827:android:d6fbed23c14852af281b8e",
+        "android_client_info": {
+          "package_name": "com.example.matterofmovement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "494902674827-db1sgkppjipaovt3jnljtstthfmt4urg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVGXZNfCL47aVtRGhk_YIF6eCsxuj80s4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "494902674827-db1sgkppjipaovt3jnljtstthfmt4urg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "494902674827-826e4gejm4urpf4s1lr9f2ud2id9iagq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.matterofmovement"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

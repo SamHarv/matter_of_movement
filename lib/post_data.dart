@@ -1,0 +1,776 @@
+import './models/post_model.dart';
+
+List<Post> postData = [
+  // Post(
+  //   title: 'Cold Water Immersion',
+  //   datePosted: DateTime(2022, 12, 23),
+  //   image: 'images/1.png',
+  //   tags: [
+  //     'Philosophy',
+  //     'Comedy',
+  //   ],
+  //   body:
+  //       'Why would one submerge themselves in ice-cold water of their own volition?\n\n'
+  //       'There are many claimed benifits to cold water immersion - some of which have gained empirical evidence, including:\n\n'
+  //       '- Cooling for treatment of hyperthermia\n'
+  //       '- Pre-cooling to improve exercise performance in hot conditions\n\n'
+  //       'In addition to this there are many claimed benefits which are currently backed by only weak evidence, including:\n\n'
+  //       '- Upregulation in immune function\n'
+  //       '- Treatment of conditions related to inflammation\n'
+  //       '- Improved mood\n'
+  //       '- Exporsure to eustress - which involves being exposed to a stressor in order to build resilience to stress\n'
+  //       '- Improved cardiovascular circulation\n'
+  //       '- Improved metabolic function\n'
+  //       '- Improved post-exercise recovery\n'
+  //       '- Improved hair and skin\n\n'
+  //       'I have been partaking in a daily cold shower for about 2 years now.\n\n'
+  //       'The temperature varies throughout the year, but I have found it sufficient to yield the following subjective benefits:\n\n'
+  //       '- Invigoration - I find a cold shower a great way to start the day (ideally after exercise) as it increases my alertness\n'
+  //       '- Mood improvement - a sense of pleasure often accompanies my sense of invigoration\n'
+  //       '- It builds momentum - when I have a cold shower, I feel as though I am starting the day on a positive note and the positivity tends to build from there. It is an act of discipline.\n'
+  //       '- Improved resilience to the cold\n\n'
+  //       'If you are interested in cold water immersion or cold showers, I recommend you check out Wim Hof.\n\n'
+  //       'He is a madman but I find him both entertaining and inspiring.\n\n'
+  //       '"The cold is my warm friend"\n\n'
+  //       '- Wim Hof whilst submerged in an ice bath',
+  // ),
+  Post(
+    title: 'Epistemophilia',
+    datePosted: DateTime(2022, 12, 16),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'Epistemophilia.\n\n'
+        'An excessive love of, or striving for, knowledge.\n\n'
+        'The acquisition of knowledge is an addictive preoccupation, but the benefits seem to be exponential over time.\n\n'
+        '"Give someone an idea and you enrich their day. Teach them how to learn and they can enrich their life"\n\n'
+        '- Jim Kwik',
+  ),
+  Post(
+    title: 'You Can Learn Something From Anyone',
+    datePosted: DateTime(2022, 12, 9),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'You can learn something from anyone.\n\n'
+        'Don\'t assume you know more than someone else.\n\n'
+        'It doesn\'t matter who the person is, they will know something you don\'t.\n\n'
+        'Respect them and pay attention - you never know what you might learn.',
+  ),
+  Post(
+    title: 'Start With Why',
+    datePosted: DateTime(2022, 11, 25),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'It is so easy to get caught up and live your life going through the motions without stopping to reflect and ask yourself why.\n\n'
+        'What do you want to get out of your life?\n\n'
+        'Remind yourself why you are doing what you are doing.\n\n'
+        'Ensure your life is on the right trajectory.\n\n'
+        'Start with why.',
+  ),
+  Post(
+    title: 'What Would You Do If You Were Not Afraid?',
+    datePosted: DateTime(2022, 11, 18),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'What would you do if you knew you would not fail?\n\n'
+        'This is a great question to ask to assess where fear may be holding you back. Is this fear logical?\n\n'
+        '"You wouldn\'t worry so much about what others think of you if you realised how seldom they do"\n\n'
+        '- Eleanor Roosevelt',
+  ),
+  Post(
+    title: 'Practice Makes Progress',
+    datePosted: DateTime(2022, 11, 11),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'Practice does not make perfect, you should not aim to be perfect because perfection is unattainable.\n\n'
+        'Practice makes progress - you should never stop learning.\n\n'
+        '"You don\'t have to know everything. You just have to know where to find it"\n\n'
+        '- Einstein.',
+  ),
+  Post(
+    title: 'Consistency Trumps Intensity',
+    datePosted: DateTime(2022, 10, 28),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'When it comes to exercise, consistency trumps intensity.\n\n'
+        'You would be better served completing 12 moderate intensity exercise bouts in a month than doing 6 very high intensity bouts in a month.\n\n'
+        'The best way to create positive adaptations is to continue to turn up.\n\n'
+        'Just get your runners on, get to the gym, and the hard part is already over.\n\n'
+        'Consistency is key.',
+  ),
+  Post(
+    title: 'Tough Conversations',
+    datePosted: DateTime(2022, 10, 21),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'Two minutes of discomfort can lead to many hours of improved wellbeing.\n\n'
+        'Sometimes you need to endure the tough conversation.',
+  ),
+  Post(
+    title: 'Kaizen',
+    datePosted: DateTime(2022, 10, 14),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'Kaizen: taking small steps to create large change.\n\n'
+        'Take a small step toward being the person you want to be, today.\n\n'
+        'Small, daily steps compound to big results.\n\n'
+        'Motivation is fleeting, habits persist. They are the compound interest of self improvement.\n\n'
+        'Small steps appear to make little difference until you cross a critical threshold.\n\n'
+        'Rather than focusing on goals, focus on systems.\n\n'
+        'Law of least effort (conservation of energy) - people tend to instinctively choose the path of least resistance, therefore using small, simple steps to achieve your goals is a way of hacking the brain.\n\n'
+        'Such is the art of Kaizen.',
+  ),
+  Post(
+    title: 'A Challenge is an Opportunity',
+    datePosted: DateTime(2022, 9, 30),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'A challenge can be interpreted as an opportunity to better yourself.\n\n'
+        'If you face a challenge, recognise it as a chance to improve and sub-vocalise "good".\n\n'
+        'Ask how can I learn from this?\n\n'
+        'From struggle, comes strength - It doesn\'t get easier, you get stronger!',
+  ),
+  Post(
+    title: 'Listen',
+    datePosted: DateTime(2022, 9, 23),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'Some have a tendency to speak a lot without saying anything.\n\n'
+        '"We have two ears and one mouth so we can listen twice as much as we speak"\n\n'
+        '- attributed to Epictetus',
+  ),
+  Post(
+    title: 'Honesty Without Compassion Becomes Cruelty',
+    datePosted: DateTime(2022, 9, 16),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'It is true that honesty leads to trust, however honesty without compassion becomes cruelty.',
+  ),
+  Post(
+    title: 'Apologise Quickly',
+    datePosted: DateTime(2022, 9, 9),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'Have the insight to recognise when you are in the wrong, then apologise quickly.\n\n'
+        'A swift apology is able to defuse situations where tensions are rising.\n\n'
+        'Do not be too stubborn to admit when you are wrong - apologise quickly.',
+  ),
+  Post(
+    title: 'Acts of Kindness',
+    datePosted: DateTime(2022, 8, 26),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'Do something nice for another person every day - one random act of kindness could change the trajectory of someone\'s life.\n\n'
+        'Pay the compliment - if you think a positive thought about someone, share it with them.',
+  ),
+  Post(
+    title: 'Do the Right, Not the Easy Thing',
+    datePosted: DateTime(2022, 8, 19),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'In the immortalised words of  Frozen 2, "do the next right thing".\n\n'
+        'When in doubt, trust your moral compass, and focus on your next action being the right one.\n\n'
+        'If you make a mistake, own it. Even if it was only partly your fault - take ownership.\n\n'
+        'Sometimes you cannot predict what the road ahead will bring, but you will be moving in the right direction if you just "do the next right thing".',
+  ),
+  Post(
+    title: 'Be Open',
+    datePosted: DateTime(2022, 8, 12),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'Be open-minded to new ideas and beliefs - overcome the reflex of being defensive of your pre-conceived ideas and biases.\n\n'
+        'I believe you can learn something from anyone, and you can learn anything you truly desire.\n\n'
+        'Your intelligence and skills are not fixed - through neuroplasticity the brain is always changing, updating - it is important to subscribe to a growth mindset.\n\n'
+        'You must also be aware of confirmation bias - the tendency to interpret information in a way that confirms or supports one\'s prior beliefs or values.',
+  ),
+  Post(
+    title: 'Fulfilment Requires Effort',
+    datePosted: DateTime(2022, 7, 29),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'Fulfilment is not a passive state - it does not just come to you.\n\n'
+        'It requires effort to both find what is fulfilling to you and acquire said fulfilment.\n\n'
+        'Fulfilment is an active process and requires much effort.',
+  ),
+  Post(
+    title: 'The Universe Owes You Nothing',
+    datePosted: DateTime(2022, 7, 27),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'Every generation seems to complain about another generation being "entitled" - when they too, are "entitled".\n\n'
+        'It is human to behave in an "entitled" way at times, but we must remember that the universe owes us nothing.\n\n'
+        'Everyone is "entitled" to living their best life.\n\n'
+        'Everything in life is borrowed, including life itself.\n\n'
+        'We are ultimately insignificant in the scheme of things, so don\'t have a chip on your shoulder.\n\n'
+        'We must enjoy the time we have and leave this rock in a better state than we found it.',
+  ),
+  Post(
+    title: 'The Quest for Power',
+    datePosted: DateTime(2022, 7, 15),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'I have stumbled upon a few books, namely 12 Rules for Life, The 48 Laws of Power, and The Art of War which despite their rampant popularity, left a bad taste in my mouth.\n\n'
+        'They endorse the use of deception and of violating the golden rule of treating other how you would like to be treated.\n\n'
+        'I understand that this behaviour may be useful to "get results" and "obtain power", but is it worth the cost of hurting others and negatively affecting the trust which people have in you?\n\n'
+        'If people continuing to be rewarded for carrying on like petulant children to gets results, they will continue to behave in such away. A positive feedback loop of behaving unethically.\n\n'
+        'We should choose not to reward this type of behaviour, and when on the receiving end of someone trying to wield their power, should choose to delay or ignore in an effort to break the cycle.',
+  ),
+  Post(
+    title: 'The Golden Rule',
+    datePosted: DateTime(2022, 7, 1),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'The Golden Rule - treat others as you would like to be treated.\n\n'
+        'This message is echoed across all religions and is an agreed upon principle of being considered a "good person".\n\n'
+        'This is an important step in empathy. It helps you understand how others may feel or think.\n\n'
+        'If you have no awareness of the emotions and thoughts of others, you will likely do them harm.',
+  ),
+  Post(
+    title: 'Sunk Cost Fallacy',
+    datePosted: DateTime(2022, 6, 24),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'Be mindful of loss aversion and the sunk cost fallacy.\n\n'
+        'Loss aversion - losses are more painful than gains are pleasurable - people will disproportionately prefer to avoid losses.\n\n'
+        'Sunk cost fallacy - when people continue to invest time or money because of their previous sunk costs, regardless of whether future winnings look probable - chasing losses.\n\n'
+        'The sunk cost fallacy can lead people to persist in areas they have invested much time and money (I studied finance for four years, so I have to continue to pursue a career in finance).\n\n'
+        'Sometimes it is best to cut your losses and let the sunk costs go (I do not enjoy working in finance and would rather work in healthcare).\n\n'
+        'Just do the next right thing for you regardless of what you have spent time on in the past.',
+  ),
+  Post(
+    title: 'Exposure to Negativity',
+    datePosted: DateTime(2022, 6, 17),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'The vast majority of people either watch, listen to, or read "the news" on a regular basis.\n\n'
+        '"The news" paints a picture of a terrible world where mostly negative things happen. This is because fear keeps people watching.\n\n'
+        '"The truth", as it is claimed by the news is just a journalist\'s interpretation of something they likely don\'t fully understand, and which has been framed in a way to invoke the maximal emotional response.\n\n'
+        'You will have seen time and time again that the media exploit people\'s emotions to get more views - notice if someone is crying in an interview, the camera pans to their face.\n\n'
+        'The world is a better place than it is portrayed to be through the media - we as humankind are making progress for the better and the world has never been a better place to live - despite what some who grew up in the 80s may believe through their romanticised memory.\n\n'
+        'We are led to believe the world is a bad place because this is what we see on "the news" -  this is what is available to us - this is known as the availability heuristic, the tendency to believe that what you see is all there is.\n\n'
+        'Next time you expose yourself to "the news", keep in mind why they do what they do, and don\'t be led to believe the world is such a horrible place.\n\n'
+        'Misinformation is more rampant than ever - know the source of information and question everything.\n\n'
+        '“I prefer a question I cannot answer over an answer I cannot question”\n\n'
+        '- Richard Feynman',
+  ),
+  Post(
+    title: 'Ikigai',
+    datePosted: DateTime(2022, 6, 10),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'I have become enthralled by Japanese philosophy as of late, and one of the key concepts that keeps presenting itself is Ikigai.\n\n'
+        'Ikigai can be loosely defined as purpose - a reason for living.\n\n'
+        'The idea is that if you can find and practice your Ikigai, you will live a happier and more fulfilled life.\n\n'
+        'It is your why - your purpose in life.\n\n'
+        'Again, the following quote is brought to mind:\n\n'
+        '"In work, do what you love. In family time, be completely present."\n\n'
+        '- Lao Tzu',
+  ),
+  Post(
+    title: 'Self-Regulation',
+    datePosted: DateTime(2022, 5, 27),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'To be able to self-regulate effectively is to be able to control the way you feel and behave.\n\n'
+        'The best tips I have come across on self-regulation:\n\n'
+        'When an emotional response is triggered:\n\n'
+        '- Default to silence: if you feel anger bubbling, train yourself to restrain your reaction. Take a moment and be silent before responding - the best remedy for anger is delay. Anger will hurt the person wielding it more than the person at whom it is directed.\n\n'
+        '- Breathe: take a moment to take a deep breath before reacting.\n\n'
+        'When craving an unhelpful habit:\n\n'
+        '- Seek peace rather than pleasure.\n\n'
+        '- Delay gratification. Train yourself to delay gratification, to delay gratification is to be successful in your endeavours. But remember to celebrate when you succeed.\n\n'
+        'Stress is the most detrimental thing to human health - avoid stress by getting enough sleep, exercising regularly, eating nutritious food, and learning to regulate your emotions.\n\n'
+        'Be self-aware - notice your thoughts, emotions, and behaviours. Notice the way your body responds to your craving and understand the mechanism of dopamine to drive this craving.\n\n'
+        'Positive self-talk - don\'t listen to the goblin in your head - the negative voice.',
+  ),
+  Post(
+    title: 'Your Most Precious Commodities',
+    datePosted: DateTime(2022, 5, 20),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'Your time and attention are your two most precious commodities.\n\n'
+        'Do not waste either.\n\n'
+        'In an era where we are inundated with overstimulating cues, it is important to be able to filter the vital few valuable cues from the trivial many unimportant cues to avoid information deluge.\n\n'
+        'To perform optimally, we must learn to focus on the single most important thing.\n\n'
+        '"The hunter who chases two rabbits, catches neither"\n\n'
+        'Paraphrased from Confucius.',
+  ),
+  Post(
+    title: 'Intuition',
+    datePosted: DateTime(2022, 5, 13),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'If your intuition tells you something is off, it often is.\n\n'
+        'Your subconscious is able to identify and analyse subtle cues whilst you are blissfully unaware.\n\n'
+        'You must however, keep in mind that the subconscious is susceptible to biases.\n\n'
+        '"Intuition is nothing but the outcome of earlier intellectual experience"\n\n'
+        '- Einstein\n\n'
+        'For more brief, occasionally oxymoronic entries, check in every Friday for a new post.',
+  ),
+  Post(
+    title: 'External Stressors',
+    datePosted: DateTime(2022, 4, 22),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'Stress is normal, but not always rational.\n\n'
+        'When you are stressed by an external factor, it is not the factor itself that stresses you, but your interpretation of it.\n\n'
+        '"There are more things ... likely to frighten us than there are to crush us; we suffer more often in imagination than reality."\n\n'
+        '- Seneca\n\n'
+        'Your perception - the narrative you tell yourself is more often the source of your stress than external occurrences.\n\n'
+        'Do not suffer imagined troubles.',
+  ),
+  Post(
+    title: 'Failure',
+    datePosted: DateTime(2022, 4, 15),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'It is acceptable to fail, as long as you learn.\n\n'
+        '"Courage is going form failure to failure without losing enthusiasm"\n\n'
+        '- Winston Churchill\n\n'
+        'You will never be excellent at something when you first start. It takes time, practice, mistakes, and failures to improve.',
+  ),
+  Post(
+    title: 'It\'s a Funny Old World',
+    datePosted: DateTime(2022, 4, 8),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'Particularly in times of peril, I think it important to find the humour in life.\n\n'
+        'If you take everything too seriously, you will be burdened with unnecessary stress which will ultimately shorten your life.\n\n'
+        'Enjoy yourself, love everything that happens, and remind yourself daily that none of us will get out of here alive.\n\n'
+        'It\'s a funny old world.',
+  ),
+  Post(
+    title: 'Minimalism',
+    datePosted: DateTime(2022, 3, 25),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'Have you ever entered your home and been struck with an overwhelming wave of anxiety upon noticing the clutter?\n\n'
+        'The overstimulating presence of clutter can cause a great deal of anxiety and distress.\n\n'
+        'This can be eliminated by keeping things minimal.\n\n'
+        'As I mature, I slowly learn that collecting material possessions does not make us happier.\n\n'
+        'We get a rush of excitement when purchasing or receiving a new product, but as the novelty of the product diminishes, so does the joy we experience from it - this is called anhedonic adaption, and everyone has likely experienced it.\n\n'
+        'It would be a lie to claim that I live a minimal lifestyle, but I appreciate its benefits and try to remain minimal within my constraints.\n\n'
+        'The 3 principles that come to mind when I consider minimalism are the following:\n\n'
+        '1. Keep things lean\n\n'
+        '2. Function before form\n\n'
+        '3. Simplicity is the ultimate sophistication\n\n'
+        'If the clutter in your home invokes anxiety within you, start throwing things away - it will make you feel more in control of your environment, and make you better appreciate the items which you choose to keep.',
+  ),
+  Post(
+    title: 'Gratitude',
+    datePosted: DateTime(2022, 3, 18),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'Remember what you have gained and what you have endured.\n\n'
+        'Be grateful not only for the positive aspects of your life, but for the negative aspects which have made you more resilient and which you have learned from.\n\n'
+        'Do not waste your time and energy trying to obtain things which you already have.\n\n'
+        'If you stop to look at the bigger picture, you may realise you have been chasing something to which you already have access.\n\n'
+        'Take time to stop and appreciate the world we live in.\n\n'
+        'Practise gratitude.',
+  ),
+  Post(
+    title: 'Should You Do It?',
+    datePosted: DateTime(2022, 3, 7),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'Will it bring you joy?\n\n'
+        'Will it make you a better person?\n\n'
+        'If the answer is no to both of these questions, don\'t do it.',
+  ),
+  Post(
+    title: 'Don\'t Conform',
+    datePosted: DateTime(2022, 2, 25),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'As social beings, we have a tendency to follow the herd.\n\n'
+        'Do not blindly conform to social norms with which you disagree.\n\n'
+        'Think for yourself and decide the best course of action regardless of what others are doing.',
+  ),
+  Post(
+    title: 'Memento Mori',
+    datePosted: DateTime(2022, 2, 11),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'Memento Mori - meditate on your own death.\n\n'
+        'Knowing you are mortal motivates you to live in a positive way during your brief window consciousness.',
+  ),
+  Post(
+    title: 'Negative Visualisation',
+    datePosted: DateTime(2022, 1, 28),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'Negative visualisation. What is it? Are we not supposed to think positively?\n\n'
+        'It is a tool accredited to the philosophical field of Stoicism.\n\n'
+        'Imagine things that could go wrong in your life.\n\n'
+        'Imagine the worst thing that could go wrong.\n\n'
+        'Imagine losing what and who is dearest to you.\n\n'
+        'Visualise how this would feel.\n\n'
+        'Sounds morbid, I know, but this is a helpful tool to prepare us for life\'s inevitable setbacks and build gratitude for what we have.\n\n'
+        'A rehearsal in the worst that could happen.\n\n'
+        'This enables you to better appreciate what you have.\n\n'
+        'The world owes you nothing, and everything you have is borrowed.\n\n'
+        'You cannot take it with you when you go.\n\n'
+        'So enjoy it.',
+  ),
+  Post(
+    title: 'Change',
+    datePosted: DateTime(2022, 1, 21),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'The only constants in life are change and uncertainty.\n\n'
+        'If you try to resist change you will inevitably fail.\n\n'
+        'Embrace change. Welcome it and capitalise on it.',
+  ),
+  Post(
+    title: 'Clarity of Communication',
+    datePosted: DateTime(2022, 1, 7),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'In a time where people socialise largely through short snippets of text, clarity in communication has become more important than ever.\n\n'
+        'Have you ever read an SMS and misinterpreted the tone of the person sending the message?\n\n'
+        'If we can communicate more clearly, we can eliminate a large proportion of the interpersonal conflicts we experience throughout our lives.',
+  ),
+  Post(
+    title: 'Body Mass Loss: an outcome',
+    datePosted: DateTime(2021, 12, 9),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'Weight loss (body mass reduction) is not a behaviour, it is an outcome - it is therefore not under your direct control.\n\n'
+        'People (myself included) tend to set weight loss as a goal.\n\n'
+        'In reality it would be more beneficial to focus on changes in your every day behaviour as a goal.\n\n'
+        'Focus on what you can control:\n\n'
+        '- Exercise: get 150-300 minutes of moderate intensity aerobic exercise along with 2-3 resistance exercise sessions per week\n\n'
+        '- Nutrition: eat a balanced diet within moderation - eat until you are 80% "full"\n\n'
+        '- Non-exercise activity thermogenesis: expend more energy in your every day activities, avoid sedentary behaviour\n\n'
+        'Consistency in your behaviour is key.',
+  ),
+  Post(
+    title: 'Mindfulness',
+    datePosted: DateTime(2021, 11, 25),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: '"Those who are depressed are living in the past.\n\n'
+        'Those who are anxious are living in the future.\n\n'
+        'Those who are at peace are living in the present."\n\n'
+        'Paraphrased from Lao Tzu.\n\n\n\n'
+        'To be mindful is to live in the present.\n\n'
+        'Experience the internal and external stimuli which you are being subjected to.\n\n'
+        'Notice your thoughts and emotions - acknowledge them, and let them pass.\n\n'
+        'It requires effort, but when you practise mindfulness, you will be brought self-awareness and tranquility.',
+  ),
+  Post(
+    title: 'Human-Technology Symbiosis',
+    datePosted: DateTime(2021, 11, 23),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'In the modern world, we are inundated with means of technological progression.\n\n'
+        'Some embrace the change, whilst others fear the change.\n\n'
+        'If your fear of a technology such as artificial intelligence replacing you, prevents you from using the latest advancements in technology, you may be replaced not by artificial intelligence, but rather by someone who was willing to work with the technology - in a symbiotic relationship.\n\n'
+        'Technology is designed to assist, not replace us.\n\n'
+        'If you do not welcome change, it will bypass you, and you will be caught with your quill in your hand and parchment sprawled over the table writing six words a minute while your competition is dictating her notes on her morning walk to grab a coffee.\n\n'
+        'Those who do not embrace the symbiotic relationship between humans and computational technology, will be made redundant.\n\n'
+        'Accept change and improve your worth, because progress will continue with or without you.',
+  ),
+  Post(
+    title: 'Transcend the Comfort Zone',
+    datePosted: DateTime(2021, 11, 12),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'Improvement requires discomfort.\n\n'
+        'If you want to break the plateau, push beyond your comfort zone.',
+  ),
+  Post(
+    title: 'Procrastination: the catalyst of anxiety',
+    datePosted: DateTime(2021, 11, 5),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'The more I procrastinate - the more I delay the commencement of work, the more anxious I become.\n\n'
+        'The inertia or "resistance" that stops me from completing productive work is somehow so intangible, yet so difficult to overcome.\n\n'
+        'When I am able to commence my work, the anxiety related to the task fades away, and the my productivity returns.\n\n'
+        'To overcome procrastination, sometimes it is enough to just start. Read one page, complete one push up, write one sentence.\n\n'
+        'Once you start, you must only ensure you are working on the right thing.',
+  ),
+  Post(
+    title: 'Habits',
+    datePosted: DateTime(2021, 10, 31),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'Motivation is fleeting, habits persist',
+  ),
+  Post(
+    title: 'Scratch That Itch',
+    datePosted: DateTime(2021, 10, 25),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'It is Sunday afternoon.\n\n'
+        'You have existed as one with the couch all day.\n\n'
+        'You have eaten copious amounts of food that you ought not eat regularly.\n\n'
+        'You are feeling sluggish and as if you have wasted the day.\n\n'
+        'You are feeling restless and unfulfilled.\n\n'
+        'Get up and exercise. Do any exercise.\n\n'
+        'Your body likes to move, you will feel much better.\n\n'
+        'Scratch that itch.',
+  ),
+  Post(
+    title: 'Placebo',
+    datePosted: DateTime(2021, 10, 18),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'A placebo will be ineffective when the recipient is aware it is a placebo.\n\n'
+        'Ignorance is bliss.',
+  ),
+  Post(
+    title: 'Consistency is Key',
+    datePosted: DateTime(2021, 10, 5),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'When it comes to exercise, consistency trumps intensity.\n\n'
+        'You would be better served completing 12 moderate intensity exercise bouts in a month than doing 2 very high intensity bouts in a month.\n\n'
+        'The best way to create positive adaptations is to continue to turn up.\n\n'
+        'Just get your runners on, get to the gym, and the hard part is already over.\n\n'
+        'Consistency is key.',
+  ),
+  Post(
+    title: 'Black Swans',
+    datePosted: DateTime(2021, 9, 21),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'Absence of evidence is not evidence of absence.\n\n'
+        'In his book; The Black Swan, Nassim Nicholas Taleb speaks about, well, Black Swans.\n\n'
+        'They are the highly improbable and unpredicted events that often shape the world as we perceive it.\n\n'
+        'The story states that it was once believed that swans could only be white - that it was not possible for a swan to be black.\n\n'
+        'This was until 1697 when Dutch navigator, Willem de Vlamingh stumbled upon black swans on his expedition in Western Australia.\n\n'
+        'This is a now well-known example which illustrates the fallacy of thinking we can predict future events.\n\n'
+        'An absence of evidence that black swans exist, is not equivalent to evidence that they do not exist.\n\n'
+        'We are currently living in the midst of a Black Swan event - what will come next is difficult to predict.',
+  ),
+  Post(
+    title: 'Science',
+    datePosted: DateTime(2021, 9, 11),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'What makes scientific evidence such a reputable source of information?\n\n'
+        'The goal of science is to form a hypothesis and try to disprove it - once a hypothesis is formed, a scientist will actively strive to prove the hypothesis wrong.\n\n'
+        'Due to this dynamic, science is the best method we have of refining our best guess of what should be categorised as "fact".\n\n'
+        'When trying to find accurate information, you should always aim to use evidence-based, peer-reviewed science - as this is humankind\'s best current guess.',
+  ),
+  Post(
+    title: 'Body Mass Reduction',
+    datePosted: DateTime(2021, 6, 25),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'Today we are inundated with information on how to lose weight (mass).\n\n'
+        'A quick note on weight and mass - weight is the amount of force exerted on an object by gravity. It is related to mass, but if gravity is altered, your weight can vary immensely.\n\n'
+        'Mass is the amount of matter in an object. Regardless of the amount of gravity being exerted on you, your mass will remain consistent.\n\n'
+        'If you would like to lose weight, jump in a body of water (buoyancy) or put yourself in an environment with less gravity.\n\n'
+        'If you would like to lose mass - the solution is simple.\n\n'
+        'Your total energy expenditure must exceed your total energy (food) consumption for the given period of time.\n\n'
+        'Energy consumption can be measured relatively easily using a mobile app.\n\n'
+        'Energy expenditure is more difficult to measure accurately, however there are equations to estimate the value to sufficient accuracy.\n\n'
+        'Limit how much you eat, optimise how much you move.',
+  ),
+  Post(
+    title: 'Chronic Pain',
+    datePosted: DateTime(2021, 6, 24),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'It is possible to have tissue damage without pain or pain without tissue damage.\n\n'
+        'Such is the problem with chronic pain.',
+  ),
+  Post(
+    title: 'Rest',
+    datePosted: DateTime(2021, 6, 22),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'If you wish to improve your physical capacity, you must pay attention to rest.\n\n'
+        'At rest is when you consolidate improvements and allow your body to adapt.\n\n'
+        'Train sufficiently intensely to induce adaptations, but pay attention to rest.',
+  ),
+  Post(
+    title: 'Motion',
+    datePosted: DateTime(2021, 2, 24),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        '"Our nature consists in motion; complete rest is death." \n\n- Blaise Pascal',
+  ),
+];
