@@ -47,8 +47,13 @@ class MoM extends StatelessWidget {
 //improve performance
 //work on O2 Tech webpage
 
-//To Update:
+//To Update Firebase:
 //Save project;
 //Change the version on pubspec.yaml (from 1.0.0+1 to 1.0.1+1 for example);
 //Run flutter build web.
 //Run firebase deploy.
+
+//Update Github
+//git add .
+//git commit -m "Customisable Message which describes changes"
+//git push
