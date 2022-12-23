@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../main.dart';
+import '../constants.dart';
 
 import 'package:go_router/go_router.dart';
 
@@ -13,11 +13,11 @@ class AppDrawer extends StatelessWidget {
       leading: Icon(
         icon,
         size: 26,
-        color: const Color.fromARGB(255, 0, 74, 173),
+        color: color,
       ),
       title: Text(
         title,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 24,
           color: secondaryColor,
         ),
@@ -38,12 +38,12 @@ class AppDrawer extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             alignment: Alignment.centerLeft,
             color: secondaryColor,
-            child: Text(
+            child: const Text(
               'Menu',
               style: TextStyle(fontSize: 26, color: thirdColor),
             ),
           ),
-          const SizedBox(height: 20),
+          gapH20,
           buildListTile(
             'Home',
             Icons.home,

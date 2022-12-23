@@ -1,18 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+import '../constants.dart';
+
 class PostTile extends StatelessWidget {
   final String title;
   final String image;
   final DateTime datePosted;
   final List<String>? tags;
   final Function() onTap;
+  final bool isFavourite;
+  final IconButton icon;
 
   const PostTile({
     required this.title,
     required this.image,
     required this.datePosted,
     required this.onTap,
+    required this.isFavourite,
+    required this.icon,
     this.tags,
     Key? key,
   }) : super(key: key);
@@ -21,10 +27,10 @@ class PostTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      splashColor: Theme.of(context).primaryColor,
+      splashColor: color,
       borderRadius: BorderRadius.circular(16),
       child: Container(
-        padding: const EdgeInsets.all(16),
+        padding: kPadding,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
@@ -42,6 +48,10 @@ class PostTile extends StatelessWidget {
               child: Image.asset(image),
             ),
             Align(
+              alignment: Alignment.topLeft,
+              child: icon,
+            ),
+            Align(
               alignment: Alignment.bottomLeft,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -51,8 +61,8 @@ class PostTile extends StatelessWidget {
                     title,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
-                      fontSize: 20,
                       color: Colors.white,
+                      fontSize: 20,
                     ),
                   ),
                   Text(

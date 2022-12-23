@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../main.dart';
+import '../constants.dart';
 
 import 'package:go_router/go_router.dart';
 
 import '../post_data.dart';
 
-import '../widgets/app_drawer.dart';
 import '../widgets/custom_appbar.dart';
 
 class ArticlePage extends StatelessWidget {
@@ -19,11 +18,10 @@ class ArticlePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double mediaWidth = MediaQuery.of(context).size.width;
+    final double mediaWidth = MediaQuery.of(context).size.width;
     return GestureDetector(
       child: Scaffold(
-        backgroundColor: thirdColor,
-        drawer: const AppDrawer(),
+        drawer: appDrawer,
         appBar: const CustomAppBar(id: '/article'),
         body: Center(
           child: SingleChildScrollView(
@@ -34,24 +32,18 @@ class ArticlePage extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                      padding: const EdgeInsets.all(16.0),
+                      padding: kPadding,
                       child: Text(
                         postData[postIndex].title,
                         textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 30.0,
-                          color: Theme.of(context).primaryColor,
-                        ),
+                        style: headingStyle,
                       ),
                     ),
                     Container(
-                      padding: const EdgeInsets.all(16.0),
+                      padding: kPadding,
                       child: Text(
                         postData[postIndex].body,
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          color: secondaryColor,
-                        ),
+                        style: bodyStyle,
                       ),
                     ),
                     SizedBox(
@@ -59,7 +51,7 @@ class ArticlePage extends StatelessWidget {
                           ? mediaWidth * 0.8
                           : mediaWidth * 0.4,
                       child: Padding(
-                        padding: const EdgeInsets.all(16.0),
+                        padding: kPadding,
                         child: Image.asset(fullLogo),
                       ),
                     ),
@@ -82,7 +74,7 @@ class ArticlePage extends StatelessWidget {
                         : context.go('/article', extra: postIndex),
                 backgroundColor: secondaryColor,
                 heroTag: null,
-                child: Icon(
+                child: const Icon(
                   Icons.navigate_before_rounded,
                   color: thirdColor,
                 ),
@@ -93,7 +85,7 @@ class ArticlePage extends StatelessWidget {
                     : context.go('/article', extra: postIndex),
                 backgroundColor: secondaryColor,
                 heroTag: null,
-                child: Icon(
+                child: const Icon(
                   Icons.navigate_next_rounded,
                   color: thirdColor,
                 ),

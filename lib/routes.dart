@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:matterofmovement/pages/already_subscribed.dart';
+import 'package:matterofmovement/pages/subscribed.dart';
 import 'package:matterofmovement/pages/auth_page.dart';
 
 import './pages/book_list.dart';
@@ -9,7 +9,6 @@ import './pages/about_page.dart';
 import './pages/favourites_page.dart';
 import './pages/search_page.dart';
 import './pages/article_page.dart';
-import './pages/success.dart';
 
 final router = GoRouter(
   initialLocation: '/',
@@ -43,12 +42,8 @@ final router = GoRouter(
       builder: (context, state) => const AuthPage(),
     ),
     GoRoute(
-      path: '/success',
-      builder: (context, state) => const SuccessfullySubscribed(),
-    ),
-    GoRoute(
       path: '/subscribed',
-      builder: (context, state) => const AlreadySubscribed(),
+      builder: (context, state) => const Subscribed(),
     ),
     GoRoute(
       path: '/article',

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-
+import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+
+import './providers/favourite_provider.dart';
 
 import './routes.dart';
 
@@ -13,36 +15,30 @@ void main() async {
   runApp(const MoM());
 }
 
-bool darkMode = false;
-final Color secondaryColor = darkMode ? Colors.white : Colors.black;
-final Color thirdColor = darkMode ? Colors.black : Colors.white;
-final String fullLogo = darkMode ? 'images/3.png' : 'images/2.png';
-final String logo = darkMode ? 'images/4.png' : 'images/1.png';
-
 class MoM extends StatelessWidget {
   const MoM({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      theme: ThemeData(
-        primaryColor: const Color.fromARGB(255, 0, 74, 173),
+    return ChangeNotifierProvider(
+      create: (context) => FavouriteProvider(),
+      child: MaterialApp.router(
+        routerConfig: router,
+        debugShowCheckedModeBanner: false,
+        title: 'Matter of Movement',
       ),
-      routerConfig: router,
-      debugShowCheckedModeBanner: false,
-      title: 'Matter of Movement',
     );
   }
 }
 
 //todo: 
-//add section to subscribe via email
-//add comment/ like (Favourite) functionality with shared prefs & riverpod
-
+//add data persistence 
+//commit and deploy
 //check out all Firebase features (set them up)
+
 //fix refresh/ link copy & paste issue - try to replace extra with params?
-//copy to GitHub
 //add search functionality with topic tags/ keys
+//add comment functionality
 //implement switch to enable dark mode
 //improve performance
 //work on O2 Tech webpage

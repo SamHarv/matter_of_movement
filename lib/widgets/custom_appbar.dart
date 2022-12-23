@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
-import 'package:matterofmovement/main.dart';
+import '../constants.dart';
 
 import '../pages/search_page.dart';
 
@@ -19,11 +19,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    double mediaWidth = MediaQuery.of(context).size.width;
+    final double mediaWidth = MediaQuery.of(context).size.width;
 
     return AppBar(
       automaticallyImplyLeading: mediaWidth < 750 ? true : false,
-      iconTheme: IconThemeData(
+      iconTheme: const IconThemeData(
         color: secondaryColor,
       ),
       backgroundColor: thirdColor,
@@ -78,7 +78,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [
         Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: kPadding,
           child: IconButton(
             onPressed: () => Navigator.of(context).push(
               MaterialPageRoute(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:go_router/go_router.dart';
+
+import '../constants.dart';
 
 class AppBarMenuItem extends StatelessWidget {
   const AppBarMenuItem({
@@ -14,13 +15,12 @@ class AppBarMenuItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const Color primaryColor = Color.fromARGB(255, 0, 74, 173);
     return Padding(
-      padding: const EdgeInsets.all(16),
+      padding: kPadding,
       child: InkWell(
         child: Text(
           title,
-          style: const TextStyle(color: primaryColor),
+          style: const TextStyle(color: color),
         ),
         onTap: () => context.go(route),
       ),

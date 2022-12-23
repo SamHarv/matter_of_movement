@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
 
-import '../main.dart';
-
+import '../constants.dart';
 import '../post_data.dart';
 
-import '../widgets/app_drawer.dart';
+import '../providers/favourite_provider.dart';
+
 import '../widgets/custom_appbar.dart';
 import '../widgets/post_tile.dart';
 
@@ -14,14 +15,14 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double mediaWidth = MediaQuery.of(context).size.width;
+    final double mediaWidth = MediaQuery.of(context).size.width;
+    final provider = Provider.of<FavouriteProvider>(context);
 
     return Scaffold(
-      backgroundColor: thirdColor,
-      drawer: const AppDrawer(),
+      drawer: appDrawer,
       appBar: const CustomAppBar(id: '/'),
       body: Container(
-        padding: const EdgeInsets.all(10),
+        padding: kPadding,
         child: CustomScrollView(
           slivers: [
             SliverGrid(
@@ -34,14 +35,31 @@ class HomePage extends StatelessWidget {
               delegate: SliverChildBuilderDelegate(
                 childCount: postData.length,
                 (context, postIndex) {
+                  final post = postData[postIndex];
                   return PostTile(
-                    title: postData[postIndex].title,
-                    image: postData[postIndex].image,
-                    datePosted: postData[postIndex].datePosted,
+                    title: post.title,
+                    image: post.image,
+                    datePosted: post.datePosted,
+                    isFavourite: post.isFavourite,
                     onTap: () => context.go(
                       '/article',
                       extra: postIndex,
                     ),
+                    icon: provider.isInFavourites(post)
+                        ? IconButton(
+                            icon: const Icon(Icons.star),
+                            onPressed: () {
+                              provider.toggleFavourite(post);
+                            },
+                            color: thirdColor,
+                          )
+                        : IconButton(
+                            icon: const Icon(Icons.star_border),
+                            onPressed: () {
+                              provider.toggleFavourite(post);
+                            },
+                            color: thirdColor,
+                          ),
                   );
                 },
               ),
@@ -52,7 +70,7 @@ class HomePage extends StatelessWidget {
                   width:
                       mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
                   child: Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: kPadding,
                     child: Image.asset(fullLogo),
                   ),
                 ),
@@ -65,7 +83,7 @@ class HomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () => context.go('/favourites'),
         backgroundColor: secondaryColor,
-        child: Icon(
+        child: const Icon(
           Icons.star,
           color: thirdColor,
         ),

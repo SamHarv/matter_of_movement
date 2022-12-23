@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:matterofmovement/pages/subscribe_page.dart';
+import '../pages/subscribe_page.dart';
 
-import '../pages/already_subscribed.dart';
+import 'subscribed.dart';
 
 class AuthPage extends StatelessWidget {
   const AuthPage({super.key});
@@ -13,9 +13,8 @@ class AuthPage extends StatelessWidget {
     return Scaffold(
       body: StreamBuilder<User?>(
         stream: FirebaseAuth.instance.authStateChanges(),
-        builder: (context, snapshot) => snapshot.hasData
-            ? const AlreadySubscribed()
-            : const SubscribePage(),
+        builder: (context, snapshot) =>
+            snapshot.hasData ? const Subscribed() : const SubscribePage(),
       ),
     );
   }

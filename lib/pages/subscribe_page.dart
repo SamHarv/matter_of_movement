@@ -1,13 +1,12 @@
 //import 'dart:js';
 
 import 'package:flutter/material.dart';
-
 import 'package:firebase_auth/firebase_auth.dart';
 
-import '../main.dart';
+import '../constants.dart';
 
-import '../widgets/app_drawer.dart';
 import '../widgets/custom_appbar.dart';
+import '../widgets/text_field.dart';
 
 class SubscribePage extends StatefulWidget {
   const SubscribePage({super.key});
@@ -18,33 +17,56 @@ class SubscribePage extends StatefulWidget {
 
 class _SubscribePageState extends State<SubscribePage> {
   final emailController = TextEditingController();
+  final nameController = TextEditingController();
 
-  var acs = ActionCodeSettings(
-    url: 'https://matterofmovement.page.link/success',
-    handleCodeInApp: true,
-    iOSBundleId: 'com.example.matterofmovement',
-    androidPackageName: 'com.example.matterofmovement',
-    androidInstallApp: true,
-    androidMinimumVersion: '12',
-  );
+  void createUser() async {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const Center(
+          child: CircularProgressIndicator(),
+        );
+      },
+    );
+    try {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: emailController.text.trim(),
+        password: nameController.text.trim(),
+      );
+      // pop the loading circle
+      // ignore: use_build_context_synchronously
+      Navigator.pop(context);
+    } on FirebaseAuthException catch (e) {
+      // pop the loading circle
+      Navigator.pop(context);
+      //show error message
+      showErrorMessage(e.code);
+    }
+  }
 
-  void signInUser() async {
-    await FirebaseAuth.instance
-        .sendSignInLinkToEmail(
-          email: emailController.text.trim(),
-          actionCodeSettings: acs,
-        )
-        .catchError(
-            (onError) => print('Error sending email verification $onError'))
-        .then((value) => print('Successfully sent email verification'));
+  //error message
+  void showErrorMessage(String message) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          backgroundColor: color,
+          title: Center(
+            child: Text(
+              message,
+              style: const TextStyle(color: Colors.white),
+            ),
+          ),
+        );
+      },
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-    double mediaWidth = MediaQuery.of(context).size.width;
+    final double mediaWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: thirdColor,
-      drawer: const AppDrawer(),
+      drawer: appDrawer,
       appBar: const CustomAppBar(id: '/subscribe'),
       body: Center(
         child: SingleChildScrollView(
@@ -52,51 +74,37 @@ class _SubscribePageState extends State<SubscribePage> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Container(
-                padding: const EdgeInsets.all(16),
-                child: Text(
+                padding: kPadding,
+                child: const Text(
                   'Subscribe',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Theme.of(context).primaryColor,
-                  ),
+                  style: headingStyle,
                 ),
               ),
-              const SizedBox(height: 35),
-              SizedBox(
-                height: 51,
-                width: mediaWidth <= 750 ? mediaWidth * 0.7 : mediaWidth * 0.4,
-                child: TextField(
-                  controller: emailController,
-                  decoration: InputDecoration(
-                    hintText: 'Email Address',
-                    hintStyle: TextStyle(
-                      color: Colors.grey[500],
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.grey.shade400,
-                      ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide:
-                          BorderSide(color: Theme.of(context).primaryColor),
-                    ),
-                    fillColor: Colors.grey.shade200,
-                    filled: true,
-                  ),
-                ),
+              gapH35,
+              MyTextField(
+                mediaWidth: mediaWidth,
+                controller: emailController,
+                hintText: 'Email Address',
+                obscure: false,
               ),
-              const SizedBox(height: 20),
+              gapH20,
+              MyTextField(
+                mediaWidth: mediaWidth,
+                controller: nameController,
+                hintText: 'Create Password',
+                obscure: true,
+              ),
+              gapH20,
               SizedBox(
                 height: 51,
                 width: mediaWidth <= 750 ? mediaWidth * 0.7 : mediaWidth * 0.4,
                 child: ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB(255, 0, 74, 173),
+                      color,
                     ),
                   ),
-                  onPressed: signInUser,
+                  onPressed: createUser,
                   child: const Text(
                     'Submit',
                     style: TextStyle(
@@ -105,11 +113,11 @@ class _SubscribePageState extends State<SubscribePage> {
                   ),
                 ),
               ),
-              const SizedBox(height: 35),
+              gapH35,
               SizedBox(
                 width: mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
                 child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: kPadding,
                   child: Image.asset(fullLogo),
                 ),
               ),

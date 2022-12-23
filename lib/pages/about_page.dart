@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
+import '../constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../main.dart';
-
-import '../widgets/app_drawer.dart';
 import '../widgets/custom_appbar.dart';
 
 final Uri _url = Uri.parse('https://google.com'); //this will be O2 Tech url
@@ -29,10 +27,9 @@ class AboutPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double mediaWidth = MediaQuery.of(context).size.width;
+    final double mediaWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: thirdColor,
-      drawer: const AppDrawer(),
+      drawer: appDrawer,
       appBar: const CustomAppBar(
         id: '/about',
       ),
@@ -42,19 +39,16 @@ class AboutPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Container(
-                padding: const EdgeInsets.all(16.0),
-                child: Text(
+                padding: kPadding,
+                child: const Text(
                   'About',
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 30.0,
-                    color: Theme.of(context).primaryColor,
-                  ),
+                  style: headingStyle,
                 ),
               ),
               Container(
-                padding: const EdgeInsets.all(16.0),
-                child: Text(
+                padding: kPadding,
+                child: const Text(
                   'A public jounral of what I perceive to be the more valuable of my ideas.\n\n'
                   'Why Matter of Movement?\n\n'
                   'I initially created this webpage to write about movement as it pertains to exercise and physical activity.\n\n'
@@ -62,55 +56,40 @@ class AboutPage extends StatelessWidget {
                   'To enable me to write about whatever I want, here is my justification for continued use of the name:\n\n'
                   'A complete cessation of movement is death, therefore life consists of continuous movement.\n\n'
                   'Matters of movement are matters of life.',
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    color: secondaryColor,
-                  ),
+                  style: bodyStyle,
                 ),
               ),
               const Divider(),
               Container(
-                padding: const EdgeInsets.all(16.0),
-                child: Text(
+                padding: kPadding,
+                child: const Text(
                   'Contact',
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 30.0,
-                    color: Theme.of(context).primaryColor,
-                  ),
+                  style: headingStyle,
                 ),
               ),
               Container(
-                padding: const EdgeInsets.all(16.0),
+                padding: kPadding,
                 child: Column(
-                  children: [
+                  children: const [
                     Text(
                       'Sam Harvey\n\n'
                       'Oxygen Tech\n',
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        color: secondaryColor,
-                      ),
+                      style: bodyStyle,
                     ),
-                    const TextButton(
+                    TextButton(
                       onPressed: _sendEmail,
                       child: Text(
                         'oxygentech@protonmail.com\n',
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Color.fromARGB(255, 0, 74, 173),
-                        ),
+                        style: bodyStyle,
                       ),
                     ),
-                    const TextButton(
+                    TextButton(
                       onPressed: _launchUrl,
                       child: Text(
                         'oxygentech.com.au (coming soon)',
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Color.fromARGB(255, 0, 74, 173),
-                        ),
+                        style: bodyStyle,
                       ),
                     ),
                   ],
@@ -118,7 +97,7 @@ class AboutPage extends StatelessWidget {
               ),
               const SizedBox(
                 child: Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding: kPadding,
                   child: CircleAvatar(
                     backgroundImage: AssetImage('images/sam.jpeg'),
                     radius: 100,
@@ -128,7 +107,7 @@ class AboutPage extends StatelessWidget {
               SizedBox(
                 width: mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
                 child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: kPadding,
                   child: Image.asset(fullLogo),
                 ),
               ),

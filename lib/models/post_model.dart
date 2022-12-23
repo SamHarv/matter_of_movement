@@ -4,13 +4,15 @@ class Post {
   final DateTime datePosted;
   final String image;
   final List<String> tags;
+  final bool isFavourite;
 
-  Post({
+  const Post({
     required this.title,
     this.body = 'There is no content available for this post.\n\n'
         'Please check back again soon',
     required this.datePosted,
     required this.image,
     required this.tags,
+    required this.isFavourite,
   });
 }

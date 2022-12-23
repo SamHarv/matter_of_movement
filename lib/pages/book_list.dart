@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../main.dart';
+import '../constants.dart';
 
-import '../widgets/app_drawer.dart';
 import '../widgets/custom_appbar.dart';
 
 class BookListPage extends StatelessWidget {
@@ -113,10 +112,9 @@ class BookListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double mediaWidth = MediaQuery.of(context).size.width;
+    final double mediaWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: thirdColor,
-      drawer: const AppDrawer(),
+      drawer: appDrawer,
       appBar: const CustomAppBar(id: '/books'),
       body: Center(
         child: SingleChildScrollView(
@@ -124,18 +122,15 @@ class BookListPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Container(
-                padding: const EdgeInsets.all(16),
-                child: Text(
+                padding: kPadding,
+                child: const Text(
                   'Top 100 Books',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Theme.of(context).primaryColor,
-                  ),
+                  style: headingStyle,
                 ),
               ),
               Container(
                 height: MediaQuery.of(context).size.height * 0.7,
-                padding: const EdgeInsets.all(16),
+                padding: kPadding,
                 child: ListView.builder(
                   shrinkWrap: true,
                   itemCount: bookList.length,
@@ -143,10 +138,7 @@ class BookListPage extends StatelessWidget {
                     return ListTile(
                       title: Text(
                         bookList[index],
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: secondaryColor,
-                        ),
+                        style: bodyStyle,
                       ),
                     );
                   },
@@ -155,7 +147,7 @@ class BookListPage extends StatelessWidget {
               SizedBox(
                 width: mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
                 child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: kPadding,
                   child: Image.asset(fullLogo),
                 ),
               ),

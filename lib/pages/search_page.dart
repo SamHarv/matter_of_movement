@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
 
-import '../main.dart';
-
-import '../widgets/app_drawer.dart';
+import '../constants.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    double mediaWidth = MediaQuery.of(context).size.width;
+    final double mediaWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: thirdColor,
-      drawer: const AppDrawer(),
+      drawer: appDrawer,
       appBar: AppBar(
         backgroundColor: thirdColor,
         title: Container(
@@ -25,12 +22,12 @@ class SearchPage extends StatelessWidget {
           child: Center(
             child: TextField(
               decoration: InputDecoration(
-                  prefixIcon: Icon(
+                  prefixIcon: const Icon(
                     Icons.search,
                     color: secondaryColor,
                   ),
                   suffixIcon: IconButton(
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.clear,
                       color: secondaryColor,
                     ),
@@ -49,30 +46,24 @@ class SearchPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Container(
-                padding: const EdgeInsets.all(16),
-                child: Text(
+                padding: kPadding,
+                child: const Text(
                   'Search',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Theme.of(context).primaryColor,
-                  ),
+                  style: headingStyle,
                 ),
               ),
               Container(
-                padding: const EdgeInsets.all(16),
-                child: Text(
+                padding: kPadding,
+                child: const Text(
                   'Search functionality is under construction.\n\n'
                   'Please check back soon.',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: secondaryColor,
-                  ),
+                  style: bodyStyle,
                 ),
               ),
               SizedBox(
                 width: mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
                 child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: kPadding,
                   child: Image.asset(fullLogo),
                 ),
               ),
