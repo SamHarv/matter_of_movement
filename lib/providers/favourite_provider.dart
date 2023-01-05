@@ -1,27 +1,54 @@
 import 'package:flutter/material.dart';
-
-//import 'package:firebase_database/firebase_database.dart';
+import 'package:hive/hive.dart';
 
 import '../models/post_model.dart';
 
 class FavouriteProvider extends ChangeNotifier {
-  final List<Post> _favouritePosts = [];
+  List<Post> _favouritePosts = [];
   List<Post> get favouritePosts => _favouritePosts;
-  // FirebaseDatabase db = FirebaseDatabase.instance;
-  // DatabaseReference ref = FirebaseDatabase.instance.ref();
 
-  void toggleFavourite(Post post) {
-    final inFavourites = _favouritePosts.contains(post);
+  final String postHiveBox = 'post-box';
+
+  Future<void> createItem(Post post) async {
+    Box<Post> box = Hive.box(postHiveBox);
+    await box.add(post);
+    notifyListeners();
+    _favouritePosts.add(post);
+    _favouritePosts = box.values.toList();
+    notifyListeners();
+  }
+
+  Future<void> getItems() async {
+    Box<Post> box = await Hive.openBox<Post>(postHiveBox);
+    _favouritePosts = box.values.toList();
+    notifyListeners();
+  }
+
+  void removeItem(Post post) {
+    Box<Post> box = Hive.box(postHiveBox);
+    box.delete(post.key);
+    notifyListeners();
+    _favouritePosts = box.values.toList();
+    notifyListeners();
+  }
+
+  void toggleFavourite(Post post) async {
+    final inFavourites = isInFavourites(post);
     if (inFavourites) {
       _favouritePosts.remove(post);
+      removeItem(post);
+      //getItems();
     } else {
       _favouritePosts.add(post);
+      createItem(post);
+      //getItems();
     }
     notifyListeners();
   }
 
   bool isInFavourites(Post post) {
     final inFavourites = _favouritePosts.contains(post);
+    getItems();
     return inFavourites;
   }
 }

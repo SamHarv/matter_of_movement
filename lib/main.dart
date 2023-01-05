@@ -1,17 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
+import 'package:url_strategy/url_strategy.dart';
+
 import './providers/favourite_provider.dart';
 
 import './routes.dart';
+import 'constants.dart';
+import 'models/post_model.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+  Hive.registerAdapter(PostAdapter());
+  setPathUrlStrategy();
   runApp(const MoM());
 }
 
@@ -23,6 +31,7 @@ class MoM extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => FavouriteProvider(),
       child: MaterialApp.router(
+        theme: ThemeData(primaryColor: color),
         routerConfig: router,
         debugShowCheckedModeBanner: false,
         title: 'Matter of Movement',
@@ -32,11 +41,9 @@ class MoM extends StatelessWidget {
 }
 
 //todo: 
-//add data persistence 
-//commit and deploy
-//check out all Firebase features (set them up)
+//fix refresh/ link copy & paste issue
 
-//fix refresh/ link copy & paste issue - try to replace extra with params?
+//check out all Firebase features (set them up)
 //add search functionality with topic tags/ keys
 //add comment functionality
 //implement switch to enable dark mode

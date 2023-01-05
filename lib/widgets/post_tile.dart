@@ -9,7 +9,6 @@ class PostTile extends StatelessWidget {
   final DateTime datePosted;
   final List<String>? tags;
   final Function() onTap;
-  final bool isFavourite;
   final IconButton icon;
 
   const PostTile({
@@ -17,7 +16,6 @@ class PostTile extends StatelessWidget {
     required this.image,
     required this.datePosted,
     required this.onTap,
-    required this.isFavourite,
     required this.icon,
     this.tags,
     Key? key,
@@ -45,7 +43,11 @@ class PostTile extends StatelessWidget {
         child: Stack(
           children: [
             Center(
-              child: Image.asset(image),
+              child: Image.asset(
+                image,
+                cacheHeight: 200,
+                cacheWidth: 200,
+              ),
             ),
             Align(
               alignment: Alignment.topLeft,

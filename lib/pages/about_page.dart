@@ -99,7 +99,11 @@ class AboutPage extends StatelessWidget {
                 child: Padding(
                   padding: kPadding,
                   child: CircleAvatar(
-                    backgroundImage: AssetImage('images/sam.jpeg'),
+                    backgroundImage: AssetImage(
+                      'images/sam.jpeg',
+                      // cacheHeight: 200,
+                      // cacheWidth: 200,
+                    ),
                     radius: 100,
                   ),
                 ),
@@ -108,7 +112,9 @@ class AboutPage extends StatelessWidget {
                 width: mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
                 child: Padding(
                   padding: kPadding,
-                  child: Image.asset(fullLogo),
+                  child: Image.asset(
+                    fullLogo,
+                  ),
                 ),
               ),
             ],

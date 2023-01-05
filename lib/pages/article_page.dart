@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
 
 import '../constants.dart';
 
-import 'package:go_router/go_router.dart';
+import '../providers/favourite_provider.dart';
 
 import '../post_data.dart';
 
@@ -19,6 +21,8 @@ class ArticlePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double mediaWidth = MediaQuery.of(context).size.width;
+    final post = postData[postIndex];
+    final provider = Provider.of<FavouriteProvider>(context);
     return GestureDetector(
       child: Scaffold(
         drawer: appDrawer,
@@ -31,13 +35,40 @@ class ArticlePage extends StatelessWidget {
               children: <Widget>[
                 Column(
                   children: [
-                    Container(
-                      padding: kPadding,
-                      child: Text(
-                        postData[postIndex].title,
-                        textAlign: TextAlign.center,
-                        style: headingStyle,
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        provider.isInFavourites(post)
+                            ? IconButton(
+                                icon: const Icon(Icons.star),
+                                onPressed: () {
+                                  provider.toggleFavourite(post);
+                                },
+                                iconSize: 24,
+                                padding: kPadding,
+                                color: secondaryColor,
+                              )
+                            : IconButton(
+                                icon: const Icon(Icons.star_border),
+                                onPressed: () {
+                                  provider.toggleFavourite(post);
+                                },
+                                iconSize: 24,
+                                padding: kPadding,
+                                color: secondaryColor,
+                              ),
+                        Expanded(
+                          child: Container(
+                            padding: kPadding,
+                            child: Text(
+                              postData[postIndex].title,
+                              textAlign: TextAlign.center,
+                              style: headingStyle,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 56),
+                      ],
                     ),
                     Container(
                       padding: kPadding,

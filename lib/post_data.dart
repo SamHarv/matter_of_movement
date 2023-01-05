@@ -2,10 +2,36 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Ask Questions',
+    datePosted: DateTime(2022, 1, 6),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body: 'We must continue to encourage the asking of questions.\n\n'
+        'Some are inclined to scoff when their answers are questioned by others, but we need to be open to rethinking our beliefs if we are to continue to learn and improve.\n\n'
+        '"I would rather a question I cannot answer than an answer I could not question"\n\n'
+        '- Richard Feynman',
+  ),
+  Post(
+    title: 'Focus Within Your Locus of Control',
+    datePosted: DateTime(2022, 12, 30),
+    image: 'images/1.png',
+    tags: [
+      'Philosophy',
+      'Comedy',
+    ],
+    body:
+        'It is easy to get caught up in stressing over and trying to control that which is beyond our locus of control.\n\n'
+        'We cannot control what happens, but we have the power to accept it and control the way we react.\n\n'
+        '"Don\'t hope events will turn out the way you want, welcome events in whichever way they happen: this is the path to peace."\n\n'
+        '- Epictetus',
+  ),
+  Post(
     title: 'Cold Water Immersion',
     datePosted: DateTime(2022, 12, 23),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -39,7 +65,6 @@ List<Post> postData = [
     title: 'Epistemophilia',
     datePosted: DateTime(2022, 12, 16),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -54,7 +79,6 @@ List<Post> postData = [
     title: 'You Can Learn Something From Anyone',
     datePosted: DateTime(2022, 12, 9),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -68,7 +92,6 @@ List<Post> postData = [
     title: 'Start With Why',
     datePosted: DateTime(2022, 11, 25),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -84,7 +107,6 @@ List<Post> postData = [
     title: 'What Would You Do If You Were Not Afraid?',
     datePosted: DateTime(2022, 11, 18),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -98,7 +120,6 @@ List<Post> postData = [
     title: 'Practice Makes Progress',
     datePosted: DateTime(2022, 11, 11),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -113,7 +134,6 @@ List<Post> postData = [
     title: 'Consistency Trumps Intensity',
     datePosted: DateTime(2022, 10, 28),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -128,7 +148,6 @@ List<Post> postData = [
     title: 'Tough Conversations',
     datePosted: DateTime(2022, 10, 21),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -141,7 +160,6 @@ List<Post> postData = [
     title: 'Kaizen',
     datePosted: DateTime(2022, 10, 14),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -159,7 +177,6 @@ List<Post> postData = [
     title: 'A Challenge is an Opportunity',
     datePosted: DateTime(2022, 9, 30),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -174,7 +191,6 @@ List<Post> postData = [
     title: 'Listen',
     datePosted: DateTime(2022, 9, 23),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -187,7 +203,6 @@ List<Post> postData = [
     title: 'Honesty Without Compassion Becomes Cruelty',
     datePosted: DateTime(2022, 9, 16),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -199,7 +214,6 @@ List<Post> postData = [
     title: 'Apologise Quickly',
     datePosted: DateTime(2022, 9, 9),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -213,7 +227,6 @@ List<Post> postData = [
     title: 'Acts of Kindness',
     datePosted: DateTime(2022, 8, 26),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -226,7 +239,6 @@ List<Post> postData = [
     title: 'Do the Right, Not the Easy Thing',
     datePosted: DateTime(2022, 8, 19),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -241,7 +253,6 @@ List<Post> postData = [
     title: 'Be Open',
     datePosted: DateTime(2022, 8, 12),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -256,7 +267,6 @@ List<Post> postData = [
     title: 'Fulfilment Requires Effort',
     datePosted: DateTime(2022, 7, 29),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -270,7 +280,6 @@ List<Post> postData = [
     title: 'The Universe Owes You Nothing',
     datePosted: DateTime(2022, 7, 27),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -287,7 +296,6 @@ List<Post> postData = [
     title: 'The Quest for Power',
     datePosted: DateTime(2022, 7, 15),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -303,7 +311,6 @@ List<Post> postData = [
     title: 'The Golden Rule',
     datePosted: DateTime(2022, 7, 1),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -317,7 +324,6 @@ List<Post> postData = [
     title: 'Sunk Cost Fallacy',
     datePosted: DateTime(2022, 6, 24),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -333,7 +339,6 @@ List<Post> postData = [
     title: 'Exposure to Negativity',
     datePosted: DateTime(2022, 6, 17),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -354,7 +359,6 @@ List<Post> postData = [
     title: 'Ikigai',
     datePosted: DateTime(2022, 6, 10),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -372,7 +376,6 @@ List<Post> postData = [
     title: 'Self-Regulation',
     datePosted: DateTime(2022, 5, 27),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -394,7 +397,6 @@ List<Post> postData = [
     title: 'Your Most Precious Commodities',
     datePosted: DateTime(2022, 5, 20),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -410,7 +412,6 @@ List<Post> postData = [
     title: 'Intuition',
     datePosted: DateTime(2022, 5, 13),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -426,7 +427,6 @@ List<Post> postData = [
     title: 'External Stressors',
     datePosted: DateTime(2022, 4, 22),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -442,7 +442,6 @@ List<Post> postData = [
     title: 'Failure',
     datePosted: DateTime(2022, 4, 15),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -456,7 +455,6 @@ List<Post> postData = [
     title: 'It\'s a Funny Old World',
     datePosted: DateTime(2022, 4, 8),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -471,7 +469,6 @@ List<Post> postData = [
     title: 'Minimalism',
     datePosted: DateTime(2022, 3, 25),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -493,7 +490,6 @@ List<Post> postData = [
     title: 'Gratitude',
     datePosted: DateTime(2022, 3, 18),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -509,7 +505,6 @@ List<Post> postData = [
     title: 'Should You Do It?',
     datePosted: DateTime(2022, 3, 7),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -522,7 +517,6 @@ List<Post> postData = [
     title: 'Don\'t Conform',
     datePosted: DateTime(2022, 2, 25),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -535,7 +529,6 @@ List<Post> postData = [
     title: 'Memento Mori',
     datePosted: DateTime(2022, 2, 11),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -547,7 +540,6 @@ List<Post> postData = [
     title: 'Negative Visualisation',
     datePosted: DateTime(2022, 1, 28),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -570,7 +562,6 @@ List<Post> postData = [
     title: 'Change',
     datePosted: DateTime(2022, 1, 21),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -583,7 +574,6 @@ List<Post> postData = [
     title: 'Clarity of Communication',
     datePosted: DateTime(2022, 1, 7),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -597,7 +587,6 @@ List<Post> postData = [
     title: 'Body Mass Loss: an outcome',
     datePosted: DateTime(2021, 12, 9),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -616,7 +605,6 @@ List<Post> postData = [
     title: 'Mindfulness',
     datePosted: DateTime(2021, 11, 25),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -634,7 +622,6 @@ List<Post> postData = [
     title: 'Human-Technology Symbiosis',
     datePosted: DateTime(2021, 11, 23),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -652,7 +639,6 @@ List<Post> postData = [
     title: 'Transcend the Comfort Zone',
     datePosted: DateTime(2021, 11, 12),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -664,7 +650,6 @@ List<Post> postData = [
     title: 'Procrastination: the catalyst of anxiety',
     datePosted: DateTime(2021, 11, 5),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -680,7 +665,6 @@ List<Post> postData = [
     title: 'Habits',
     datePosted: DateTime(2021, 10, 31),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -691,7 +675,6 @@ List<Post> postData = [
     title: 'Scratch That Itch',
     datePosted: DateTime(2021, 10, 25),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -709,7 +692,6 @@ List<Post> postData = [
     title: 'Placebo',
     datePosted: DateTime(2021, 10, 18),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -722,7 +704,6 @@ List<Post> postData = [
     title: 'Consistency is Key',
     datePosted: DateTime(2021, 10, 5),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -737,7 +718,6 @@ List<Post> postData = [
     title: 'Black Swans',
     datePosted: DateTime(2021, 9, 21),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -755,7 +735,6 @@ List<Post> postData = [
     title: 'Science',
     datePosted: DateTime(2021, 9, 11),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -770,7 +749,6 @@ List<Post> postData = [
     title: 'Body Mass Reduction',
     datePosted: DateTime(2021, 6, 25),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -790,7 +768,6 @@ List<Post> postData = [
     title: 'Chronic Pain',
     datePosted: DateTime(2021, 6, 24),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -803,7 +780,6 @@ List<Post> postData = [
     title: 'Rest',
     datePosted: DateTime(2021, 6, 22),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',
@@ -817,7 +793,6 @@ List<Post> postData = [
     title: 'Motion',
     datePosted: DateTime(2021, 2, 24),
     image: 'images/1.png',
-    isFavourite: false,
     tags: [
       'Philosophy',
       'Comedy',

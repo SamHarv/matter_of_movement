@@ -40,7 +40,6 @@ class HomePage extends StatelessWidget {
                     title: post.title,
                     image: post.image,
                     datePosted: post.datePosted,
-                    isFavourite: post.isFavourite,
                     onTap: () => context.go(
                       '/article',
                       extra: postIndex,

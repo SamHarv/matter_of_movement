@@ -51,7 +51,6 @@ class FavouritesPage extends StatelessWidget {
                     title: post.title,
                     image: post.image,
                     datePosted: post.datePosted,
-                    isFavourite: post.isFavourite,
                     onTap: () => context.go(
                       '/article',
                       extra: postIndex,
@@ -60,7 +59,7 @@ class FavouritesPage extends StatelessWidget {
                       icon: const Icon(Icons.star),
                       onPressed: () {
                         provider.toggleFavourite(post);
-                        //delete from Hive Box
+                        provider.removeItem(post);
                       },
                       color: thirdColor,
                     ),
