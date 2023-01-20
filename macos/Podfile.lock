@@ -1,5 +1,5 @@
 PODS:
-  - cloud_functions (4.0.6):
+  - cloud_functions (4.0.7):
     - Firebase/CoreOnly (~> 10.3.0)
     - Firebase/Functions (~> 10.3.0)
     - firebase_core
@@ -17,7 +17,7 @@ PODS:
     - Firebase/CoreOnly (~> 10.3.0)
     - firebase_core
     - FlutterMacOS
-  - firebase_core (2.4.0):
+  - firebase_core (2.4.1):
     - Firebase/CoreOnly (~> 10.3.0)
     - FlutterMacOS
   - FirebaseAppCheckInterop (10.3.0)
@@ -107,10 +107,10 @@ EXTERNAL SOURCES:
     :path: Flutter/ephemeral/.symlinks/plugins/url_launcher_macos/macos
 
 SPEC CHECKSUMS:
-  cloud_functions: f0cdbca27e5b17c396317a712a72e191dabe5385
+  cloud_functions: d7b704ffe68cf2ae041054fdd854de9e2fc231f2
   Firebase: f92fc551ead69c94168d36c2b26188263860acd9
   firebase_auth: aa3a4e0358dabcb896cd8c57fb39a506d17b4409
-  firebase_core: 7bd6c8dabdeba26600cf939a5f59b20e78156d7c
+  firebase_core: 651a84636254f758b9b9367f27bef0801a3855a2
   FirebaseAppCheckInterop: 9fc57dfa08f0abb737b185ea065422b55355c909
   FirebaseAuth: 0e415d29d846c1dce2fb641e46f35e9888d9bec6
   FirebaseAuthInterop: 7a766bd56971347e0de4b7674aaa62ddc7820097

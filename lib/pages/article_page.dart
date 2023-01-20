@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
+import 'package:flutterwebapp_reload_detector/flutterwebapp_reload_detector.dart';
 
 import '../constants.dart';
 
@@ -10,7 +11,7 @@ import '../post_data.dart';
 
 import '../widgets/custom_appbar.dart';
 
-class ArticlePage extends StatelessWidget {
+class ArticlePage extends StatefulWidget {
   final int postIndex;
 
   const ArticlePage({
@@ -19,9 +20,25 @@ class ArticlePage extends StatelessWidget {
   });
 
   @override
+  State<ArticlePage> createState() => _ArticlePageState();
+}
+
+class _ArticlePageState extends State<ArticlePage> {
+  @override
+  void initState() {
+    // Make sure to Call this on Top Level Widget only once
+    WebAppReloadDetector.onReload(() {
+      setState(() {
+        context.go('/');
+      });
+    });
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final double mediaWidth = MediaQuery.of(context).size.width;
-    final post = postData[postIndex];
+    final post = postData[widget.postIndex];
     final provider = Provider.of<FavouriteProvider>(context);
     return GestureDetector(
       child: Scaffold(
@@ -61,7 +78,7 @@ class ArticlePage extends StatelessWidget {
                           child: Container(
                             padding: kPadding,
                             child: Text(
-                              postData[postIndex].title,
+                              postData[widget.postIndex].title,
                               textAlign: TextAlign.center,
                               style: headingStyle,
                             ),
@@ -73,7 +90,7 @@ class ArticlePage extends StatelessWidget {
                     Container(
                       padding: kPadding,
                       child: Text(
-                        postData[postIndex].body,
+                        postData[widget.postIndex].body,
                         style: bodyStyle,
                       ),
                     ),
@@ -100,9 +117,9 @@ class ArticlePage extends StatelessWidget {
             children: [
               FloatingActionButton(
                 onPressed: () =>
-                    (postIndex >= postData.length - postData.length + 1)
-                        ? context.go('/article', extra: postIndex - 1)
-                        : context.go('/article', extra: postIndex),
+                    (widget.postIndex >= postData.length - postData.length + 1)
+                        ? context.go('/article', extra: widget.postIndex - 1)
+                        : context.go('/article', extra: widget.postIndex),
                 backgroundColor: secondaryColor,
                 heroTag: null,
                 child: const Icon(
@@ -111,9 +128,9 @@ class ArticlePage extends StatelessWidget {
                 ),
               ),
               FloatingActionButton(
-                onPressed: () => (postIndex < postData.length - 1)
-                    ? context.go('/article', extra: postIndex + 1)
-                    : context.go('/article', extra: postIndex),
+                onPressed: () => (widget.postIndex < postData.length - 1)
+                    ? context.go('/article', extra: widget.postIndex + 1)
+                    : context.go('/article', extra: widget.postIndex),
                 backgroundColor: secondaryColor,
                 heroTag: null,
                 child: const Icon(

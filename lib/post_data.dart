@@ -1,6 +1,60 @@
 import './models/post_model.dart';
 
 List<Post> postData = [
+  // Post(
+  //   title: 'Neuroplasticity',
+  //   datePosted: DateTime(2022, 1, 27),
+  //   image: 'images/1.png',
+  //   tags: [],
+  //   body: 'Neuroplasticity.\n\n'
+  //       '"Neuro" (nervous system).\n\n'
+  //       '"Plasticity" (changeability).\n\n'
+  //       'Your nervous system is always updating - reinforcing or neglecting paths, or forging new paths.\n\n'
+  //       'These updates will be based on stimuli to which you are exposed.\n\n'
+  //       'It is your responsibility to ensure the nature of such updates are conducive to achieving your desired outcomes.\n\n'
+  //       '"You are what you repeatedly do"\n\n'
+  //       '- Aristotle',
+  // ),
+  Post(
+    title: 'Availability Bias',
+    datePosted: DateTime(2022, 1, 20),
+    image: 'images/1.png',
+    tags: [],
+    body: 'WYSIATI - What you see is all there is.\n\n'
+        'This sums up availability bias well.\n\n'
+        'We tend to believe that what we perceive is the way the world is, when in reality, there is much information of which we are unaware.\n\n'
+        'The media like to exploit this for financial gain.\n\n'
+        '"Every man takes the limits of his own field of vision for the limits of the world"\n\n'
+        '- Arthur Schopenhauer\n\n'
+        'We all fall victim to availability bias at times.\n\n'
+        'We just need to gain awareness after the fact to enable reflection and learning.',
+  ),
+  Post(
+    title: 'Wabi-sabi',
+    datePosted: DateTime(2022, 1, 14),
+    image: 'images/1.png',
+    tags: [],
+    body: 'Wabi-sabi.\n\n'
+        'A Japanese concept centred around the acceptance of transience and imperfection.\n\n'
+        'Finding beauty in impermanence and imperfection.\n\n'
+        'Life is impermanent.\n\n'
+        'Life is imperfect.\n\n'
+        'However, through finding purpose, through cultivating relationships, we can generate happiness as a byproduct.\n\n'
+        'Appreciate asymmetries, appreciate flaws, appreciate deviations from the norm.\n\n'
+        'As these are the very nature of our universe.',
+  ),
+  Post(
+    title: 'Proactive Rather than Reactive',
+    datePosted: DateTime(2022, 1, 13),
+    image: 'images/1.png',
+    tags: [],
+    body:
+        'We as a society tend to invest our time, energy and funds reactively rather than proactively.\n\n'
+        'This is due to our limited foresight.\n\n'
+        'There will always be instances where we need to put out fires, but where possible, we should take precautions to prepare for events which may be likely to occur.\n\n'
+        'Prevention is the best treatment.\n\n'
+        'Be proactive rather than reactive.',
+  ),
   Post(
     title: 'Ask Questions',
     datePosted: DateTime(2022, 1, 6),

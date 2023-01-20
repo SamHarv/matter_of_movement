@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
       drawer: appDrawer,
       appBar: const CustomAppBar(id: '/'),
       body: Container(
-        padding: kPadding,
+        padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
         child: CustomScrollView(
           slivers: [
             SliverGrid(

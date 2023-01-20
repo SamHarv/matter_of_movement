@@ -13,10 +13,10 @@ import 'constants.dart';
 import 'models/post_model.dart';
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
   Hive.registerAdapter(PostAdapter());
   setPathUrlStrategy();
@@ -32,6 +32,7 @@ class MoM extends StatelessWidget {
       create: (context) => FavouriteProvider(),
       child: MaterialApp.router(
         theme: ThemeData(primaryColor: color),
+        //darkTheme: ThemeData.dark(),
         routerConfig: router,
         debugShowCheckedModeBanner: false,
         title: 'Matter of Movement',
@@ -41,13 +42,9 @@ class MoM extends StatelessWidget {
 }
 
 //todo: 
-//fix refresh/ link copy & paste issue
+//fix refresh/ link copy & paste issue (not an issue in mob app)
+//Fix issue of displaying posts according to HomePage index on FavouritesPage
 
-//check out all Firebase features (set them up)
-//add search functionality with topic tags/ keys
-//add comment functionality
-//implement switch to enable dark mode
-//improve performance
 //work on O2 Tech webpage
 
 //To Update Firebase:

@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../constants.dart';
 
-import '../pages/search_page.dart';
-
 import './app_bar_menu_item.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -78,14 +76,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [
         Padding(
-          padding: kPadding,
+          padding: const EdgeInsets.all(8),
           child: IconButton(
-            onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (_) => const SearchPage(),
-              ),
-            ),
-            icon: const Icon(Icons.search),
+            onPressed: () => context.go('/about'),
+            icon: const Icon(Icons.info),
             color: secondaryColor,
           ),
         ),

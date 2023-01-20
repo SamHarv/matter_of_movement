@@ -1,13 +1,12 @@
 import 'package:go_router/go_router.dart';
-import 'package:matterofmovement/pages/subscribed.dart';
-import 'package:matterofmovement/pages/auth_page.dart';
 
+import './pages/subscribed.dart';
+import './pages/auth_page.dart';
 import './pages/book_list.dart';
 import './pages/subscribe_page.dart';
 import './pages/home_page.dart';
 import './pages/about_page.dart';
 import './pages/favourites_page.dart';
-import './pages/search_page.dart';
 import './pages/article_page.dart';
 
 final router = GoRouter(
@@ -24,10 +23,6 @@ final router = GoRouter(
     GoRoute(
       path: '/favourites',
       builder: (context, state) => const FavouritesPage(),
-    ),
-    GoRoute(
-      path: '/search',
-      builder: (context, state) => const SearchPage(),
     ),
     GoRoute(
       path: '/books',
