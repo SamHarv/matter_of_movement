@@ -37,18 +37,16 @@ class FavouriteProvider extends ChangeNotifier {
     if (inFavourites) {
       _favouritePosts.remove(post);
       removeItem(post);
-      //getItems();
     } else {
       _favouritePosts.add(post);
       createItem(post);
-      //getItems();
     }
     notifyListeners();
   }
 
   bool isInFavourites(Post post) {
-    final inFavourites = _favouritePosts.contains(post);
     getItems();
+    final inFavourites = _favouritePosts.contains(post);
     return inFavourites;
   }
 }

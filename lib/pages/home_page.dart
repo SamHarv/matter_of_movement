@@ -34,31 +34,27 @@ class HomePage extends StatelessWidget {
               ),
               delegate: SliverChildBuilderDelegate(
                 childCount: postData.length,
-                (context, postIndex) {
-                  final post = postData[postIndex];
+                (context, index) {
+                  final post = postData[index];
                   return PostTile(
                     title: post.title,
                     image: post.image,
                     datePosted: post.datePosted,
-                    onTap: () => context.go(
-                      '/article',
-                      extra: postIndex,
+                    onTap: () {
+                      context.go(
+                        '/article',
+                        extra: post,
+                      );
+                    },
+                    icon: IconButton(
+                      icon: provider.isInFavourites(post)
+                          ? const Icon(Icons.star)
+                          : const Icon(Icons.star_border),
+                      onPressed: () {
+                        provider.toggleFavourite(post);
+                      },
+                      color: thirdColor,
                     ),
-                    icon: provider.isInFavourites(post)
-                        ? IconButton(
-                            icon: const Icon(Icons.star),
-                            onPressed: () {
-                              provider.toggleFavourite(post);
-                            },
-                            color: thirdColor,
-                          )
-                        : IconButton(
-                            icon: const Icon(Icons.star_border),
-                            onPressed: () {
-                              provider.toggleFavourite(post);
-                            },
-                            color: thirdColor,
-                          ),
                   );
                 },
               ),

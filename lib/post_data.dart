@@ -1,20 +1,82 @@
 import './models/post_model.dart';
 
 List<Post> postData = [
-  // Post(
-  //   title: 'Neuroplasticity',
-  //   datePosted: DateTime(2022, 1, 27),
-  //   image: 'images/1.png',
-  //   tags: [],
-  //   body: 'Neuroplasticity.\n\n'
-  //       '"Neuro" (nervous system).\n\n'
-  //       '"Plasticity" (changeability).\n\n'
-  //       'Your nervous system is always updating - reinforcing or neglecting paths, or forging new paths.\n\n'
-  //       'These updates will be based on stimuli to which you are exposed.\n\n'
-  //       'It is your responsibility to ensure the nature of such updates are conducive to achieving your desired outcomes.\n\n'
-  //       '"You are what you repeatedly do"\n\n'
-  //       '- Aristotle',
-  // ),
+  Post(
+    title: 'Multitasking',
+    datePosted: DateTime(2022, 3, 3),
+    image: 'images/1.png',
+    tags: [],
+    body: 'People often boast about how well they can "multitask".\n\n'
+        'Multitasking can be understood as the concurrent execution of multiple tasks - performing more than one task at any given moment.\n\n'
+        'The truth is the human brain is incapable of this.\n\n'
+        'When one is trying to multitask, they are really just rapidly task-switching.\n\n'
+        'This task-switching has a cost - the time taken to switch, and to readjust focus on a different task.\n\n'
+        'Despite people often being encouraged to multitask in professional work, it is damamging to productivity.\n\n'
+        'Instead of trying to perform as a computer can, give your full attention to one task and work deeply - set aside a block of time for this important task.\n\n'
+        'This will lead to drastically improved productivity.',
+  ),
+  Post(
+    title: 'Take Action',
+    datePosted: DateTime(2022, 2, 24),
+    image: 'images/1.png',
+    tags: [],
+    body: 'Learning without implementation is ineffective.\n\n'
+        'You could read 1000 books and take 100 online courses, but without making the effort to apply your learnings, they are lost.',
+  ),
+  Post(
+    title: 'Wu Wei',
+    datePosted: DateTime(2022, 2, 17),
+    image: 'images/1.png',
+    tags: [],
+    body:
+        'Wu Wei - effortless action. Doing nothing. Conscious non-action. In alignment with the Tao - the flow of life.\n\n'
+        'Wu Wei is a Chinese concept which I picked up from Taoism.\n\n'
+        'I resonate with this philosophy on a fundamental level.\n\n'
+        'This is my jam.\n\n'
+        'Wu Wei can be translated to mean effortless action.\n\n'
+        'Based off my investigation into the term, it is not so much about doing nothing, as it is often translated - but about doing less - doing only what is essential to achieve your desired outcome.\n\n'
+        'Effortless ation should be strived for rather than overaction - this means living by essentialist practices.',
+  ),
+  Post(
+    title: 'Growth Mindset',
+    datePosted: DateTime(2022, 2, 10),
+    image: 'images/1.png',
+    tags: [],
+    body: 'You can learn anything.\n\n'
+        'Carol Dweck, in her book, Mindset - describes the difference between a fixed and a growth mindset.\n\n'
+        'A fixed mindset represents the idea that people have a fixed potential and that everything comes down to talent.\n\n'
+        'This keeps people in a box and is frankly bullshit.\n\n'
+        'A growth mindset, however, involves believing that you can work to learn or do anything you really want to.\n\n'
+        '"No matter what your ability is, effort is what ignites that ability and turns it into accomplishment"\n\n'
+        '- Carol Dweck',
+  ),
+  Post(
+    title: 'Imposter Syndrome',
+    datePosted: DateTime(2022, 2, 3),
+    image: 'images/1.png',
+    tags: [],
+    body: 'Imposter Syndrome.\n\n'
+        'A phenomenon where one feels they are not qualified to be doing what they are doing - self-doubt.\n\n'
+        'They feel as though they are an imposter.\n\n'
+        'There have been many times where I have experienced this - having the feeling that I am in over my head.\n\n'
+        'It helps to understand that everyone who pushes themselves out of their depth will experience this.\n\n'
+        'Reflect on what you have achieved and continue learning.\n\n'
+        'You are not an imposter. You are a work in progress.',
+  ),
+  Post(
+    title: 'Neuroplasticity',
+    datePosted: DateTime(2022, 1, 27),
+    image: 'images/1.png',
+    tags: [],
+    body: 'Neuroplasticity.\n\n'
+        '"Neuro" (nervous system).\n\n'
+        '"Plasticity" (changeability).\n\n'
+        'Your nervous system is always updating - reinforcing or neglecting paths, or forging new paths.\n\n'
+        'These updates will be based on stimuli to which you are exposed.\n\n'
+        'It is your responsibility to ensure the nature of such updates are conducive to achieving your desired outcomes.\n\n'
+        '"You are what you repeatedly do"\n\n'
+        '- Aristotle',
+  ),
   Post(
     title: 'Availability Bias',
     datePosted: DateTime(2022, 1, 20),

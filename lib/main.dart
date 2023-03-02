@@ -3,7 +3,6 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
-
 import 'package:url_strategy/url_strategy.dart';
 
 import './providers/favourite_provider.dart';
@@ -42,8 +41,11 @@ class MoM extends StatelessWidget {
 }
 
 //todo: 
+//Run with MACOS - run errors through ChatGPT
+//Add splash page?
+
 //fix refresh/ link copy & paste issue (not an issue in mob app)
-//Fix issue of displaying posts according to HomePage index on FavouritesPage
+//Fix issue of displaying posts according to HomePage index through FavouritesPage
 
 //work on O2 Tech webpage
 

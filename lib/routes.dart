@@ -8,6 +8,7 @@ import './pages/home_page.dart';
 import './pages/about_page.dart';
 import './pages/favourites_page.dart';
 import './pages/article_page.dart';
+import 'models/post_model.dart';
 
 final router = GoRouter(
   initialLocation: '/',
@@ -42,7 +43,7 @@ final router = GoRouter(
     ),
     GoRoute(
       path: '/article',
-      builder: (context, state) => ArticlePage(postIndex: state.extra! as int),
+      builder: (context, state) => ArticlePage(post: state.extra! as Post),
     ),
   ],
 );

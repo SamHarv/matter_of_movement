@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
-import 'package:flutterwebapp_reload_detector/flutterwebapp_reload_detector.dart';
 
 import '../constants.dart';
 
+import '../models/post_model.dart';
 import '../providers/favourite_provider.dart';
 
 import '../post_data.dart';
@@ -12,11 +12,13 @@ import '../post_data.dart';
 import '../widgets/custom_appbar.dart';
 
 class ArticlePage extends StatefulWidget {
-  final int postIndex;
+  final Post post;
+  final bool fromFavouritesPage;
 
   const ArticlePage({
     super.key,
-    required this.postIndex,
+    required this.post,
+    this.fromFavouritesPage = false,
   });
 
   @override
@@ -25,21 +27,26 @@ class ArticlePage extends StatefulWidget {
 
 class _ArticlePageState extends State<ArticlePage> {
   @override
-  void initState() {
-    // Make sure to Call this on Top Level Widget only once
-    WebAppReloadDetector.onReload(() {
-      setState(() {
-        context.go('/');
-      });
-    });
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     final double mediaWidth = MediaQuery.of(context).size.width;
-    final post = postData[widget.postIndex];
     final provider = Provider.of<FavouriteProvider>(context);
+    final favourites = provider.favouritePosts;
+    final favouritePost = favourites.firstWhere(
+      (post) => post.title == widget.post.title,
+      orElse: () => widget.post,
+    );
+    final currentIndex = postData.indexOf(widget.post);
+    final prevPost = currentIndex > 0 ? postData[currentIndex - 1] : null;
+    final nextPost =
+        currentIndex < postData.length - 1 ? postData[currentIndex + 1] : null;
+    final currentFavouriteIndex = favourites.indexOf(widget.post);
+    final prevFavouritePost = currentFavouriteIndex > 0
+        ? favourites[currentFavouriteIndex - 1]
+        : null;
+    final nextFavouritePost = currentFavouriteIndex < favourites.length - 1
+        ? favourites[currentFavouriteIndex + 1]
+        : null;
+    //final favouritePost = favourites[widget.postIndex];
     return GestureDetector(
       child: Scaffold(
         drawer: appDrawer,
@@ -55,30 +62,23 @@ class _ArticlePageState extends State<ArticlePage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        provider.isInFavourites(post)
-                            ? IconButton(
-                                icon: const Icon(Icons.star),
-                                onPressed: () {
-                                  provider.toggleFavourite(post);
-                                },
-                                iconSize: 24,
-                                padding: kPadding,
-                                color: secondaryColor,
-                              )
-                            : IconButton(
-                                icon: const Icon(Icons.star_border),
-                                onPressed: () {
-                                  provider.toggleFavourite(post);
-                                },
-                                iconSize: 24,
-                                padding: kPadding,
-                                color: secondaryColor,
-                              ),
+                        IconButton(
+                          icon: provider.isInFavourites(widget.post)
+                              ? const Icon(Icons.star)
+                              : const Icon(Icons.star_border),
+                          onPressed: () {
+                            provider.toggleFavourite(widget.post);
+                          },
+                          iconSize: 24,
+                          padding: kPadding,
+                          color: secondaryColor,
+                        ),
                         Expanded(
                           child: Container(
                             padding: kPadding,
                             child: Text(
-                              postData[widget.postIndex].title,
+                              favouritePost.title,
+                              //post.title,
                               textAlign: TextAlign.center,
                               style: headingStyle,
                             ),
@@ -90,7 +90,8 @@ class _ArticlePageState extends State<ArticlePage> {
                     Container(
                       padding: kPadding,
                       child: Text(
-                        postData[widget.postIndex].body,
+                        favouritePost.body,
+                        //post.body,
                         style: bodyStyle,
                       ),
                     ),
@@ -115,28 +116,83 @@ class _ArticlePageState extends State<ArticlePage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              FloatingActionButton(
-                onPressed: () =>
-                    (widget.postIndex >= postData.length - postData.length + 1)
-                        ? context.go('/article', extra: widget.postIndex - 1)
-                        : context.go('/article', extra: widget.postIndex),
-                backgroundColor: secondaryColor,
-                heroTag: null,
-                child: const Icon(
-                  Icons.navigate_before_rounded,
-                  color: thirdColor,
-                ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  provider.isInFavourites(widget.post)
+                      ? FloatingActionButton(
+                          onPressed: () {
+                            if (prevFavouritePost != null) {
+                              context.go('/article', extra: prevFavouritePost);
+                            }
+                          },
+                          backgroundColor: secondaryColor,
+                          heroTag: null,
+                          child: const RotatedBox(
+                            quarterTurns: 3,
+                            child: Icon(
+                              Icons.star,
+                              color: thirdColor,
+                            ),
+                          ),
+                        )
+                      : const SizedBox(),
+                  provider.isInFavourites(widget.post)
+                      ? const SizedBox(height: 16)
+                      : const SizedBox(),
+                  FloatingActionButton(
+                    onPressed: () {
+                      if (prevPost != null) {
+                        context.go('/article', extra: prevPost);
+                      }
+                    },
+                    backgroundColor: secondaryColor,
+                    heroTag: null,
+                    child: const Icon(
+                      Icons.navigate_before_rounded,
+                      color: thirdColor,
+                    ),
+                  ),
+                ],
               ),
-              FloatingActionButton(
-                onPressed: () => (widget.postIndex < postData.length - 1)
-                    ? context.go('/article', extra: widget.postIndex + 1)
-                    : context.go('/article', extra: widget.postIndex),
-                backgroundColor: secondaryColor,
-                heroTag: null,
-                child: const Icon(
-                  Icons.navigate_next_rounded,
-                  color: thirdColor,
-                ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  provider.isInFavourites(widget.post)
+                      ? FloatingActionButton(
+                          onPressed: () {
+                            if (nextFavouritePost != null) {
+                              context.go('/article', extra: nextFavouritePost);
+                            }
+                          },
+                          backgroundColor: secondaryColor,
+                          heroTag: null,
+                          child: const RotatedBox(
+                            quarterTurns: 1,
+                            child: Icon(
+                              Icons.star,
+                              color: thirdColor,
+                            ),
+                          ),
+                        )
+                      : const SizedBox(),
+                  provider.isInFavourites(widget.post)
+                      ? const SizedBox(height: 16)
+                      : const SizedBox(),
+                  FloatingActionButton(
+                    onPressed: () {
+                      if (nextPost != null) {
+                        context.go('/article', extra: nextPost);
+                      }
+                    },
+                    backgroundColor: secondaryColor,
+                    heroTag: null,
+                    child: const Icon(
+                      Icons.navigate_next_rounded,
+                      color: thirdColor,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

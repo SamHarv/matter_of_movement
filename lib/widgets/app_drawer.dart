@@ -33,17 +33,14 @@ class AppDrawer extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: 100,
+            //height: 200,
             width: double.infinity,
             padding: const EdgeInsets.all(20),
             alignment: Alignment.centerLeft,
-            color: secondaryColor,
-            child: const Text(
-              'Menu',
-              style: TextStyle(fontSize: 26, color: thirdColor),
-            ),
+            color: thirdColor,
+            child: Image.asset(fullLogo),
           ),
-          gapH20,
+          const Divider(),
           buildListTile(
             'Home',
             Icons.home,
