@@ -41,13 +41,7 @@ class MoM extends StatelessWidget {
 }
 
 //todo: 
-//Run with MACOS - run errors through ChatGPT
-//Add splash page?
-
-//fix refresh/ link copy & paste issue (not an issue in mob app)
-//Fix issue of displaying posts according to HomePage index through FavouritesPage
-
-//work on O2 Tech webpage
+//fix refresh/ link copy & paste issue
 
 //To Update Firebase:
 //Save project;
