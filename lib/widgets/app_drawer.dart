@@ -1,8 +1,7 @@
+import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
-
-import 'package:go_router/go_router.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
@@ -33,7 +32,6 @@ class AppDrawer extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            //height: 200,
             width: double.infinity,
             padding: const EdgeInsets.all(20),
             alignment: Alignment.centerLeft,
@@ -44,31 +42,31 @@ class AppDrawer extends StatelessWidget {
           buildListTile(
             'Home',
             Icons.home,
-            () => context.go('/'),
+            () => Beamer.of(context).beamToNamed('/'),
           ),
           const Divider(),
           buildListTile(
             'Favourites',
             Icons.star,
-            () => context.go('/favourites'),
+            () => Beamer.of(context).beamToNamed('/favourites'),
           ),
           const Divider(),
           buildListTile(
             'About',
             Icons.info,
-            () => context.go('/about'),
+            () => Beamer.of(context).beamToNamed('/about'),
           ),
           const Divider(),
           buildListTile(
             'Book List',
             Icons.book,
-            () => context.go('/books'),
+            () => Beamer.of(context).beamToNamed('/books'),
           ),
           const Divider(),
           buildListTile(
             'Subscribe',
             Icons.email,
-            () => context.go('/auth'),
+            () => Beamer.of(context).beamToNamed('/auth'),
           ),
           const Divider(),
         ],

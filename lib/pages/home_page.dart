@@ -1,5 +1,5 @@
+import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 import '../constants.dart';
@@ -42,9 +42,9 @@ class HomePage extends StatelessWidget {
                     datePosted: post.datePosted,
                     onTap: () {
                       String location = post.id;
-                      context.go('/article/$location', extra: post);
+                      Beamer.of(context).beamToNamed('/article/$location',
+                          data: {'post': post});
                     },
-                    //onTap: () => context.go('/article', extra: post),
                     icon: IconButton(
                       icon: provider.isInFavourites(post)
                           ? const Icon(Icons.star)
@@ -75,7 +75,7 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
-        onPressed: () => context.go('/favourites'),
+        onPressed: () => Beamer.of(context).beamToNamed('/favourites'),
         backgroundColor: secondaryColor,
         child: const Icon(
           Icons.star,

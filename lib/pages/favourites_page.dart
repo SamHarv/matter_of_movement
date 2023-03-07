@@ -1,10 +1,9 @@
+import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:go_router/go_router.dart';
 
 import '../constants.dart';
 
-import '../post_data.dart';
 import '../providers/favourite_provider.dart';
 
 import '../widgets/custom_appbar.dart';
@@ -57,9 +56,9 @@ class FavouritesPage extends StatelessWidget {
                     datePosted: post.datePosted,
                     onTap: () {
                       String location = post.id;
-                      context.go('/article/$location', extra: post);
+                      Beamer.of(context).beamToNamed('/article/$location',
+                          data: {'post': post});
                     },
-                    //onTap: () => context.go('/article', extra: post),
                     icon: IconButton(
                       icon: const Icon(Icons.star),
                       onPressed: () {

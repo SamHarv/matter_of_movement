@@ -51,6 +51,7 @@ dependencies:
   flutterwebapp_reload_detector: ^0.0.1
   seo_renderer: ^0.6.0
   flutter_native_splash: ^2.2.18
+  beamer: ^1.5.3
 
 flutter_native_splash:
   color: "#ffffff"

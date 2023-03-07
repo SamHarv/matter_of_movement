@@ -1,3 +1,4 @@
+import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
@@ -8,8 +9,8 @@ import 'package:url_strategy/url_strategy.dart';
 import './providers/favourite_provider.dart';
 
 import './routes.dart';
-import 'constants.dart';
-import 'models/post_model.dart';
+import './constants.dart';
+import './models/post_model.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,12 +28,15 @@ class MoM extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => FavouriteProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => FavouriteProvider()),
+      ],
       child: MaterialApp.router(
         theme: ThemeData(primaryColor: color),
         //darkTheme: ThemeData.dark(),
-        routerConfig: router,
+        routerDelegate: routerDelegate,
+        routeInformationParser: BeamerParser(),
         debugShowCheckedModeBanner: false,
         title: 'Matter of Movement',
       ),
@@ -41,7 +45,6 @@ class MoM extends StatelessWidget {
 }
 
 //todo: 
-//fix refresh/ link copy & paste issue - cannot use extra - must use params - try to implement postData[].id to navigate
 //Implement SEO changes
 
 //Digby:

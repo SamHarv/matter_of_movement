@@ -1,5 +1,5 @@
+import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 import '../constants.dart';
 
@@ -22,7 +22,7 @@ class AppBarMenuItem extends StatelessWidget {
           title,
           style: const TextStyle(color: color),
         ),
-        onTap: () => context.go(route),
+        onTap: () => Beamer.of(context).beamToNamed(route),
       ),
     );
   }

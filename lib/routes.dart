@@ -1,4 +1,7 @@
-import 'package:go_router/go_router.dart';
+import 'package:flutter/material.dart';
+import 'package:beamer/beamer.dart';
+
+import '../post_data.dart';
 
 import './pages/subscribed.dart';
 import './pages/auth_page.dart';
@@ -8,50 +11,29 @@ import './pages/home_page.dart';
 import './pages/about_page.dart';
 import './pages/favourites_page.dart';
 import './pages/article_page.dart';
-import './models/post_model.dart';
 
-final router = GoRouter(
-  initialLocation: '/',
-  routes: [
-    GoRoute(
-      path: '/',
-      builder: (context, state) => const HomePage(),
-    ),
-    GoRoute(
-      path: '/about',
-      builder: (context, state) => const AboutPage(),
-    ),
-    GoRoute(
-      path: '/favourites',
-      builder: (context, state) => const FavouritesPage(),
-    ),
-    GoRoute(
-      path: '/books',
-      builder: (context, state) => const BookListPage(),
-    ),
-    GoRoute(
-      path: '/subscribe',
-      builder: (context, state) => const SubscribePage(),
-    ),
-    GoRoute(
-      path: '/auth',
-      builder: (context, state) => const AuthPage(),
-    ),
-    GoRoute(
-      path: '/subscribed',
-      builder: (context, state) => const Subscribed(),
-    ),
-    GoRoute(
-        path: '/article/:id',
-        builder: (context, state) {
-          return ArticlePage(
-            id: state.params['id']!,
-            post: state.extra! as Post,
-          );
-        }),
-    // GoRoute(
-    //   path: '/article',
-    //   builder: (context, state) => ArticlePage(post: state.extra! as Post),
-    // ),
-  ],
+final routerDelegate = BeamerDelegate(
+  notFoundRedirectNamed: '/',
+  initialPath: '/',
+  locationBuilder: RoutesLocationBuilder(
+    routes: {
+      '/': (context, state, data) => const HomePage(),
+      '/about': (context, state, data) => const AboutPage(),
+      '/favourites': (context, state, data) => const FavouritesPage(),
+      '/books': (context, state, data) => const BookListPage(),
+      '/subscribe': (context, state, data) => const SubscribePage(),
+      '/auth': (context, state, data) => const AuthPage(),
+      '/subscribed': (context, state, data) => const Subscribed(),
+      '/article/:id': (context, state, data) {
+        final postId = state.pathParameters['id'];
+        final post = postData.firstWhere((post) => post.id == postId);
+        return BeamPage(
+          key: ValueKey('article-$postId'),
+          type: BeamPageType.fadeTransition,
+          title: post.title,
+          child: ArticlePage(post: post, id: postId!),
+        );
+      },
+    },
+  ),
 );

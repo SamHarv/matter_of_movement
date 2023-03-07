@@ -1,5 +1,5 @@
+import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 import '../constants.dart';
@@ -31,7 +31,7 @@ class _ArticlePageState extends State<ArticlePage> {
     final double mediaWidth = MediaQuery.of(context).size.width;
     final provider = Provider.of<FavouriteProvider>(context);
     final favourites = provider.favouritePosts;
-//Test
+
     final favouritePost = favourites.firstWhere(
       (post) => post.title == widget.post.title,
       orElse: () => widget.post,
@@ -47,23 +47,6 @@ class _ArticlePageState extends State<ArticlePage> {
     final nextFavouritePost = currentFavouriteIndex < favourites.length - 1
         ? favourites[currentFavouriteIndex + 1]
         : null;
-    //End test
-
-    // final favouritePost = favourites.firstWhere(
-    //   (post) => post.title == widget.post.title,
-    //   orElse: () => widget.post,
-    // );
-    // final currentIndex = postData.indexOf(widget.post);
-    // final prevPost = currentIndex > 0 ? postData[currentIndex - 1] : null;
-    // final nextPost =
-    //     currentIndex < postData.length - 1 ? postData[currentIndex + 1] : null;
-    // final currentFavouriteIndex = favourites.indexOf(widget.post);
-    // final prevFavouritePost = currentFavouriteIndex > 0
-    //     ? favourites[currentFavouriteIndex - 1]
-    //     : null;
-    // final nextFavouritePost = currentFavouriteIndex < favourites.length - 1
-    //     ? favourites[currentFavouriteIndex + 1]
-    //     : null;
 
     return GestureDetector(
       child: Scaffold(
@@ -109,7 +92,6 @@ class _ArticlePageState extends State<ArticlePage> {
                       padding: kPadding,
                       child: Text(
                         favouritePost.body,
-                        //post.body,
                         style: bodyStyle,
                       ),
                     ),
@@ -142,8 +124,9 @@ class _ArticlePageState extends State<ArticlePage> {
                           onPressed: () {
                             if (prevFavouritePost != null) {
                               String location = prevFavouritePost.id;
-                              context.go('/article/$location',
-                                  extra: prevFavouritePost);
+                              Beamer.of(context).beamToNamed(
+                                  '/article/$location',
+                                  data: prevFavouritePost);
                             }
                           },
                           backgroundColor: secondaryColor,
@@ -164,7 +147,8 @@ class _ArticlePageState extends State<ArticlePage> {
                     onPressed: () {
                       if (prevPost != null) {
                         String location = prevPost.id;
-                        context.go('/article/$location', extra: prevPost);
+                        Beamer.of(context)
+                            .beamToNamed('/article/$location', data: prevPost);
                       }
                     },
                     backgroundColor: secondaryColor,
@@ -184,8 +168,9 @@ class _ArticlePageState extends State<ArticlePage> {
                           onPressed: () {
                             if (nextFavouritePost != null) {
                               String location = nextFavouritePost.id;
-                              context.go('/article/$location',
-                                  extra: nextFavouritePost);
+                              Beamer.of(context).beamToNamed(
+                                  '/article/$location',
+                                  data: nextFavouritePost);
                             }
                           },
                           backgroundColor: secondaryColor,
@@ -206,7 +191,8 @@ class _ArticlePageState extends State<ArticlePage> {
                     onPressed: () {
                       if (nextPost != null) {
                         String location = nextPost.id;
-                        context.go('/article/$location', extra: nextPost);
+                        Beamer.of(context)
+                            .beamToNamed('/article/$location', data: nextPost);
                       }
                     },
                     backgroundColor: secondaryColor,
