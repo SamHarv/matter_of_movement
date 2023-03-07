@@ -41,11 +41,10 @@ class HomePage extends StatelessWidget {
                     image: post.image,
                     datePosted: post.datePosted,
                     onTap: () {
-                      context.go(
-                        '/article',
-                        extra: post,
-                      );
+                      String location = post.id;
+                      context.go('/article/$location', extra: post);
                     },
+                    //onTap: () => context.go('/article', extra: post),
                     icon: IconButton(
                       icon: provider.isInFavourites(post)
                           ? const Icon(Icons.star)

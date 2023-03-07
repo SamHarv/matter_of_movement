@@ -2,10 +2,20 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Take Ownership',
+    datePosted: DateTime(2022, 3, 10),
+    image: 'images/1.png',
+    id: '64',
+    body: 'If you are somehow involved in an error, a mistake.\n\n'
+        'Take responsibility.\n\n'
+        'You may not feel it is your fault, but blame is not productive.\n\n'
+        'You will be looked upon more favourably by others if you own mistakes, and seek ways to fix them.',
+  ),
+  Post(
     title: 'Multitasking',
     datePosted: DateTime(2022, 3, 3),
     image: 'images/1.png',
-    tags: [],
+    id: '63',
     body: 'People often boast about how well they can "multitask".\n\n'
         'Multitasking can be understood as the concurrent execution of multiple tasks - performing more than one task at any given moment.\n\n'
         'The truth is the human brain is incapable of this.\n\n'
@@ -19,7 +29,7 @@ List<Post> postData = [
     title: 'Take Action',
     datePosted: DateTime(2022, 2, 24),
     image: 'images/1.png',
-    tags: [],
+    id: '62',
     body: 'Learning without implementation is ineffective.\n\n'
         'You could read 1000 books and take 100 online courses, but without making the effort to apply your learnings, they are lost.',
   ),
@@ -27,7 +37,7 @@ List<Post> postData = [
     title: 'Wu Wei',
     datePosted: DateTime(2022, 2, 17),
     image: 'images/1.png',
-    tags: [],
+    id: '61',
     body:
         'Wu Wei - effortless action. Doing nothing. Conscious non-action. In alignment with the Tao - the flow of life.\n\n'
         'Wu Wei is a Chinese concept which I picked up from Taoism.\n\n'
@@ -41,7 +51,7 @@ List<Post> postData = [
     title: 'Growth Mindset',
     datePosted: DateTime(2022, 2, 10),
     image: 'images/1.png',
-    tags: [],
+    id: '60',
     body: 'You can learn anything.\n\n'
         'Carol Dweck, in her book, Mindset - describes the difference between a fixed and a growth mindset.\n\n'
         'A fixed mindset represents the idea that people have a fixed potential and that everything comes down to talent.\n\n'
@@ -54,7 +64,7 @@ List<Post> postData = [
     title: 'Imposter Syndrome',
     datePosted: DateTime(2022, 2, 3),
     image: 'images/1.png',
-    tags: [],
+    id: '59',
     body: 'Imposter Syndrome.\n\n'
         'A phenomenon where one feels they are not qualified to be doing what they are doing - self-doubt.\n\n'
         'They feel as though they are an imposter.\n\n'
@@ -67,7 +77,7 @@ List<Post> postData = [
     title: 'Neuroplasticity',
     datePosted: DateTime(2022, 1, 27),
     image: 'images/1.png',
-    tags: [],
+    id: '58',
     body: 'Neuroplasticity.\n\n'
         '"Neuro" (nervous system).\n\n'
         '"Plasticity" (changeability).\n\n'
@@ -81,7 +91,7 @@ List<Post> postData = [
     title: 'Availability Bias',
     datePosted: DateTime(2022, 1, 20),
     image: 'images/1.png',
-    tags: [],
+    id: '57',
     body: 'WYSIATI - What you see is all there is.\n\n'
         'This sums up availability bias well.\n\n'
         'We tend to believe that what we perceive is the way the world is, when in reality, there is much information of which we are unaware.\n\n'
@@ -95,7 +105,7 @@ List<Post> postData = [
     title: 'Wabi-sabi',
     datePosted: DateTime(2022, 1, 14),
     image: 'images/1.png',
-    tags: [],
+    id: '56',
     body: 'Wabi-sabi.\n\n'
         'A Japanese concept centred around the acceptance of transience and imperfection.\n\n'
         'Finding beauty in impermanence and imperfection.\n\n'
@@ -109,7 +119,7 @@ List<Post> postData = [
     title: 'Proactive Rather than Reactive',
     datePosted: DateTime(2022, 1, 13),
     image: 'images/1.png',
-    tags: [],
+    id: '55',
     body:
         'We as a society tend to invest our time, energy and funds reactively rather than proactively.\n\n'
         'This is due to our limited foresight.\n\n'
@@ -121,10 +131,7 @@ List<Post> postData = [
     title: 'Ask Questions',
     datePosted: DateTime(2022, 1, 6),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '54',
     body: 'We must continue to encourage the asking of questions.\n\n'
         'Some are inclined to scoff when their answers are questioned by others, but we need to be open to rethinking our beliefs if we are to continue to learn and improve.\n\n'
         '"I would rather a question I cannot answer than an answer I could not question"\n\n'
@@ -134,10 +141,7 @@ List<Post> postData = [
     title: 'Focus Within Your Locus of Control',
     datePosted: DateTime(2022, 12, 30),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '53',
     body:
         'It is easy to get caught up in stressing over and trying to control that which is beyond our locus of control.\n\n'
         'We cannot control what happens, but we have the power to accept it and control the way we react.\n\n'
@@ -148,10 +152,7 @@ List<Post> postData = [
     title: 'Cold Water Immersion',
     datePosted: DateTime(2022, 12, 23),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '52',
     body:
         'Why would one submerge themselves in ice-cold water of their own volition?\n\n'
         'There are many claimed benefits to cold water immersion - some of which have gained empirical evidence, including:\n\n'
@@ -181,10 +182,7 @@ List<Post> postData = [
     title: 'Epistemophilia',
     datePosted: DateTime(2022, 12, 16),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '51',
     body: 'Epistemophilia.\n\n'
         'An excessive love of, or striving for, knowledge.\n\n'
         'The acquisition of knowledge is an addictive preoccupation, but the benefits seem to be exponential over time.\n\n'
@@ -195,10 +193,7 @@ List<Post> postData = [
     title: 'You Can Learn Something From Anyone',
     datePosted: DateTime(2022, 12, 9),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '50',
     body: 'You can learn something from anyone.\n\n'
         'Don\'t assume you know more than someone else.\n\n'
         'It doesn\'t matter who the person is, they will know something you don\'t.\n\n'
@@ -208,10 +203,7 @@ List<Post> postData = [
     title: 'Start With Why',
     datePosted: DateTime(2022, 11, 25),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '49',
     body:
         'It is so easy to get caught up and live your life going through the motions without stopping to reflect and ask yourself why.\n\n'
         'What do you want to get out of your life?\n\n'
@@ -223,10 +215,7 @@ List<Post> postData = [
     title: 'What Would You Do If You Were Not Afraid?',
     datePosted: DateTime(2022, 11, 18),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '48',
     body: 'What would you do if you knew you would not fail?\n\n'
         'This is a great question to ask to assess where fear may be holding you back. Is this fear logical?\n\n'
         '"You wouldn\'t worry so much about what others think of you if you realised how seldom they do"\n\n'
@@ -236,10 +225,7 @@ List<Post> postData = [
     title: 'Practice Makes Progress',
     datePosted: DateTime(2022, 11, 11),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '47',
     body:
         'Practice does not make perfect, you should not aim to be perfect because perfection is unattainable.\n\n'
         'Practice makes progress - you should never stop learning.\n\n'
@@ -250,10 +236,7 @@ List<Post> postData = [
     title: 'Consistency Trumps Intensity',
     datePosted: DateTime(2022, 10, 28),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '46',
     body: 'When it comes to exercise, consistency trumps intensity.\n\n'
         'You would be better served completing 12 moderate intensity exercise bouts in a month than doing 6 very high intensity bouts in a month.\n\n'
         'The best way to create positive adaptations is to continue to turn up.\n\n'
@@ -264,10 +247,7 @@ List<Post> postData = [
     title: 'Tough Conversations',
     datePosted: DateTime(2022, 10, 21),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '45',
     body:
         'Two minutes of discomfort can lead to many hours of improved wellbeing.\n\n'
         'Sometimes you need to endure the tough conversation.',
@@ -276,10 +256,7 @@ List<Post> postData = [
     title: 'Kaizen',
     datePosted: DateTime(2022, 10, 14),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '44',
     body: 'Kaizen: taking small steps to create large change.\n\n'
         'Take a small step toward being the person you want to be, today.\n\n'
         'Small, daily steps compound to big results.\n\n'
@@ -293,10 +270,7 @@ List<Post> postData = [
     title: 'A Challenge is an Opportunity',
     datePosted: DateTime(2022, 9, 30),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '43',
     body:
         'A challenge can be interpreted as an opportunity to better yourself.\n\n'
         'If you face a challenge, recognise it as a chance to improve and sub-vocalise "good".\n\n'
@@ -307,10 +281,7 @@ List<Post> postData = [
     title: 'Listen',
     datePosted: DateTime(2022, 9, 23),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '42',
     body: 'Some have a tendency to speak a lot without saying anything.\n\n'
         '"We have two ears and one mouth so we can listen twice as much as we speak"\n\n'
         '- attributed to Epictetus',
@@ -319,10 +290,7 @@ List<Post> postData = [
     title: 'Honesty Without Compassion Becomes Cruelty',
     datePosted: DateTime(2022, 9, 16),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '41',
     body:
         'It is true that honesty leads to trust, however honesty without compassion becomes cruelty.',
   ),
@@ -330,10 +298,7 @@ List<Post> postData = [
     title: 'Apologise Quickly',
     datePosted: DateTime(2022, 9, 9),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '40',
     body:
         'Have the insight to recognise when you are in the wrong, then apologise quickly.\n\n'
         'A swift apology is able to defuse situations where tensions are rising.\n\n'
@@ -343,10 +308,7 @@ List<Post> postData = [
     title: 'Acts of Kindness',
     datePosted: DateTime(2022, 8, 26),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '39',
     body:
         'Do something nice for another person every day - one random act of kindness could change the trajectory of someone\'s life.\n\n'
         'Pay the compliment - if you think a positive thought about someone, share it with them.',
@@ -355,10 +317,7 @@ List<Post> postData = [
     title: 'Do the Right, Not the Easy Thing',
     datePosted: DateTime(2022, 8, 19),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '38',
     body:
         'In the immortalised words of  Frozen 2, "do the next right thing".\n\n'
         'When in doubt, trust your moral compass, and focus on your next action being the right one.\n\n'
@@ -369,10 +328,7 @@ List<Post> postData = [
     title: 'Be Open',
     datePosted: DateTime(2022, 8, 12),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '37',
     body:
         'Be open-minded to new ideas and beliefs - overcome the reflex of being defensive of your pre-conceived ideas and biases.\n\n'
         'I believe you can learn something from anyone, and you can learn anything you truly desire.\n\n'
@@ -383,10 +339,7 @@ List<Post> postData = [
     title: 'Fulfilment Requires Effort',
     datePosted: DateTime(2022, 7, 29),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '36',
     body:
         'Fulfilment is not a passive state - it does not just come to you.\n\n'
         'It requires effort to both find what is fulfilling to you and acquire said fulfilment.\n\n'
@@ -396,10 +349,7 @@ List<Post> postData = [
     title: 'The Universe Owes You Nothing',
     datePosted: DateTime(2022, 7, 27),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '35',
     body:
         'Every generation seems to complain about another generation being "entitled" - when they too, are "entitled".\n\n'
         'It is human to behave in an "entitled" way at times, but we must remember that the universe owes us nothing.\n\n'
@@ -412,10 +362,7 @@ List<Post> postData = [
     title: 'The Quest for Power',
     datePosted: DateTime(2022, 7, 15),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '34',
     body:
         'I have stumbled upon a few books, namely 12 Rules for Life, The 48 Laws of Power, and The Art of War which despite their rampant popularity, left a bad taste in my mouth.\n\n'
         'They endorse the use of deception and of violating the golden rule of treating other how you would like to be treated.\n\n'
@@ -427,10 +374,7 @@ List<Post> postData = [
     title: 'The Golden Rule',
     datePosted: DateTime(2022, 7, 1),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '33',
     body: 'The Golden Rule - treat others as you would like to be treated.\n\n'
         'This message is echoed across all religions and is an agreed upon principle of being considered a "good person".\n\n'
         'This is an important step in empathy. It helps you understand how others may feel or think.\n\n'
@@ -440,10 +384,7 @@ List<Post> postData = [
     title: 'Sunk Cost Fallacy',
     datePosted: DateTime(2022, 6, 24),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '32',
     body: 'Be mindful of loss aversion and the sunk cost fallacy.\n\n'
         'Loss aversion - losses are more painful than gains are pleasurable - people will disproportionately prefer to avoid losses.\n\n'
         'Sunk cost fallacy - when people continue to invest time or money because of their previous sunk costs, regardless of whether future winnings look probable - chasing losses.\n\n'
@@ -455,10 +396,7 @@ List<Post> postData = [
     title: 'Exposure to Negativity',
     datePosted: DateTime(2022, 6, 17),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '31',
     body:
         'The vast majority of people either watch, listen to, or read "the news" on a regular basis.\n\n'
         '"The news" paints a picture of a terrible world where mostly negative things happen. This is because fear keeps people watching.\n\n'
@@ -475,10 +413,7 @@ List<Post> postData = [
     title: 'Ikigai',
     datePosted: DateTime(2022, 6, 10),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '30',
     body:
         'I have become enthralled by Japanese philosophy as of late, and one of the key concepts that keeps presenting itself is Ikigai.\n\n'
         'Ikigai can be loosely defined as purpose - a reason for living.\n\n'
@@ -492,10 +427,7 @@ List<Post> postData = [
     title: 'Self-Regulation',
     datePosted: DateTime(2022, 5, 27),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '29',
     body:
         'To be able to self-regulate effectively is to be able to control the way you feel and behave.\n\n'
         'The best tips I have come across on self-regulation:\n\n'
@@ -513,10 +445,7 @@ List<Post> postData = [
     title: 'Your Most Precious Commodities',
     datePosted: DateTime(2022, 5, 20),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '28',
     body: 'Your time and attention are your two most precious commodities.\n\n'
         'Do not waste either.\n\n'
         'In an era where we are inundated with overstimulating cues, it is important to be able to filter the vital few valuable cues from the trivial many unimportant cues to avoid information deluge.\n\n'
@@ -528,10 +457,7 @@ List<Post> postData = [
     title: 'Intuition',
     datePosted: DateTime(2022, 5, 13),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '27',
     body: 'If your intuition tells you something is off, it often is.\n\n'
         'Your subconscious is able to identify and analyse subtle cues whilst you are blissfully unaware.\n\n'
         'You must however, keep in mind that the subconscious is susceptible to biases.\n\n'
@@ -543,10 +469,7 @@ List<Post> postData = [
     title: 'External Stressors',
     datePosted: DateTime(2022, 4, 22),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '26',
     body: 'Stress is normal, but not always rational.\n\n'
         'When you are stressed by an external factor, it is not the factor itself that stresses you, but your interpretation of it.\n\n'
         '"There are more things ... likely to frighten us than there are to crush us; we suffer more often in imagination than reality."\n\n'
@@ -558,10 +481,7 @@ List<Post> postData = [
     title: 'Failure',
     datePosted: DateTime(2022, 4, 15),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '25',
     body: 'It is acceptable to fail, as long as you learn.\n\n'
         '"Courage is going form failure to failure without losing enthusiasm"\n\n'
         '- Winston Churchill\n\n'
@@ -571,10 +491,7 @@ List<Post> postData = [
     title: 'It\'s a Funny Old World',
     datePosted: DateTime(2022, 4, 8),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '24',
     body:
         'Particularly in times of peril, I think it important to find the humour in life.\n\n'
         'If you take everything too seriously, you will be burdened with unnecessary stress which will ultimately shorten your life.\n\n'
@@ -585,10 +502,7 @@ List<Post> postData = [
     title: 'Minimalism',
     datePosted: DateTime(2022, 3, 25),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '23',
     body:
         'Have you ever entered your home and been struck with an overwhelming wave of anxiety upon noticing the clutter?\n\n'
         'The overstimulating presence of clutter can cause a great deal of anxiety and distress.\n\n'
@@ -606,10 +520,7 @@ List<Post> postData = [
     title: 'Gratitude',
     datePosted: DateTime(2022, 3, 18),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '22',
     body: 'Remember what you have gained and what you have endured.\n\n'
         'Be grateful not only for the positive aspects of your life, but for the negative aspects which have made you more resilient and which you have learned from.\n\n'
         'Do not waste your time and energy trying to obtain things which you already have.\n\n'
@@ -621,10 +532,7 @@ List<Post> postData = [
     title: 'Should You Do It?',
     datePosted: DateTime(2022, 3, 7),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '21',
     body: 'Will it bring you joy?\n\n'
         'Will it make you a better person?\n\n'
         'If the answer is no to both of these questions, don\'t do it.',
@@ -633,10 +541,7 @@ List<Post> postData = [
     title: 'Don\'t Conform',
     datePosted: DateTime(2022, 2, 25),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '20',
     body: 'As social beings, we have a tendency to follow the herd.\n\n'
         'Do not blindly conform to social norms with which you disagree.\n\n'
         'Think for yourself and decide the best course of action regardless of what others are doing.',
@@ -645,10 +550,7 @@ List<Post> postData = [
     title: 'Memento Mori',
     datePosted: DateTime(2022, 2, 11),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '19',
     body: 'Memento Mori - meditate on your own death.\n\n'
         'Knowing you are mortal motivates you to live in a positive way during your brief window consciousness.',
   ),
@@ -656,10 +558,7 @@ List<Post> postData = [
     title: 'Negative Visualisation',
     datePosted: DateTime(2022, 1, 28),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '18',
     body:
         'Negative visualisation. What is it? Are we not supposed to think positively?\n\n'
         'It is a tool accredited to the philosophical field of Stoicism.\n\n'
@@ -678,10 +577,7 @@ List<Post> postData = [
     title: 'Change',
     datePosted: DateTime(2022, 1, 21),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '17',
     body: 'The only constants in life are change and uncertainty.\n\n'
         'If you try to resist change you will inevitably fail.\n\n'
         'Embrace change. Welcome it and capitalise on it.',
@@ -690,10 +586,7 @@ List<Post> postData = [
     title: 'Clarity of Communication',
     datePosted: DateTime(2022, 1, 7),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '16',
     body:
         'In a time where people socialise largely through short snippets of text, clarity in communication has become more important than ever.\n\n'
         'Have you ever read an SMS and misinterpreted the tone of the person sending the message?\n\n'
@@ -703,10 +596,7 @@ List<Post> postData = [
     title: 'Body Mass Loss: an outcome',
     datePosted: DateTime(2021, 12, 9),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '15',
     body:
         'Weight loss (body mass reduction) is not a behaviour, it is an outcome - it is therefore not under your direct control.\n\n'
         'People (myself included) tend to set weight loss as a goal.\n\n'
@@ -721,10 +611,7 @@ List<Post> postData = [
     title: 'Mindfulness',
     datePosted: DateTime(2021, 11, 25),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '14',
     body: '"Those who are depressed are living in the past.\n\n'
         'Those who are anxious are living in the future.\n\n'
         'Those who are at peace are living in the present."\n\n'
@@ -738,10 +625,7 @@ List<Post> postData = [
     title: 'Human-Technology Symbiosis',
     datePosted: DateTime(2021, 11, 23),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '13',
     body:
         'In the modern world, we are inundated with means of technological progression.\n\n'
         'Some embrace the change, whilst others fear the change.\n\n'
@@ -755,10 +639,7 @@ List<Post> postData = [
     title: 'Transcend the Comfort Zone',
     datePosted: DateTime(2021, 11, 12),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '12',
     body: 'Improvement requires discomfort.\n\n'
         'If you want to break the plateau, push beyond your comfort zone.',
   ),
@@ -766,10 +647,7 @@ List<Post> postData = [
     title: 'Procrastination: the catalyst of anxiety',
     datePosted: DateTime(2021, 11, 5),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '11',
     body:
         'The more I procrastinate - the more I delay the commencement of work, the more anxious I become.\n\n'
         'The inertia or "resistance" that stops me from completing productive work is somehow so intangible, yet so difficult to overcome.\n\n'
@@ -781,20 +659,14 @@ List<Post> postData = [
     title: 'Habits',
     datePosted: DateTime(2021, 10, 31),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '10',
     body: 'Motivation is fleeting, habits persist',
   ),
   Post(
     title: 'Scratch That Itch',
     datePosted: DateTime(2021, 10, 25),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '9',
     body: 'It is Sunday afternoon.\n\n'
         'You have existed as one with the couch all day.\n\n'
         'You have eaten copious amounts of food that you ought not eat regularly.\n\n'
@@ -808,10 +680,7 @@ List<Post> postData = [
     title: 'Placebo',
     datePosted: DateTime(2021, 10, 18),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '8',
     body:
         'A placebo will be ineffective when the recipient is aware it is a placebo.\n\n'
         'Ignorance is bliss.',
@@ -820,10 +689,7 @@ List<Post> postData = [
     title: 'Consistency is Key',
     datePosted: DateTime(2021, 10, 5),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '7',
     body: 'When it comes to exercise, consistency trumps intensity.\n\n'
         'You would be better served completing 12 moderate intensity exercise bouts in a month than doing 2 very high intensity bouts in a month.\n\n'
         'The best way to create positive adaptations is to continue to turn up.\n\n'
@@ -834,10 +700,7 @@ List<Post> postData = [
     title: 'Black Swans',
     datePosted: DateTime(2021, 9, 21),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '6',
     body: 'Absence of evidence is not evidence of absence.\n\n'
         'In his book; The Black Swan, Nassim Nicholas Taleb speaks about, well, Black Swans.\n\n'
         'They are the highly improbable and unpredicted events that often shape the world as we perceive it.\n\n'
@@ -851,10 +714,7 @@ List<Post> postData = [
     title: 'Science',
     datePosted: DateTime(2021, 9, 11),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '5',
     body:
         'What makes scientific evidence such a reputable source of information?\n\n'
         'The goal of science is to form a hypothesis and try to disprove it - once a hypothesis is formed, a scientist will actively strive to prove the hypothesis wrong.\n\n'
@@ -865,10 +725,7 @@ List<Post> postData = [
     title: 'Body Mass Reduction',
     datePosted: DateTime(2021, 6, 25),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '4',
     body:
         'Today we are inundated with information on how to lose weight (mass).\n\n'
         'A quick note on weight and mass - weight is the amount of force exerted on an object by gravity. It is related to mass, but if gravity is altered, your weight can vary immensely.\n\n'
@@ -884,10 +741,7 @@ List<Post> postData = [
     title: 'Chronic Pain',
     datePosted: DateTime(2021, 6, 24),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '3',
     body:
         'It is possible to have tissue damage without pain or pain without tissue damage.\n\n'
         'Such is the problem with chronic pain.',
@@ -896,10 +750,7 @@ List<Post> postData = [
     title: 'Rest',
     datePosted: DateTime(2021, 6, 22),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '2',
     body:
         'If you wish to improve your physical capacity, you must pay attention to rest.\n\n'
         'At rest is when you consolidate improvements and allow your body to adapt.\n\n'
@@ -909,10 +760,7 @@ List<Post> postData = [
     title: 'Motion',
     datePosted: DateTime(2021, 2, 24),
     image: 'images/1.png',
-    tags: [
-      'Philosophy',
-      'Comedy',
-    ],
+    id: '1',
     body:
         '"Our nature consists in motion; complete rest is death." \n\n- Blaise Pascal',
   ),

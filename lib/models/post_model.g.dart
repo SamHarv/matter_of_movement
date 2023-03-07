@@ -21,7 +21,7 @@ class PostAdapter extends TypeAdapter<Post> {
       body: fields[1] as String,
       datePosted: fields[2] as DateTime,
       image: fields[3] as String,
-      tags: (fields[4] as List).cast<String>(),
+      id: fields[4] as String,
     );
   }
 
@@ -38,7 +38,7 @@ class PostAdapter extends TypeAdapter<Post> {
       ..writeByte(3)
       ..write(obj.image)
       ..writeByte(4)
-      ..write(obj.tags);
+      ..write(obj.id);
   }
 
   @override

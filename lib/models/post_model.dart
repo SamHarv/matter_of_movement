@@ -13,7 +13,7 @@ class Post extends HiveObject {
   @HiveField(3)
   final String image;
   @HiveField(4)
-  final List<String> tags;
+  final String id;
 
   Post({
     required this.title,
@@ -21,7 +21,7 @@ class Post extends HiveObject {
         'Please check back again soon',
     required this.datePosted,
     required this.image,
-    required this.tags,
+    required this.id,
   });
 
   @override

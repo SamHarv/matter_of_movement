@@ -41,7 +41,12 @@ class MoM extends StatelessWidget {
 }
 
 //todo: 
-//fix refresh/ link copy & paste issue
+//fix refresh/ link copy & paste issue - cannot use extra - must use params - try to implement postData[].id to navigate
+//Implement SEO changes
+
+//Digby:
+// Replace boosters
+// Publish to PlayStore & AppStore
 
 //To Update Firebase:
 //Save project;

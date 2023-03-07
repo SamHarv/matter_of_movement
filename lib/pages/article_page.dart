@@ -13,12 +13,12 @@ import '../widgets/custom_appbar.dart';
 
 class ArticlePage extends StatefulWidget {
   final Post post;
-  final bool fromFavouritesPage;
+  final String id;
 
   const ArticlePage({
     super.key,
     required this.post,
-    this.fromFavouritesPage = false,
+    required this.id,
   });
 
   @override
@@ -31,6 +31,7 @@ class _ArticlePageState extends State<ArticlePage> {
     final double mediaWidth = MediaQuery.of(context).size.width;
     final provider = Provider.of<FavouriteProvider>(context);
     final favourites = provider.favouritePosts;
+//Test
     final favouritePost = favourites.firstWhere(
       (post) => post.title == widget.post.title,
       orElse: () => widget.post,
@@ -46,7 +47,24 @@ class _ArticlePageState extends State<ArticlePage> {
     final nextFavouritePost = currentFavouriteIndex < favourites.length - 1
         ? favourites[currentFavouriteIndex + 1]
         : null;
-    //final favouritePost = favourites[widget.postIndex];
+    //End test
+
+    // final favouritePost = favourites.firstWhere(
+    //   (post) => post.title == widget.post.title,
+    //   orElse: () => widget.post,
+    // );
+    // final currentIndex = postData.indexOf(widget.post);
+    // final prevPost = currentIndex > 0 ? postData[currentIndex - 1] : null;
+    // final nextPost =
+    //     currentIndex < postData.length - 1 ? postData[currentIndex + 1] : null;
+    // final currentFavouriteIndex = favourites.indexOf(widget.post);
+    // final prevFavouritePost = currentFavouriteIndex > 0
+    //     ? favourites[currentFavouriteIndex - 1]
+    //     : null;
+    // final nextFavouritePost = currentFavouriteIndex < favourites.length - 1
+    //     ? favourites[currentFavouriteIndex + 1]
+    //     : null;
+
     return GestureDetector(
       child: Scaffold(
         drawer: appDrawer,
@@ -123,7 +141,9 @@ class _ArticlePageState extends State<ArticlePage> {
                       ? FloatingActionButton(
                           onPressed: () {
                             if (prevFavouritePost != null) {
-                              context.go('/article', extra: prevFavouritePost);
+                              String location = prevFavouritePost.id;
+                              context.go('/article/$location',
+                                  extra: prevFavouritePost);
                             }
                           },
                           backgroundColor: secondaryColor,
@@ -143,7 +163,8 @@ class _ArticlePageState extends State<ArticlePage> {
                   FloatingActionButton(
                     onPressed: () {
                       if (prevPost != null) {
-                        context.go('/article', extra: prevPost);
+                        String location = prevPost.id;
+                        context.go('/article/$location', extra: prevPost);
                       }
                     },
                     backgroundColor: secondaryColor,
@@ -162,7 +183,9 @@ class _ArticlePageState extends State<ArticlePage> {
                       ? FloatingActionButton(
                           onPressed: () {
                             if (nextFavouritePost != null) {
-                              context.go('/article', extra: nextFavouritePost);
+                              String location = nextFavouritePost.id;
+                              context.go('/article/$location',
+                                  extra: nextFavouritePost);
                             }
                           },
                           backgroundColor: secondaryColor,
@@ -182,7 +205,8 @@ class _ArticlePageState extends State<ArticlePage> {
                   FloatingActionButton(
                     onPressed: () {
                       if (nextPost != null) {
-                        context.go('/article', extra: nextPost);
+                        String location = nextPost.id;
+                        context.go('/article/$location', extra: nextPost);
                       }
                     },
                     backgroundColor: secondaryColor,

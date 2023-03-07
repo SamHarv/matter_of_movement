@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../constants.dart';
 
+import '../post_data.dart';
 import '../providers/favourite_provider.dart';
 
 import '../widgets/custom_appbar.dart';
@@ -54,10 +55,11 @@ class FavouritesPage extends StatelessWidget {
                     title: post.title,
                     image: post.image,
                     datePosted: post.datePosted,
-                    onTap: () => context.go(
-                      '/article',
-                      extra: post,
-                    ),
+                    onTap: () {
+                      String location = post.id;
+                      context.go('/article/$location', extra: post);
+                    },
+                    //onTap: () => context.go('/article', extra: post),
                     icon: IconButton(
                       icon: const Icon(Icons.star),
                       onPressed: () {

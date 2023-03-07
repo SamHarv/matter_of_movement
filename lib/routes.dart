@@ -8,7 +8,7 @@ import './pages/home_page.dart';
 import './pages/about_page.dart';
 import './pages/favourites_page.dart';
 import './pages/article_page.dart';
-import 'models/post_model.dart';
+import './models/post_model.dart';
 
 final router = GoRouter(
   initialLocation: '/',
@@ -42,8 +42,16 @@ final router = GoRouter(
       builder: (context, state) => const Subscribed(),
     ),
     GoRoute(
-      path: '/article',
-      builder: (context, state) => ArticlePage(post: state.extra! as Post),
-    ),
+        path: '/article/:id',
+        builder: (context, state) {
+          return ArticlePage(
+            id: state.params['id']!,
+            post: state.extra! as Post,
+          );
+        }),
+    // GoRoute(
+    //   path: '/article',
+    //   builder: (context, state) => ArticlePage(post: state.extra! as Post),
+    // ),
   ],
 );
