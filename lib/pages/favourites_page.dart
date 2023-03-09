@@ -1,5 +1,6 @@
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import '../constants.dart';
@@ -10,15 +11,22 @@ import '../widgets/custom_appbar.dart';
 import '../widgets/post_tile.dart';
 
 class FavouritesPage extends StatelessWidget {
-  const FavouritesPage({
-    super.key,
-  });
+  const FavouritesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     final double mediaWidth = MediaQuery.of(context).size.width;
     final provider = Provider.of<FavouriteProvider>(context);
     final favouritePosts = provider.favouritePosts;
+    int adaptiveWidth() {
+      if (mediaWidth <= 750) {
+        return 2;
+      } else if (mediaWidth > 750 && mediaWidth <= 1250) {
+        return 3;
+      } else {
+        return 4;
+      }
+    }
 
     return Scaffold(
       drawer: appDrawer,
@@ -41,7 +49,7 @@ class FavouritesPage extends StatelessWidget {
             ),
             SliverGrid(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: mediaWidth <= 750 ? 2 : 3,
+                crossAxisCount: adaptiveWidth(),
                 mainAxisSpacing: 10,
                 crossAxisSpacing: 10,
                 childAspectRatio: 1.2,
@@ -51,7 +59,7 @@ class FavouritesPage extends StatelessWidget {
                 (context, index) {
                   final post = favouritePosts[index];
                   return PostTile(
-                    title: post.title,
+                    title: post!.title,
                     image: post.image,
                     datePosted: post.datePosted,
                     onTap: () {
@@ -62,8 +70,27 @@ class FavouritesPage extends StatelessWidget {
                     icon: IconButton(
                       icon: const Icon(Icons.star),
                       onPressed: () {
+                        final snackBar = SnackBar(
+                          content: Text(
+                            provider.isInFavourites(post)
+                                ? 'Removed from Favourites'
+                                : 'Added to Favourites',
+                          ),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8)),
+                          backgroundColor: color,
+                          action: SnackBarAction(
+                            label: 'undo',
+                            textColor: Colors.white,
+                            onPressed: () => provider.toggleFavourite(post),
+                          ),
+                        );
+                        WidgetsBinding.instance
+                            .addPostFrameCallback((timeStamp) {
+                          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        });
                         provider.toggleFavourite(post);
-                        provider.removeItem(post);
+                        HapticFeedback.mediumImpact();
                       },
                       color: thirdColor,
                     ),

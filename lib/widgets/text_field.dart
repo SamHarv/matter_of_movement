@@ -28,6 +28,7 @@ class MyTextField extends StatelessWidget {
           hintText: hintText,
           hintStyle: TextStyle(
             color: Colors.grey[500],
+            fontSize: 20,
           ),
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(

@@ -17,13 +17,62 @@ final routerDelegate = BeamerDelegate(
   initialPath: '/',
   locationBuilder: RoutesLocationBuilder(
     routes: {
-      '/': (context, state, data) => const HomePage(),
-      '/about': (context, state, data) => const AboutPage(),
-      '/favourites': (context, state, data) => const FavouritesPage(),
-      '/books': (context, state, data) => const BookListPage(),
-      '/subscribe': (context, state, data) => const SubscribePage(),
-      '/auth': (context, state, data) => const AuthPage(),
-      '/subscribed': (context, state, data) => const Subscribed(),
+      '/': (context, state, data) {
+        return const BeamPage(
+          key: ValueKey(''),
+          type: BeamPageType.fadeTransition,
+          title: 'Matter of Movement',
+          child: HomePage(),
+        );
+      },
+      '/about': (context, state, data) {
+        return const BeamPage(
+          key: ValueKey('about'),
+          type: BeamPageType.fadeTransition,
+          title: 'About - Matter of Movement',
+          child: AboutPage(),
+        );
+      },
+      '/favourites': (context, state, data) {
+        return const BeamPage(
+          key: ValueKey('favourites'),
+          type: BeamPageType.fadeTransition,
+          title: 'Favourite Posts - Matter of Movement',
+          child: FavouritesPage(),
+        );
+      },
+      '/books': (context, state, data) {
+        return const BeamPage(
+          key: ValueKey('books'),
+          type: BeamPageType.fadeTransition,
+          title: 'Top 100 Books - Matter of Movement',
+          child: BookListPage(),
+        );
+      },
+      '/subscribe': (context, state, data) {
+        return const BeamPage(
+          key: ValueKey('subscribe'),
+          type: BeamPageType.fadeTransition,
+          title: 'Subscribe - Matter of Movement',
+          child: SubscribePage(),
+        );
+      },
+      '/auth': (context, state, data) {
+        return const BeamPage(
+          key: ValueKey('auth'),
+          type: BeamPageType.fadeTransition,
+          title: 'Subscribe - Matter of Movement',
+          child: AuthPage(),
+        );
+      },
+      '/subscribed': (context, state, data) {
+        return const BeamPage(
+          key: ValueKey('subscribed'),
+          type: BeamPageType.fadeTransition,
+          title: 'Subscribed - Matter of Movement',
+          child: Subscribed(),
+        );
+      },
       '/article/:id': (context, state, data) {
         final postId = state.pathParameters['id'];
         final post = postData.firstWhere((post) => post.id == postId);

@@ -1,5 +1,5 @@
 PODS:
-  - cloud_functions (4.0.7):
+  - cloud_functions (4.0.11):
     - Firebase/CoreOnly (~> 10.3.0)
     - Firebase/Functions (~> 10.3.0)
     - firebase_core
@@ -17,7 +17,7 @@ PODS:
     - Firebase/CoreOnly (~> 10.3.0)
     - firebase_core
     - FlutterMacOS
-  - firebase_core (2.4.1):
+  - firebase_core (2.7.0):
     - Firebase/CoreOnly (~> 10.3.0)
     - FlutterMacOS
   - FirebaseAppCheckInterop (10.3.0)
@@ -108,10 +108,10 @@ EXTERNAL SOURCES:
     :path: Flutter/ephemeral/.symlinks/plugins/url_launcher_macos/macos
 
 SPEC CHECKSUMS:
-  cloud_functions: d7b704ffe68cf2ae041054fdd854de9e2fc231f2
+  cloud_functions: d14a5472c73fa4e9b921a45aacc22fe0dcd20856
   Firebase: f92fc551ead69c94168d36c2b26188263860acd9
   firebase_auth: aa3a4e0358dabcb896cd8c57fb39a506d17b4409
-  firebase_core: 651a84636254f758b9b9367f27bef0801a3855a2
+  firebase_core: 2569fb36c8e95ab963e04d8d9fdc9f0f1d297765
   FirebaseAppCheckInterop: 9fc57dfa08f0abb737b185ea065422b55355c909
   FirebaseAuth: 0e415d29d846c1dce2fb641e46f35e9888d9bec6
   FirebaseAuthInterop: 7a766bd56971347e0de4b7674aaa62ddc7820097
@@ -124,9 +124,9 @@ SPEC CHECKSUMS:
   FlutterMacOS: 8f6f14fa908a6fb3fba0cd85dbd81ec4b251fb24
   GoogleUtilities: bad72cb363809015b1f7f19beb1f1cd23c589f95
   GTMSessionFetcher: c1edebe64e9fb4e8f6415d018edf1fd3eac074a1
-  path_provider_foundation: 37748e03f12783f9de2cb2c4eadfaa25fe6d4852
+  path_provider_foundation: c68054786f1b4f3343858c1e1d0caaded73f0be9
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
-  url_launcher_macos: c04e4fa86382d4f94f6b38f14625708be3ae52e2
+  url_launcher_macos: 5335912b679c073563f29d89d33d10d459f95451
 
 PODFILE CHECKSUM: 353c8bcc5d5b0994e508d035b5431cfe18c1dea7
 

@@ -1,5 +1,6 @@
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import '../constants.dart';
@@ -33,7 +34,7 @@ class _ArticlePageState extends State<ArticlePage> {
     final favourites = provider.favouritePosts;
 
     final favouritePost = favourites.firstWhere(
-      (post) => post.title == widget.post.title,
+      (post) => post!.title == widget.post.title,
       orElse: () => widget.post,
     );
     final currentIndex = postData.indexOf(widget.post);
@@ -69,6 +70,28 @@ class _ArticlePageState extends State<ArticlePage> {
                               : const Icon(Icons.star_border),
                           onPressed: () {
                             provider.toggleFavourite(widget.post);
+                            HapticFeedback.mediumImpact();
+                            final snackBar = SnackBar(
+                              content: Text(
+                                provider.isInFavourites(widget.post)
+                                    ? 'Removed from Favourites'
+                                    : 'Added to Favourites',
+                              ),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8)),
+                              backgroundColor: color,
+                              action: SnackBarAction(
+                                label: 'undo',
+                                textColor: Colors.white,
+                                onPressed: () =>
+                                    provider.toggleFavourite(widget.post),
+                              ),
+                            );
+                            WidgetsBinding.instance
+                                .addPostFrameCallback((timeStamp) {
+                              ScaffoldMessenger.of(context)
+                                  .showSnackBar(snackBar);
+                            });
                           },
                           iconSize: 24,
                           padding: kPadding,
@@ -78,7 +101,7 @@ class _ArticlePageState extends State<ArticlePage> {
                           child: Container(
                             padding: kPadding,
                             child: Text(
-                              favouritePost.title,
+                              favouritePost!.title,
                               //post.title,
                               textAlign: TextAlign.center,
                               style: headingStyle,

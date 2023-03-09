@@ -28,7 +28,6 @@ class _SubscribedState extends State<Subscribed> {
     Navigator.pop(context);
   }
 
-  //void unsubscribe() => FirebaseAuth.instance.signOut();
   @override
   Widget build(BuildContext context) {
     final double mediaWidth = MediaQuery.of(context).size.width;

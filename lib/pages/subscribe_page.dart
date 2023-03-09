@@ -101,12 +101,17 @@ class _SubscribePageState extends State<SubscribePage> {
                     backgroundColor: MaterialStateProperty.all<Color>(
                       color,
                     ),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(32.0),
+                      ),
+                    ),
                   ),
                   onPressed: createUser,
                   child: const Text(
                     'Submit',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 20,
                     ),
                   ),
                 ),

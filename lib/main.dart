@@ -19,6 +19,7 @@ Future<void> main() async {
   );
   await Hive.initFlutter();
   Hive.registerAdapter(PostAdapter());
+  await Hive.openBox<Post>('post-box');
   setPathUrlStrategy();
   runApp(const MoM());
 }
@@ -28,10 +29,8 @@ class MoM extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (context) => FavouriteProvider()),
-      ],
+    return ChangeNotifierProvider(
+      create: (context) => FavouriteProvider(),
       child: MaterialApp.router(
         theme: ThemeData(primaryColor: color),
         //darkTheme: ThemeData.dark(),
@@ -45,10 +44,13 @@ class MoM extends StatelessWidget {
 }
 
 //todo: 
-//Implement SEO changes
+//Fix issue of toggleFavourite not working on HomePage after refresh
 
 //Digby:
 // Replace boosters
+// Add texture to barriers and round the corners
+// Get Domain name
+// Add URL strategy
 // Publish to PlayStore & AppStore
 
 //To Update Firebase:
