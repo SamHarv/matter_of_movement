@@ -85,10 +85,10 @@ class FavouritesPage extends StatelessWidget {
                             onPressed: () => provider.toggleFavourite(post),
                           ),
                         );
-                        WidgetsBinding.instance
-                            .addPostFrameCallback((timeStamp) {
-                          ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                        });
+                        // WidgetsBinding.instance
+                        //     .addPostFrameCallback((timeStamp) {
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        //});
                         provider.toggleFavourite(post);
                         HapticFeedback.mediumImpact();
                       },

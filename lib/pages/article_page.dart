@@ -87,11 +87,11 @@ class _ArticlePageState extends State<ArticlePage> {
                                     provider.toggleFavourite(widget.post),
                               ),
                             );
-                            WidgetsBinding.instance
-                                .addPostFrameCallback((timeStamp) {
-                              ScaffoldMessenger.of(context)
-                                  .showSnackBar(snackBar);
-                            });
+                            // WidgetsBinding.instance
+                            //     .addPostFrameCallback((timeStamp) {
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(snackBar);
+                            //});
                           },
                           iconSize: 24,
                           padding: kPadding,

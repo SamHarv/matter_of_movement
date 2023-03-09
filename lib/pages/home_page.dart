@@ -82,10 +82,10 @@ class HomePage extends StatelessWidget {
                             onPressed: () => provider.toggleFavourite(post),
                           ),
                         );
-                        WidgetsBinding.instance
-                            .addPostFrameCallback((timeStamp) {
-                          ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                        });
+                        // WidgetsBinding.instance
+                        //     .addPostFrameCallback((timeStamp) {
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        //});
                       },
                       color: thirdColor,
                     ),
