@@ -1,16 +1,16 @@
 import './models/post_model.dart';
 
 List<Post> postData = [
-  // Post(
-  //   title: 'Take Ownership',
-  //   datePosted: DateTime(2022, 3, 10),
-  //   image: 'images/1.png',
-  //   id: '64',
-  //   body: 'If you are somehow involved in an error, a mistake.\n\n'
-  //       'Take responsibility.\n\n'
-  //       'You may not feel it is your fault, but blame is not productive.\n\n'
-  //       'You will be looked upon more favourably by others if you own mistakes, and seek ways to fix them.',
-  // ),
+  Post(
+    title: 'Take Ownership',
+    datePosted: DateTime(2022, 3, 10),
+    image: 'images/1.png',
+    id: '64',
+    body: 'If you are somehow involved in an error, a mistake.\n\n'
+        'Take responsibility.\n\n'
+        'You may not feel it is your fault, but blame is not productive.\n\n'
+        'You will be looked upon more favourably by others if you own mistakes, and seek ways to fix them.',
+  ),
   Post(
     title: 'Multitasking',
     datePosted: DateTime(2022, 3, 3),

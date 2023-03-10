@@ -46,13 +46,6 @@ class MoM extends StatelessWidget {
 //todo: 
 //Fix issue of toggleFavourite not working on HomePage after refresh
 
-//Digby:
-// Replace boosters
-// Add texture to barriers and round the corners
-// Get Domain name
-// Add URL strategy
-// Publish to PlayStore & AppStore
-
 //To Update Firebase:
 //Save project;
 //Change the version on pubspec.yaml (from 1.0.0+1 to 1.0.1+1 for example);

@@ -70,6 +70,8 @@ class FavouritesPage extends StatelessWidget {
                     icon: IconButton(
                       icon: const Icon(Icons.star),
                       onPressed: () {
+                        provider.toggleFavourite(post);
+                        HapticFeedback.mediumImpact();
                         final snackBar = SnackBar(
                           content: Text(
                             provider.isInFavourites(post)
@@ -85,12 +87,7 @@ class FavouritesPage extends StatelessWidget {
                             onPressed: () => provider.toggleFavourite(post),
                           ),
                         );
-                        // WidgetsBinding.instance
-                        //     .addPostFrameCallback((timeStamp) {
                         ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                        //});
-                        provider.toggleFavourite(post);
-                        HapticFeedback.mediumImpact();
                       },
                       color: thirdColor,
                     ),
