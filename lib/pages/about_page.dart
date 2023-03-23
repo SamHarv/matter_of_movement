@@ -4,7 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../widgets/custom_appbar.dart';
 
-final Uri _url = Uri.parse('https://google.com'); //this will be O2 Tech url
+final Uri _url = Uri.parse('https://oxygentech.com.au');
 
 Future<void> _launchUrl() async {
   if (!await launchUrl(_url)) {
@@ -88,7 +88,7 @@ class AboutPage extends StatelessWidget {
                     TextButton(
                       onPressed: _launchUrl,
                       child: Text(
-                        'oxygentech.com.au (coming soon)',
+                        'oxygentech.com.au',
                         style: bodyStyle,
                       ),
                     ),

@@ -2,6 +2,30 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Under Promise and Over Deliver',
+    datePosted: DateTime(2022, 3, 24),
+    image: 'images/1.png',
+    id: '66',
+    body:
+        'In the words of Phil Dunphy, "You will never be disappointed if you just lower your expectations".\n\n'
+        'Whilst this is somewhat of a demotivating theme, the premise I take from it is that you should under promise, and over deliver.\n\n'
+        'This will build trust.',
+  ),
+  Post(
+    title: 'Priority',
+    datePosted: DateTime(2022, 3, 17),
+    image: 'images/1.png',
+    id: '65',
+    body:
+        'The word priority is derived from the Latin prioritas, which means first, and only first in rank.\n\n'
+        'Nowadays we often have a list of several priorities, when the original definition involves having one most important thing.\n\n'
+        'Rather than developing only a list of priorities, it is important to be able to single out the one priority at any given time.\n\n'
+        '"To do two things at once is to do neither"\n'
+        '- Publilius Syrus\n\n'
+        'Ask yourself - what is the one thing you can do such that by doing it everything else will become easier or unnecessary?\n'
+        '- The One Thing, Gary W. Keller & Jay Papasan',
+  ),
+  Post(
     title: 'Take Ownership',
     datePosted: DateTime(2022, 3, 10),
     image: 'images/1.png',
