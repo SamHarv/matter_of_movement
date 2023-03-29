@@ -2,6 +2,19 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Move with Purpose',
+    datePosted: DateTime(2022, 3, 31),
+    image: 'images/1.png',
+    id: '67',
+    body: 'I have found great value in moving mindfully.\n\n'
+        'Moving with purpose. With intent.\n\n'
+        'When you witness someone moving mindfully, not wasting any movements, it is a beauty to behold.\n\n'
+        'In situations such as conducting surgery, moving mindfully is of utmost importance.\n\n'
+        'But for those of us who are not sufficiently trained to perform surgery, value can still be found in this practice.\n\n'
+        'It may be something as trivial as stacking your dishwasher.\n\n'
+        'If you are consciously aware of your movements, you will make less errors, enable smoother motion, and likely experience tranquility.',
+  ),
+  Post(
     title: 'Under Promise and Over Deliver',
     datePosted: DateTime(2022, 3, 24),
     image: 'images/1.png',
