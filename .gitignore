@@ -9,6 +9,8 @@
 .history
 .svn/
 migrate_working_dir/
+**android/key.properties
+**macos/Runner/GoogleService-Info.plist
 
 # IntelliJ related
 *.iml
