@@ -1,17 +1,17 @@
 import './models/post_model.dart';
 
 List<Post> postData = [
-  // Post(
-  //   title: 'Values Over Beliefs',
-  //   datePosted: DateTime(2022, 4, 7),
-  //   image: 'images/1.png',
-  //   id: '68',
-  //   body:
-  //       'Define your identity in terms of values rather than beliefs or opinions.\n\n'
-  //       'Those who define themselves in terms of their beliefs or opinions will be far less likely to change and learn.\n\n'
-  //       'If you define yourself in terms of values, your beliefs and opinions can change freely.\n\n'
-  //       'This allows growth and progress.',
-  // ),
+  Post(
+    title: 'Values Over Beliefs',
+    datePosted: DateTime(2022, 4, 7),
+    image: 'images/1.png',
+    id: '68',
+    body:
+        'Define your identity in terms of values rather than beliefs or opinions.\n\n'
+        'Those who define themselves in terms of their beliefs or opinions will be far less likely to change and learn.\n\n'
+        'If you define yourself in terms of values, your beliefs and opinions can change freely.\n\n'
+        'This allows growth and progress.',
+  ),
   Post(
     title: 'Move with Purpose',
     datePosted: DateTime(2022, 3, 31),
