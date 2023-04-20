@@ -2,6 +2,31 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Fear of Technology',
+    datePosted: DateTime(2022, 4, 21),
+    image: 'images/1.png',
+    id: '70',
+    body:
+        'In the modern world, we are inundated with means of technological progression.\n\n'
+        'Some embrace change, while others fear it.\n\n'
+        'If your fear of technology such as artificial intelligence replacing you prevents you from using the latest advancements in technology, you may be replaced.\n\n'
+        'Not by artificial intelligence, but rather by someone who uses artificial intelligence.\n\n'
+        'Someone who uses technology in a symbiotic relationship.\n\n'
+        'If you do not welcome change, it will bypass you, and you will be caught with quill in hand and parchment sprawled over the table writing six words per minute while your competition is dictating emails on their morning walk to grab a coffee.\n\n'
+        'Accept change and enhance your worth, because progress will continue with out without you.',
+  ),
+  Post(
+    title: 'Correlation Does Not Equal Causation',
+    datePosted: DateTime(2022, 4, 14),
+    image: 'images/1.png',
+    id: '69',
+    body:
+        'Often with a little help from the media, people confuse correlation with causation.\n\n'
+        'This is the root of many superstitions and other illogical behaviour.\n\n'
+        'Do not jump to conclusions based off a correlation in just two data points.\n\n'
+        'Strong evidence requires a large sample size and correlation does not equal causation.',
+  ),
+  Post(
     title: 'Values Over Beliefs',
     datePosted: DateTime(2022, 4, 7),
     image: 'images/1.png',
