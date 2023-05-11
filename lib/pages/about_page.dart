@@ -70,8 +70,8 @@ class AboutPage extends StatelessWidget {
               ),
               Container(
                 padding: kPadding,
-                child: Column(
-                  children: const [
+                child: const Column(
+                  children: [
                     Text(
                       'Sam Harvey\n\n'
                       'Oxygen Tech\n',

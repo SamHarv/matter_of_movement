@@ -2,6 +2,17 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Take a Risk',
+    datePosted: DateTime(2022, 5, 12),
+    image: 'images/1.png',
+    id: '73',
+    body: 'It has never been safer to take a risk.\n\n'
+        'Most of us will not end up homeless or starving if our risk does not pay off.\n\n'
+        'We grow so accustomed to our comfort zone that we forget we are not actually in danger.\n\n'
+        '"People choose unhappiness over uncertainty" - Tim Ferris.\n\n'
+        'Sometimes a small risk will pay large dividends, so stop putting it off and take the plunge.',
+  ),
+  Post(
     title: 'Energy Management',
     datePosted: DateTime(2022, 5, 5),
     image: 'images/1.png',

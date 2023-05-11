@@ -32,7 +32,10 @@ class MoM extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => FavouriteProvider(),
       child: MaterialApp.router(
-        theme: ThemeData(primaryColor: color),
+        theme: ThemeData(
+          primaryColor: color,
+          //useMaterial3: true,
+        ),
         //darkTheme: ThemeData.dark(),
         routerDelegate: routerDelegate,
         routeInformationParser: BeamerParser(),

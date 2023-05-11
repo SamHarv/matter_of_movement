@@ -38,9 +38,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             : Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.start,
-                    children: const [
+                    children: [
                       AppBarMenuItem(
                         title: 'Home',
                         route: '/',
