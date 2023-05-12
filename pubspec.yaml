@@ -50,6 +50,7 @@ dependencies:
   flutter_native_splash: ^2.2.18
   beamer: ^1.5.3
   firebase_core_web: 2.0.2
+  shared_preferences: ^2.1.1
 
 flutter_native_splash:
   color: "#ffffff"

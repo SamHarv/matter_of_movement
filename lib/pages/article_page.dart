@@ -30,6 +30,16 @@ class _ArticlePageState extends State<ArticlePage> {
   @override
   Widget build(BuildContext context) {
     final double mediaWidth = MediaQuery.of(context).size.width;
+    final darkModeProvider = Provider.of<FavouriteProvider>(context);
+    final isDarkMode = darkModeProvider.darkMode;
+    TextStyle headingStyle = TextStyle(
+      fontSize: 30.0,
+      color: isDarkMode ? Colors.blueAccent : color,
+    );
+    TextStyle bodyStyle = TextStyle(
+      fontSize: 20.0,
+      color: isDarkMode ? thirdColor : secondaryColor,
+    );
     final provider = Provider.of<FavouriteProvider>(context);
     final favourites = provider.favouritePosts;
 
@@ -66,8 +76,12 @@ class _ArticlePageState extends State<ArticlePage> {
                       children: [
                         IconButton(
                           icon: provider.isInFavourites(widget.post)
-                              ? const Icon(Icons.star)
-                              : const Icon(Icons.star_border),
+                              ? Icon(Icons.star,
+                                  color:
+                                      isDarkMode ? thirdColor : secondaryColor)
+                              : Icon(Icons.star_border,
+                                  color:
+                                      isDarkMode ? thirdColor : secondaryColor),
                           onPressed: () {
                             provider.toggleFavourite(widget.post);
                             HapticFeedback.mediumImpact();

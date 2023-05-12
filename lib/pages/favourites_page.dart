@@ -16,6 +16,12 @@ class FavouritesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double mediaWidth = MediaQuery.of(context).size.width;
+    final darkModeProvider = Provider.of<FavouriteProvider>(context);
+    final isDarkMode = darkModeProvider.darkMode;
+    TextStyle headingStyle = TextStyle(
+      fontSize: 30.0,
+      color: isDarkMode ? Colors.blueAccent : color,
+    );
     final provider = Provider.of<FavouriteProvider>(context);
     final favouritePosts = provider.favouritePosts;
     int adaptiveWidth() {
@@ -39,7 +45,7 @@ class FavouritesPage extends StatelessWidget {
               delegate: SliverChildListDelegate([
                 Container(
                   padding: kPadding,
-                  child: const Text(
+                  child: Text(
                     'Favourites',
                     textAlign: TextAlign.center,
                     style: headingStyle,

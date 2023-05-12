@@ -13,13 +13,13 @@ import './pages/favourites_page.dart';
 import './pages/article_page.dart';
 
 final routerDelegate = BeamerDelegate(
-  notFoundRedirectNamed: '/',
-  initialPath: '/',
+  notFoundRedirectNamed: '/home',
+  initialPath: '/home',
   locationBuilder: RoutesLocationBuilder(
     routes: {
-      '/': (context, state, data) {
+      '/home': (context, state, data) {
         return const BeamPage(
-          key: ValueKey(''),
+          key: ValueKey('home'),
           type: BeamPageType.fadeTransition,
           title: 'Matter of Movement',
           child: HomePage(),

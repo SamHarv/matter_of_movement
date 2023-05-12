@@ -1,24 +1,27 @@
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
+import 'package:matterofmovement/providers/favourite_provider.dart';
+import 'package:provider/provider.dart';
 
 import '../constants.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
 
-  Widget buildListTile(String title, IconData icon, dynamic tapHandler) {
+  Widget buildListTile(String title, IconData icon, dynamic tapHandler,
+      Color iconColour, Color textColour) {
     return ListTile(
-      tileColor: thirdColor,
+      //tileColor: thirdColor,
       leading: Icon(
         icon,
         size: 26,
-        color: color,
+        color: iconColour,
       ),
       title: Text(
         title,
-        style: const TextStyle(
+        style: TextStyle(
           fontSize: 24,
-          color: secondaryColor,
+          color: textColour,
         ),
       ),
       onTap: tapHandler,
@@ -27,49 +30,73 @@ class AppDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final darkModeProvider = Provider.of<FavouriteProvider>(context);
+    final isDarkMode = darkModeProvider.darkMode;
+    Color paleBlue = Colors.blueAccent;
+
     return Drawer(
-      backgroundColor: thirdColor,
-      child: Column(
-        children: [
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.all(20),
-            alignment: Alignment.centerLeft,
-            color: thirdColor,
-            child: Image.asset(fullLogo),
-          ),
-          const Divider(),
-          buildListTile(
-            'Home',
-            Icons.home,
-            () => Beamer.of(context).beamToNamed('/'),
-          ),
-          const Divider(),
-          buildListTile(
-            'Favourites',
-            Icons.star,
-            () => Beamer.of(context).beamToNamed('/favourites'),
-          ),
-          const Divider(),
-          buildListTile(
-            'About',
-            Icons.info,
-            () => Beamer.of(context).beamToNamed('/about'),
-          ),
-          const Divider(),
-          buildListTile(
-            'Book List',
-            Icons.book,
-            () => Beamer.of(context).beamToNamed('/books'),
-          ),
-          const Divider(),
-          buildListTile(
-            'Subscribe',
-            Icons.email,
-            () => Beamer.of(context).beamToNamed('/auth'),
-          ),
-          const Divider(),
-        ],
+      //backgroundColor: thirdColor,
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(20),
+              alignment: Alignment.centerLeft,
+              //color: darkMode ? thirdColor : null,
+              child: Image.asset(isDarkMode ? logo : fullLogo),
+            ),
+            const Divider(),
+            buildListTile(
+              'Home',
+              Icons.home,
+              () => Beamer.of(context).beamToNamed('/home'),
+              isDarkMode ? paleBlue : color,
+              isDarkMode ? thirdColor : secondaryColor,
+            ),
+            const Divider(),
+            buildListTile(
+              'Favourites',
+              Icons.star,
+              () => Beamer.of(context).beamToNamed('/favourites'),
+              isDarkMode ? paleBlue : color,
+              isDarkMode ? thirdColor : secondaryColor,
+            ),
+            const Divider(),
+            buildListTile(
+              'About',
+              Icons.info,
+              () => Beamer.of(context).beamToNamed('/about'),
+              isDarkMode ? paleBlue : color,
+              isDarkMode ? thirdColor : secondaryColor,
+            ),
+            const Divider(),
+            buildListTile(
+              'Book List',
+              Icons.book,
+              () => Beamer.of(context).beamToNamed('/books'),
+              isDarkMode ? paleBlue : color,
+              isDarkMode ? thirdColor : secondaryColor,
+            ),
+            const Divider(),
+            buildListTile(
+              'Subscribe',
+              Icons.email,
+              () => Beamer.of(context).beamToNamed('/auth'),
+              isDarkMode ? paleBlue : color,
+              isDarkMode ? thirdColor : secondaryColor,
+            ),
+            const Divider(),
+            buildListTile(
+              isDarkMode ? 'Light Mode' : 'Dark Mode',
+              isDarkMode ? Icons.wb_sunny : Icons.nightlight_round,
+              () => darkModeProvider.toggleDarkMode(),
+              isDarkMode ? paleBlue : color,
+              isDarkMode ? thirdColor : secondaryColor,
+            ),
+            const Divider(),
+          ],
+        ),
       ),
     );
   }

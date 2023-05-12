@@ -1,5 +1,7 @@
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
+import 'package:matterofmovement/providers/favourite_provider.dart';
+import 'package:provider/provider.dart';
 
 import '../constants.dart';
 
@@ -18,13 +20,15 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     final double mediaWidth = MediaQuery.of(context).size.width;
+    final darkModeProvider = Provider.of<FavouriteProvider>(context);
+    final isDarkMode = darkModeProvider.darkMode;
 
     return AppBar(
       automaticallyImplyLeading: mediaWidth < 750 ? true : false,
-      iconTheme: const IconThemeData(
-        color: secondaryColor,
+      iconTheme: IconThemeData(
+        color: isDarkMode ? thirdColor : secondaryColor,
       ),
-      backgroundColor: thirdColor,
+      //backgroundColor: thirdColor,
       title: Center(
         child: mediaWidth < 750
             ? InkWell(
@@ -33,7 +37,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   fit: BoxFit.contain,
                   height: 50.0,
                 ),
-                onTap: () => Beamer.of(context).beamToNamed('/'),
+                onTap: () => Beamer.of(context).beamToNamed('/home'),
               )
             : Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -43,7 +47,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     children: [
                       AppBarMenuItem(
                         title: 'Home',
-                        route: '/',
+                        route: '/home',
                       ),
                       AppBarMenuItem(
                         title: 'Favourites',
@@ -69,7 +73,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                       fit: BoxFit.contain,
                       height: 50.0,
                     ),
-                    onTap: () => Beamer.of(context).beamToNamed('/'),
+                    onTap: () => Beamer.of(context).beamToNamed('/home'),
                   ),
                 ],
               ),
@@ -80,7 +84,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           child: IconButton(
             onPressed: () => Beamer.of(context).beamToNamed('/about'),
             icon: const Icon(Icons.info),
-            color: secondaryColor,
+            color: isDarkMode ? thirdColor : secondaryColor,
           ),
         ),
       ],

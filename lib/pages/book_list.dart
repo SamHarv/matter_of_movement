@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:matterofmovement/providers/favourite_provider.dart';
+import 'package:provider/provider.dart';
 
 import '../constants.dart';
 
@@ -28,25 +30,35 @@ class BookListPage extends StatelessWidget {
     14: 'Start With Why - Simon Sinek',
     15: 'Smart Brevity - Jim VandeHei',
     16: 'Silence - Thich Nhat Hanh',
-    17: 'Thinking, Fast and Slow - Daniel Kahneman',
+    17: 'Thinking, Fast and Slow - D.K.',
     18: 'The 7 Habits - Stephen Covey',
-    19: 'Never Split the Difference - Chris Voss',
-    20: 'Moonwalking with Einstein - Joshua Foer',
+    19: 'Never Split the Difference - C.V.',
+    20: 'Moonwalking with Einstein - J.F.',
     21: 'Influence - Robert Cialdini',
     22: 'Hackers - Steven Levy',
-    23: 'The Elegant Universe - Brian Greene',
-    24: 'Tuesdays with Morrie - Mitch Albom',
+    23: 'The Elegant Universe - B. Greene',
+    24: 'Tuesdays with Morrie - M. Albom',
     25: 'Sapiens - Yuval Noah Harari',
     26: 'Ego is the Enemy - Ryan Holiday',
     27: 'Creativity Inc - Ed Catmull',
     28: 'Zero to One - Peter Thiel',
     29: 'Ikigai - Hector Garcia',
-    30: 'Extreme Ownership - Jocko Willink',
+    30: 'Extreme Ownership - J. Willink',
   };
 
   @override
   Widget build(BuildContext context) {
     final double mediaWidth = MediaQuery.of(context).size.width;
+    final darkModeProvider = Provider.of<FavouriteProvider>(context);
+    final isDarkMode = darkModeProvider.darkMode;
+    TextStyle headingStyle = TextStyle(
+      fontSize: 30.0,
+      color: isDarkMode ? Colors.blueAccent : color,
+    );
+    TextStyle bodyStyle = TextStyle(
+      fontSize: 20.0,
+      color: isDarkMode ? thirdColor : secondaryColor,
+    );
     return Scaffold(
       drawer: appDrawer,
       appBar: const CustomAppBar(id: '/books'),
@@ -57,7 +69,7 @@ class BookListPage extends StatelessWidget {
             children: <Widget>[
               Container(
                 padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
-                child: const Text(
+                child: Text(
                   'Top 30 Books',
                   style: headingStyle,
                 ),
@@ -78,8 +90,8 @@ class BookListPage extends StatelessWidget {
                             width: 32,
                             child: Text(
                               key,
-                              style: const TextStyle(
-                                color: color,
+                              style: TextStyle(
+                                color: isDarkMode ? Colors.blueAccent : color,
                                 fontSize: 20,
                               ),
                             ),

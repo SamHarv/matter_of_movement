@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:matterofmovement/providers/favourite_provider.dart';
+import 'package:provider/provider.dart';
 import '../constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -28,6 +30,16 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double mediaWidth = MediaQuery.of(context).size.width;
+    final darkModeProvider = Provider.of<FavouriteProvider>(context);
+    final isDarkMode = darkModeProvider.darkMode;
+    TextStyle headingStyle = TextStyle(
+      fontSize: 30.0,
+      color: isDarkMode ? Colors.blueAccent : color,
+    );
+    TextStyle bodyStyle = TextStyle(
+      fontSize: 20.0,
+      color: isDarkMode ? thirdColor : secondaryColor,
+    );
     return Scaffold(
       drawer: appDrawer,
       appBar: const CustomAppBar(
@@ -40,7 +52,7 @@ class AboutPage extends StatelessWidget {
             children: <Widget>[
               Container(
                 padding: kPadding,
-                child: const Text(
+                child: Text(
                   'About',
                   textAlign: TextAlign.center,
                   style: headingStyle,
@@ -48,7 +60,7 @@ class AboutPage extends StatelessWidget {
               ),
               Container(
                 padding: kPadding,
-                child: const Text(
+                child: Text(
                   'A public jounral of what I perceive to be the more valuable of my ideas.\n\n'
                   'Why Matter of Movement?\n\n'
                   'I initially created this webpage to write about movement as it pertains to exercise and physical activity.\n\n'
@@ -62,7 +74,7 @@ class AboutPage extends StatelessWidget {
               const Divider(),
               Container(
                 padding: kPadding,
-                child: const Text(
+                child: Text(
                   'Contact',
                   textAlign: TextAlign.center,
                   style: headingStyle,
@@ -70,7 +82,7 @@ class AboutPage extends StatelessWidget {
               ),
               Container(
                 padding: kPadding,
-                child: const Column(
+                child: Column(
                   children: [
                     Text(
                       'Sam Harvey\n\n'

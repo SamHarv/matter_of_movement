@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:matterofmovement/providers/favourite_provider.dart';
+import 'package:provider/provider.dart';
 
 import '../constants.dart';
 
@@ -31,6 +33,16 @@ class _SubscribedState extends State<Subscribed> {
   @override
   Widget build(BuildContext context) {
     final double mediaWidth = MediaQuery.of(context).size.width;
+    final darkModeProvider = Provider.of<FavouriteProvider>(context);
+    final isDarkMode = darkModeProvider.darkMode;
+    TextStyle headingStyle = TextStyle(
+      fontSize: 30.0,
+      color: isDarkMode ? Colors.blueAccent : color,
+    );
+    TextStyle bodyStyle = TextStyle(
+      fontSize: 20.0,
+      color: isDarkMode ? thirdColor : secondaryColor,
+    );
     return Scaffold(
       drawer: appDrawer,
       appBar: const CustomAppBar(id: '/subscribed'),
@@ -41,7 +53,7 @@ class _SubscribedState extends State<Subscribed> {
             children: <Widget>[
               Container(
                 padding: kPadding,
-                child: const Text(
+                child: Text(
                   'Subscribe',
                   style: headingStyle,
                 ),

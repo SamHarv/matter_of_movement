@@ -21,7 +21,8 @@ Future<void> main() async {
   Hive.registerAdapter(PostAdapter());
   await Hive.openBox<Post>('post-box');
   setPathUrlStrategy();
-  runApp(const MoM());
+  runApp(ChangeNotifierProvider(
+      child: const MoM(), create: (_) => FavouriteProvider()));
 }
 
 class MoM extends StatelessWidget {
@@ -29,19 +30,24 @@ class MoM extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => FavouriteProvider(),
-      child: MaterialApp.router(
-        theme: ThemeData(
-          primaryColor: color,
-          //useMaterial3: true,
-        ),
-        //darkTheme: ThemeData.dark(),
-        routerDelegate: routerDelegate,
-        routeInformationParser: BeamerParser(),
-        debugShowCheckedModeBanner: false,
-        title: 'Matter of Movement',
-      ),
+    final darkModeProvider = Provider.of<FavouriteProvider>(context);
+    //final isDarkMode = darkModeProvider.darkMode;
+    return Consumer(
+      builder: (context, provider, child) {
+        //create: (context) => FavouriteProvider(),
+        return MaterialApp.router(
+          theme: ThemeData(
+            primaryColor: color,
+            useMaterial3: true,
+          ),
+          darkTheme: ThemeData.dark(useMaterial3: true),
+          themeMode: darkModeProvider.themeMode,
+          routerDelegate: routerDelegate,
+          routeInformationParser: BeamerParser(),
+          debugShowCheckedModeBanner: false,
+          title: 'Matter of Movement',
+        );
+      },
     );
   }
 }
