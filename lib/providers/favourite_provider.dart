@@ -4,10 +4,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/post_model.dart';
 
-Future<SharedPreferences> getPrefs() async {
-  return await SharedPreferences.getInstance();
-}
-
 class FavouriteProvider extends ChangeNotifier {
   bool _darkMode = false;
   bool get darkMode => _darkMode;
@@ -15,32 +11,20 @@ class FavouriteProvider extends ChangeNotifier {
   void getMode() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.getBool('darkMode');
-
     _darkMode = prefs.getBool('darkMode') ?? false;
-
-    //_darkMode = !_darkMode;
     notifyListeners();
   }
 
   ThemeMode get themeMode {
     getMode();
-    if (_darkMode) {
+    if (darkMode) {
       return ThemeMode.dark;
     } else {
       return ThemeMode.light;
     }
   }
 
-  // changeThemeMode(ThemeMode themeMode) {
-  //   if (themeMode == ThemeMode.dark) {
-  //     _darkMode = true;
-  //   } else {
-  //     _darkMode = false;
-  //   }
-  //   notifyListeners();
-  // }
-
-  void toggleDarkMode() async {
+  Future<void> toggleDarkMode() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     if (_darkMode) {
       prefs.setBool('darkMode', false);
@@ -49,7 +33,6 @@ class FavouriteProvider extends ChangeNotifier {
       prefs.setBool('darkMode', true);
       _darkMode = true;
     }
-    //_darkMode = !_darkMode;
     notifyListeners();
   }
 

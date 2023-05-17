@@ -31,10 +31,8 @@ class MoM extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final darkModeProvider = Provider.of<FavouriteProvider>(context);
-    //final isDarkMode = darkModeProvider.darkMode;
     return Consumer(
       builder: (context, provider, child) {
-        //create: (context) => FavouriteProvider(),
         return MaterialApp.router(
           theme: ThemeData(
             primaryColor: color,

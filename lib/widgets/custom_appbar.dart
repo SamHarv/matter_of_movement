@@ -42,28 +42,35 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             : Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       AppBarMenuItem(
                         title: 'Home',
-                        route: '/home',
+                        function: () => Beamer.of(context).beamToNamed('/home'),
                       ),
                       AppBarMenuItem(
                         title: 'Favourites',
-                        route: '/favourites',
+                        function: () =>
+                            Beamer.of(context).beamToNamed('/favourites'),
                       ),
                       AppBarMenuItem(
                         title: 'About',
-                        route: '/about',
+                        function: () =>
+                            Beamer.of(context).beamToNamed('/about'),
                       ),
                       AppBarMenuItem(
                         title: 'Book List',
-                        route: '/books',
+                        function: () =>
+                            Beamer.of(context).beamToNamed('/books'),
                       ),
                       AppBarMenuItem(
                         title: 'Subscribe',
-                        route: '/auth',
+                        function: () => Beamer.of(context).beamToNamed('/auth'),
+                      ),
+                      AppBarMenuItem(
+                        title: isDarkMode ? 'Light Mode' : 'Dark Mode',
+                        function: () => darkModeProvider.toggleDarkMode(),
                       ),
                     ],
                   ),

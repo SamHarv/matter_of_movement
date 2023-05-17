@@ -2,6 +2,17 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Update Your Systems',
+    datePosted: DateTime(2022, 5, 19),
+    image: 'images/1.png',
+    id: '74',
+    body: 'We have a tendency to become attached to our models of reality.\n\n'
+        'But they should be updated regularly.\n\n'
+        'Our attachment to preconceived models can make it difficult to learn or change when presented with new information.\n\n'
+        'It makes us less open to opportunities for improvement.\n\n'
+        'If we were more open, we would learn vastly more.',
+  ),
+  Post(
     title: 'Take a Risk',
     datePosted: DateTime(2022, 5, 12),
     image: 'images/1.png',
