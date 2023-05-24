@@ -2,6 +2,23 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Night Vision',
+    datePosted: DateTime(2022, 5, 26),
+    image: 'images/1.png',
+    id: '75',
+    body:
+        'I often take my morning run before the sun rises, allowing me to observe the sunrise at the summit of my run.\n\n'
+        'It pains me to see people walking with bright torches, which are often angled directly at me.\n\n'
+        'I find it blinds me.\n\n'
+        'When you allow your eyes sufficient time to adapt to the dark, you may notice your peripheral vision is more effective than your direct vision.\n\n'
+        'People struggle to accept this, and choose to beam a powerful ray of photons instead of embracing the beauty of dawn.\n\n'
+        'Your eyes will adapt if you just turn off the light.\n\n'
+        'And when they do, you can experience the true beauty of our world.\n\n'
+        'Don\'t try to force a perspective to which you are accustomed.\n\n'
+        'Embrace our world for what it is, and learn to flow with it.\n\n'
+        'Wu Wei.',
+  ),
+  Post(
     title: 'Update Your Systems',
     datePosted: DateTime(2022, 5, 19),
     image: 'images/1.png',
