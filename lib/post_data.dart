@@ -2,6 +2,15 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'What We Must Do',
+    datePosted: DateTime(2022, 6, 2),
+    image: 'images/1.png',
+    id: '76',
+    body:
+        'All we have to decide is what to do with the time that is given us.\n\n'
+        '- Gandalf',
+  ),
+  Post(
     title: 'Night Vision',
     datePosted: DateTime(2022, 5, 26),
     image: 'images/1.png',
