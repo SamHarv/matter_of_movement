@@ -2,6 +2,21 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'It Does Not Get Easier, You Get Stronger',
+    datePosted: DateTime(2022, 6, 16),
+    image: 'images/1.png',
+    id: '78',
+    body:
+        'This mantra is one I have used when training for endurance events.\n\n'
+        'I find it is true not only in exercise, but in the endurance event of life.\n\n'
+        'Through exposure to stress, when managed effectively, whether that be phyical or otherwise, we become stronger.\n\n'
+        'If you have progressed from a 60kg to a 150kg back squat in the gym, 60kg will not feel lighter, you will feel stronger.\n\n'
+        'If you have dealt with adversity in life in the past, you may be able to better deal with adversity in the future.\n\n'
+        'It does not get easier, you get stronger.\n\n'
+        'This is true up until the point of trauma.\n\n'
+        'Just as physical trauma and over-exertion can cause injury, so too can emotional or mental trauma.',
+  ),
+  Post(
     title: 'Preparation',
     datePosted: DateTime(2022, 6, 9),
     image: 'images/1.png',
