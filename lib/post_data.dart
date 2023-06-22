@@ -2,6 +2,18 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'How to feel better',
+    datePosted: DateTime(2022, 6, 23),
+    image: 'images/1.png',
+    id: '79',
+    body: 'If you are overthinking, write.\n\n'
+        'If you are bored, read.\n\n'
+        'If you are anxious, meditate.\n\n'
+        'If you are sad or stressed, exercise.\n\n'
+        'If you are angry, breathe.\n\n'
+        'In any case, reduce screen time.',
+  ),
+  Post(
     title: 'It Does Not Get Easier, You Get Stronger',
     datePosted: DateTime(2022, 6, 16),
     image: 'images/1.png',
