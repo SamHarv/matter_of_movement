@@ -2,7 +2,16 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
-    title: 'How to feel better',
+    title: 'Location',
+    datePosted: DateTime(2022, 6, 30),
+    image: 'images/1.png',
+    id: '80',
+    body:
+        '"One can renovate a house, but one cannot renovate a neighbourhood."\n\n'
+        '- Alex Harvey',
+  ),
+  Post(
+    title: 'How to Feel Better',
     datePosted: DateTime(2022, 6, 23),
     image: 'images/1.png',
     id: '79',
