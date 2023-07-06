@@ -2,6 +2,17 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Normative Behaviour',
+    datePosted: DateTime(2022, 7, 7),
+    image: 'images/1.png',
+    id: '81',
+    body: 'People will expect certain behaviour from you.\n\n'
+        'Behaviour which adheres to their own cultural norms.\n\n'
+        'This does not mean you are obligated to conform to their expectations.\n\n'
+        'Everyone is different, and we should behave as such.\n\n'
+        'Spend your free time the way you like, not the way you think you\'re supposed to.',
+  ),
+  Post(
     title: 'Location',
     datePosted: DateTime(2022, 6, 30),
     image: 'images/1.png',
