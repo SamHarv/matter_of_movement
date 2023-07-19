@@ -2,6 +2,16 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Failure is Success in Progression',
+    datePosted: DateTime(2023, 7, 21),
+    image: 'images/1.png',
+    id: '83',
+    body:
+        'Your rate of improvement will be drastically diminished if you are not willing to fail and fail fast.\n\n'
+        'From failure we are best able to learn and grow.\n\n'
+        'Failure is success in progression.',
+  ),
+  Post(
     title: 'Not Knowing',
     datePosted: DateTime(2023, 7, 14),
     image: 'images/1.png',
