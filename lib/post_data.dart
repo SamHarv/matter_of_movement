@@ -2,6 +2,16 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Be the Person you Wish to Become',
+    datePosted: DateTime(2023, 7, 28),
+    image: 'images/1.png',
+    id: '84',
+    body: 'Surround yourself with people who represent your aspirations.\n\n'
+        'Immerse yourself in an environment which your aspirational self would.\n\n'
+        'Behave in the way your aspirational self would.\n\n'
+        'Be the person you wish to become.',
+  ),
+  Post(
     title: 'Failure is Success in Progression',
     datePosted: DateTime(2023, 7, 21),
     image: 'images/1.png',
