@@ -2,6 +2,22 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Silence',
+    datePosted: DateTime(2023, 8, 4),
+    image: 'images/1.png',
+    id: '85',
+    body:
+        'We live in a time where we are inundated with a constant flow of stimuli.\n\n'
+        'Even when there are times we are not receiving a flow of sensory input, we tend to seek it.\n\n'
+        'We check our phone, we turn on the TV.\n\n'
+        'We are victims of the constant tug of being stimulated.\n\n'
+        'We are addicted, and dopamine reinforces this behaviour.\n\n'
+        'When I make a conscious effort to sit down and be silent, I am able to be mindful.\n\n'
+        'This is when I am able to solve my problems most effectively.\n\n'
+        '"All of humanity\'s problems stem from one\'s inability to sit quietly in a room alone."\n\n'
+        '- Blaise Pascal',
+  ),
+  Post(
     title: 'Be the Person you Wish to Become',
     datePosted: DateTime(2023, 7, 28),
     image: 'images/1.png',
