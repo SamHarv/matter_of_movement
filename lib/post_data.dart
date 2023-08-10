@@ -2,6 +2,21 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Time Unlocks Insights',
+    datePosted: DateTime(2023, 8, 11),
+    image: 'images/1.png',
+    id: '86',
+    body:
+        'One of my key learnings through developing software is many complex problems take time to solve, but are solvable.\n\n'
+        'Many are inclined to give up when facing a problem that feels too hard, when they may be 30 minutes from solving the problem.\n\n'
+        'We have to give our subconscious brain time to work on a complex problem.\n\n'
+        'The answers will not always be immediately apparent.\n\n'
+        'Often, we need to stand up and walk away from the problem to allow ourselves a different perspective.\n\n'
+        'After some time, a light bulb may ignite at an unexpected moment.\n\n'
+        '"It is not that I am so smart, it is just that I stay with problems longer."\n\n'
+        '- Albert Einstein',
+  ),
+  Post(
     title: 'Silence',
     datePosted: DateTime(2023, 8, 4),
     image: 'images/1.png',
