@@ -2,6 +2,16 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Blame',
+    datePosted: DateTime(2023, 8, 18),
+    image: 'images/1.png',
+    id: '87',
+    body: '"Uneducated people blame other people when they are doing badly.\n\n'
+        'Those whose education is underway blame themselves.\n\n'
+        'A fully educated person blames no one."\n\n'
+        '- Epictetus',
+  ),
+  Post(
     title: 'Time Unlocks Insights',
     datePosted: DateTime(2023, 8, 11),
     image: 'images/1.png',
