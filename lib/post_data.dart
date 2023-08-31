@@ -2,6 +2,17 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Scramble the Omelette',
+    datePosted: DateTime(2023, 9, 1),
+    image: 'images/1.png',
+    id: '89',
+    body: 'Sometimes in life, things don\'t go to plan.\n\n'
+        'You can prepare all you like - oil the pan, use a manageable amount of whisked egg, but occasionally, especially if you are an amateur like me, the omelette will still break apart.\n\n'
+        'Some things are beyond our locus of control.\n\n'
+        'In these times, we must search for opportunity, rather than dwell on what we meant to happen.\n\n'
+        'Pivot, scramble the omelette, and enjoy the meal.',
+  ),
+  Post(
     title: 'Happiness',
     datePosted: DateTime(2023, 8, 25),
     image: 'images/1.png',
