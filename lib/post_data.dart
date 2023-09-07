@@ -2,6 +2,17 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Hard Work Begets Hard Work',
+    datePosted: DateTime(2023, 9, 8),
+    image: 'images/1.png',
+    id: '90',
+    body: 'Do more work, have more work.\n\n'
+        'If this is what you want, great.\n\n'
+        'But often you can achieve the same output by doing less.\n\n'
+        'Hard work begets hard work, and effortless work begets effortless work.\n\n'
+        'Wu Wei.',
+  ),
+  Post(
     title: 'Scramble the Omelette',
     datePosted: DateTime(2023, 9, 1),
     image: 'images/1.png',
