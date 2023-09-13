@@ -2,6 +2,17 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Standardise Before You Optimise',
+    datePosted: DateTime(2023, 9, 15),
+    image: 'images/1.png',
+    id: '91',
+    body: '"Premature optimisation is the root of all evil"\n\n'
+        '- Donald Knuth\n\n'
+        'This quote was made in relation to software development, but it can be applied to many areas of life.\n\n'
+        'Time is often wasted trying to optimise systems which are not yet mature.\n\n'
+        'Standardise before you optimise.',
+  ),
+  Post(
     title: 'Hard Work Begets Hard Work',
     datePosted: DateTime(2023, 9, 8),
     image: 'images/1.png',
