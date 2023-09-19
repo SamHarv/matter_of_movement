@@ -2,6 +2,17 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Win the Morning',
+    datePosted: DateTime(2023, 9, 22),
+    image: 'images/1.png',
+    id: '92',
+    body: '"An hour before 9 is worth two hours after 5"\n\n'
+        '- Someone whose children slept past 8\n\n'
+        'I, like Benjamin Franklin, believe the morning is the ideal time for productive work.\n\n'
+        'However, this is attributed to having a better chance of being alone at 5am.\n\n'
+        'The true key to productivity is finding time for deep work where you have both energy and solitude.',
+  ),
+  Post(
     title: 'Standardise Before You Optimise',
     datePosted: DateTime(2023, 9, 15),
     image: 'images/1.png',
