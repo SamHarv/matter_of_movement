@@ -2,6 +2,16 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Direction of Effort',
+    datePosted: DateTime(2023, 10, 6),
+    image: 'images/1.png',
+    id: '94',
+    body:
+        'The most invisible form of wasted time is doing a good job on something unimportant.\n\n'
+        '- James Clear\n\n'
+        'Ensure your efforts are directed to the most impactful tasks.',
+  ),
+  Post(
     title: 'Persistence',
     datePosted: DateTime(2023, 9, 29),
     image: 'images/1.png',
