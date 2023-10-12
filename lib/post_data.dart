@@ -2,6 +2,17 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Decentralised Command',
+    datePosted: DateTime(2023, 10, 13),
+    image: 'images/1.png',
+    id: '95',
+    body:
+        'People at the top have all the authority and none of the information.\n\n'
+        'People at the bottom have all the information and none of the authority.\n\n'
+        'Decentralised command occurs when those at the bottom are given autonomy and are empowered to make decisions.\n\n'
+        'An effective system is one which allows information to traverse up the chain, and authority to be distributed down.',
+  ),
+  Post(
     title: 'Direction of Effort',
     datePosted: DateTime(2023, 10, 6),
     image: 'images/1.png',
