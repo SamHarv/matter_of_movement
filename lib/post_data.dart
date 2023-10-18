@@ -2,6 +2,18 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Availability Bias',
+    datePosted: DateTime(2023, 10, 20),
+    image: 'images/1.png',
+    id: '96',
+    body:
+        'People take their own limits of vision to be the limits of the world.\n\n'
+        'Availability bias is the tendency to believe that what we see is all there is.\n\n'
+        'The media like to exploit this for financial gain or to push their agenda.\n\n'
+        'If people are not willing to seek knowledge elsewhere, they are easily manipulated by the media.\n\n'
+        'We should strive to educate ourselves so we are best positioned to make crucial decisions.',
+  ),
+  Post(
     title: 'Decentralised Command',
     datePosted: DateTime(2023, 10, 13),
     image: 'images/1.png',
