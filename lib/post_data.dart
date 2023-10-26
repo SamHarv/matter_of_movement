@@ -2,6 +2,17 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Complaining',
+    datePosted: DateTime(2023, 10, 27),
+    image: 'images/1.png',
+    id: '97',
+    body: 'Some tend to develop a habit of complaining.\n\n'
+        'This leads to a tendancy to focus on the negative.\n\n'
+        'This not only reduces the quality of life of the complainer, but of those around them.\n\n'
+        '"Many a man would rather you heard his story than granted his request."\n\n'
+        '- Lord Chesterfield',
+  ),
+  Post(
     title: 'Availability Bias',
     datePosted: DateTime(2023, 10, 20),
     image: 'images/1.png',
