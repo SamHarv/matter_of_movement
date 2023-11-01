@@ -2,6 +2,17 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Lessons',
+    datePosted: DateTime(2023, 11, 3),
+    image: 'images/1.png',
+    id: '98',
+    body:
+        'The most turbulent times of our lives are often those that form the strongest lessons and memories.\n\n'
+        'They help shape who we are.\n\n'
+        '"If you are going through hell, keep going."\n\n'
+        '- Winston Churchill',
+  ),
+  Post(
     title: 'Complaining',
     datePosted: DateTime(2023, 10, 27),
     image: 'images/1.png',
