@@ -2,6 +2,17 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Life Rewards Action',
+    datePosted: DateTime(2023, 11, 10),
+    image: 'images/1.png',
+    id: '99',
+    body: '"Life rewards action, not intelligence."\n\n'
+        '- James Clear\n\n'
+        'Even some of the most intelligent people fail to fulfill their aspirations '
+        'as they are too risk averse to take action.\n\n'
+        'It has never been safer to take a risk, so we must choose action.',
+  ),
+  Post(
     title: 'Lessons',
     datePosted: DateTime(2023, 11, 3),
     image: 'images/1.png',
