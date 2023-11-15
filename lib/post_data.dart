@@ -2,6 +2,42 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: '100: Guidelines for a Happy and Healthy Life',
+    datePosted: DateTime(2023, 11, 17),
+    image: 'images/1.png',
+    id: '100',
+    body: 'This is the 100th Matter of Movement post.\n\n'
+        'Below are 20 guidelines for a happy and healthy life.\n\n'
+        'Do I practice these guidelines regularly? No.\n\n'
+        'But I feel happier and healthier when I do.\n\n'
+        'They may not be effective for everyone, but they should provide some '
+        'benefit.\n\n'
+        'Happiness\n\n'
+        '1. Create/ find your purpose\n'
+        '2. Embrace change\n'
+        '3. Believe you can learn anything, but not everything\n'
+        '4. Embody simplicity - Wu Wei\n'
+        '5. Be present\n'
+        '6. Seek solitude\n'
+        '7. Be proactive rather than reactive\n'
+        '8. Don\'t conform\n'
+        '9. Find humour in life\n'
+        '10. Remember this too shall pass\n\n'
+        'Health\n\n'
+        '1. Exercise & eat well\n'
+        '2. Sleep\n'
+        '3. Cultivate positive social relationships\n'
+        '4. Have empathy\n'
+        '5. Show gratitude\n'
+        '6. Bathe in nature\n'
+        '7. Delay gratification\n'
+        '8. Meditate\n'
+        '9. Undertake cold exposure\n'
+        '10. Choose cognitive inputs wisely\n\n'
+        'Over the next 20 weeks, I plan to elaborate on each of these topics to '
+        'illustrate their benefit.',
+  ),
+  Post(
     title: 'Life Rewards Action',
     datePosted: DateTime(2023, 11, 10),
     image: 'images/1.png',
