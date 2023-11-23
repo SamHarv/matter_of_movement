@@ -2,6 +2,31 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Create/ Find Your Purpose',
+    datePosted: DateTime(2023, 11, 17),
+    image: 'images/1.png',
+    id: '101',
+    body:
+        'I believe the primary source of happiness in life is to have purpose. A reason to live.\n\n'
+        'Finding your purpose may require risk and exploration. Trying different avenues and changing course potentially many times.\n\n'
+        'If after exploration, you are not able to find a purpose you are passionate about, consider creating a purpose.\n\n'
+        'A purpose which may not have been pursued before. A new mission.\n\n'
+        'This may involve creating a job in a field where no jobs have previously existed.\n\n'
+        'It may involve doing something which has not previously been done.\n\n'
+        'It may be initially perceived as odd to others.\n\n'
+        'Your purpose may change throughout your life, and that is ok.\n\n'
+        'Change is necessary. Change is inevitable.\n\n'
+        'You can pivot.\n\n'
+        'No matter what stage of life you are in.\n\n'
+        'How do you know if you have found your purpose?\n\n'
+        'You will feel an intense passion for it.\n\n'
+        'You will be willing to sacrifice for it.\n\n'
+        'For me, my current purpose is to give my children the best life they can have while enjoying the journey.\n\n'
+        'This means being present with them and trying to be the best father I can.\n\n'
+        'If you have not found something you are immensely passionate about, continue to search for a purpose.\n\n'
+        'If one cannot be found, create a purpose.',
+  ),
+  Post(
     title: '100: Guidelines for a Happy and Healthy Life',
     datePosted: DateTime(2023, 11, 17),
     image: 'images/1.png',
