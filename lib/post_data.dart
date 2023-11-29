@@ -2,6 +2,31 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Embrace Change',
+    datePosted: DateTime(2023, 12, 1),
+    image: 'images/1.png',
+    id: '102',
+    body: 'Change is inevitable.\n\n'
+        'A constant in life.\n\n'
+        'We must be open to it.\n\n'
+        'To learning.\n\n'
+        'To changing our beliefs.\n\n'
+        'Our most deeply held beliefs.\n\n'
+        'To changing our mind.\n\n'
+        'Many believe they appear weak if they change their mind or admit '
+        'they are wrong.\n\n'
+        'It is ok to be wrong, it is important to be wrong. It is important to '
+        'fail.\n\n'
+        'This is how we learn.\n\n'
+        'Things will never be as they were.\n\n'
+        'People who do not fear change are in a position of advantage.\n\n'
+        'People who resist change may not progress, and their resistance will '
+        'be futile.\n\n'
+        'Their strongly held beliefs do not serve them.\n\n'
+        'Change cannot be stopped, so we must not merely accept change, but '
+        'embrace it.',
+  ),
+  Post(
     title: 'Create/ Find Your Purpose',
     datePosted: DateTime(2023, 11, 17),
     image: 'images/1.png',
