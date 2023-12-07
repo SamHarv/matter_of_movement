@@ -2,6 +2,29 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'You Can Learn Anything, But Not Everything',
+    datePosted: DateTime(2023, 12, 8),
+    image: 'images/1.png',
+    id: '103',
+    body: 'The culture in which I came of age was fixated on talent.\n\n'
+        'On innate ability.\n\n'
+        'On a mindset that skills and attributes are fixed.\n\n'
+        'Assigned at birth.\n\n'
+        'This is a fixed mindset.\n\n'
+        'A growth mindset is where one believes they can learn anything.\n\n'
+        'That they can develop any skill.\n\n'
+        'Become anything they wish.\n\n'
+        'Regardless of their perceived intelligence or abilities, or even '
+        'their age.\n\n'
+        'You can learn anything, but not everything.\n\n'
+        'One must choose what to learn.\n\n'
+        'One must choose who they wish to become.\n\n'
+        'Nobody knows everything.\n\n'
+        'Nobody can do everything.\n\n'
+        'Selective, continual learning, and a willingness to admit gaps in '
+        'knowlegde is the goal.',
+  ),
+  Post(
     title: 'Embrace Change',
     datePosted: DateTime(2023, 12, 1),
     image: 'images/1.png',
