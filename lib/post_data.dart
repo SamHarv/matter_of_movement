@@ -2,6 +2,21 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Embody Simplicity - Wu Wei',
+    datePosted: DateTime(2023, 12, 15),
+    image: 'images/1.png',
+    id: '104',
+    body: 'We have a tendency to overcomplicate things.\n\n'
+        'To make them more difficult than they need to be.\n\n'
+        'Often, less is more.\n\n'
+        'This is not an excuse to "be lazy", but rather to be efficient.\n\n'
+        'To be more selective in choosing how we spend our time.\n\n'
+        'Wu Wei is a Taoist concept which means effortless action.\n\n'
+        'It demands simplicity and minimalism.\n\n'
+        'To align with the flow of life, the way.\n\n'
+        'If we simplify where possible, we will be more effective.',
+  ),
+  Post(
     title: 'You Can Learn Anything, But Not Everything',
     datePosted: DateTime(2023, 12, 8),
     image: 'images/1.png',
