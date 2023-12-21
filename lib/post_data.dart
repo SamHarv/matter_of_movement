@@ -2,6 +2,26 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Be Present',
+    datePosted: DateTime(2023, 12, 22),
+    image: 'images/1.png',
+    id: '105',
+    body: 'We spend little of our life being truly present.\n\n'
+        'We often find ourselves going through the motions and thinking about the '
+        'past or the future.\n\n'
+        'This can lead to us feeling anxious about what is to come, or depressed '
+        'about what has come to pass.\n\n'
+        'When we can find ways to anchor ourselves in the present, we can '
+        'experience true tranquility.\n\n'
+        'Some helpful ways to anchor yourself in the present can be through '
+        'meditation, tuning into your senses, or simply sitting and focusing on your breathing.\n\n'
+        'Noticing non-judgementally what pops into your head.\n\n'
+        'What emotions you feel.\n\n'
+        'The sensations and pressures felt throughout your body.\n\n'
+        'Just noticing these things can lead to peace and harmony.\n\n'
+        'When we are present, life is more pleasant.',
+  ),
+  Post(
     title: 'Embody Simplicity - Wu Wei',
     datePosted: DateTime(2023, 12, 15),
     image: 'images/1.png',
