@@ -2,6 +2,29 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Seek Solitude',
+    datePosted: DateTime(2023, 12, 29),
+    image: 'images/1.png',
+    id: '106',
+    body: 'Solitude is an underrated human need.\n\n'
+        'I have often heard people assert they do not like to be alone, that they '
+        'must be surrounded by others to feel at ease.\n\n'
+        'I believe these people are avoiding reality for some reason or another.\n\n'
+        'It is of the utmost importance to find time to be alone, to find solitude.\n\n'
+        'Not to consume social media, but to be disconnected from others by all '
+        'means, including electronic.\n\n'
+        'This quiet space is required to digest information, to reflect on the past, '
+        'to plan for the future, and above all, to find time to be present.\n\n'
+        'We are bombarded with stimuli in our daily lives which can lead to us '
+        'feeling overwhelmed.\n\n'
+        'In these times, it is important to find solitude to collect our thoughts '
+        'and recharge, especially for those of us who are inclined to be '
+        'introverted.\n\n'
+        'This does not mean isolating ourselves completely, as social interaction '
+        'is also important, but it means finding a balance between social exposure '
+        ' and solitude.',
+  ),
+  Post(
     title: 'Be Present',
     datePosted: DateTime(2023, 12, 22),
     image: 'images/1.png',
