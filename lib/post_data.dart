@@ -2,6 +2,27 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Be Proactive Rather Than Reactive',
+    datePosted: DateTime(2024, 1, 5),
+    image: 'images/1.png',
+    id: '107',
+    body: 'Where possible, we should be proactive rather than reactive.\n\n'
+        'To anticipate what is likely to occur, especially in the more predictable '
+        'domains such as health and finance.\n\n'
+        'If you eat junk food, do not exercise or sleep, and do nothing to manage '
+        'stress, your health will decline.\n\n'
+        'If you spend more than you earn, you will accumulate debt.\n\n'
+        'People often wait to see what will occur before reacting as if the '
+        'circumstances were unforseen.\n\n'
+        'Things are often predictable.\n\n'
+        'With a little bit of thought and foresight, it may be easy to see where '
+        'things are heading.\n\n'
+        'Of course, reactivity also has its place when responding to unforseen events.\n\n'
+        'But an ounce of prevention is worth a pound of cure, and we should be '
+        'proactive when able.\n\n'
+        'Things flow more smoothly when we are two steps ahead.',
+  ),
+  Post(
     title: 'Seek Solitude',
     datePosted: DateTime(2023, 12, 29),
     image: 'images/1.png',
