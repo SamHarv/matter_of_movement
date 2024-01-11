@@ -2,6 +2,28 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Do Not Conform',
+    datePosted: DateTime(2024, 1, 12),
+    image: 'images/1.png',
+    id: '108',
+    body:
+        'It is considered normal to blindly follow the expectations and common '
+        'practices of those who came before us.\n\n'
+        'Mindlessly adhering to these expectations can be harmful.\n\n'
+        'It is incredibly valuable to question why we are doing what we are doing.\n\n'
+        'Why we are conforming to a tradition which no longer serves us.\n\n'
+        'Traditions were formed to solve a problem which may no longer be relevant.\n\n'
+        'As long as it is within the bounds of what is legal, rules and expectations '
+        'need not be followed.\n\n'
+        'Wear what makes you feel good.\n\n'
+        'Learn what interests you.\n\n'
+        'Follow a career path which inspires you.\n\n'
+        'Listen to the music you enjoy.\n\n'
+        'Do what makes you happy rather than what is expected of you.\n\n'
+        'Do not conform to the expectations of others.\n\n'
+        'Forge your own path.',
+  ),
+  Post(
     title: 'Be Proactive Rather Than Reactive',
     datePosted: DateTime(2024, 1, 5),
     image: 'images/1.png',
