@@ -2,6 +2,32 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Find Humour in Life',
+    datePosted: DateTime(2024, 1, 19),
+    image: 'images/1.png',
+    id: '109',
+    body: 'It is easy to lose track of our purpose in life.\n\n'
+        'Our why.\n\n'
+        'We become so fixated on work or achieving a goal, '
+        'we forget why we set the goal in the first place.\n\n'
+        'We find ourselves in jobs we do not enjoy, working on projects which '
+        'provide us no happiness.\n\n'
+        'We begin to ignore what is most important.\n\n'
+        'We take things too seriously.\n\n'
+        'We lose the ability to have fun.\n\n'
+        'We should observe and learn from children.\n\n'
+        'Our work should feel like play.\n\n'
+        'We should aim to laugh.\n\n'
+        'To smile.\n\n'
+        'To laugh at our own misfortune and to revel in the joy of our '
+        'successes.\n\n'
+        'To not be so concerned with how others may perceive us.\n\n'
+        'We would not worry about what others thought of us if we realised '
+        'how seldom they do.\n\n'
+        'We should not take life too seriously, as we will not survive it.\n\n'
+        'It\'s a funny old world. Enjoy it.',
+  ),
+  Post(
     title: 'Do Not Conform',
     datePosted: DateTime(2024, 1, 12),
     image: 'images/1.png',
