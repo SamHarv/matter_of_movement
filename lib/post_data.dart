@@ -2,6 +2,67 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Exercise',
+    datePosted: DateTime(2024, 2, 2),
+    image: 'images/1.png',
+    id: '111',
+    body: 'One of the most well-known contributors toward positive health is '
+        'exercise.\n\n'
+        'But many do not know exactly how they should be exercising.\n\n'
+        'In what mode?\n\n'
+        'How often, for how long?\n\n'
+        'At what intensity?\n\n'
+        'The answers to these questions should align to your goals, and you should '
+        'therefore be guided by an exercise professional.\n\n'
+        'There is a vast amount of misinformation online about exercise so here, I will '
+        'share a few tips on how to spot bullshit online before I outline the basic '
+        'recommended exercise guidelines in Australia.\n\n'
+        'A few factors to check when you suspect misinformation online:\n\n'
+        '- Is it a "quick fix"? Think 7 minute abs, 4 week transformation, etc.\n\n'
+        '- Does the person preaching the method appear to have a body which seems '
+        'unobtainable by natural means (do they look as though they have had medicinal '
+        'assistance?)\n'
+        'This can sometimes be guessed by the presence of the following traits:\n'
+        '- Abnormally large deltoids or traps\n'
+        '- Overly reddish hue to their skin\n'
+        '- Dramatically vascular\n'
+        '- They are always lean\n\n'
+        '- Is it evidence-based (do they list academic articles from which the '
+        'information was derived)?\n'
+        'Please note I added a reference at the bottom of this post to dampen the hypocrisy.\n\n'
+        'The Australian physical activity guidelines are a great place to start when '
+        'planning to partake in exercise, but you must remember exercise should be tailored to '
+        'specific needs and preferences to ensure the best outcomes.\n\n'
+        'For adults in Australia, the following is recommended (Department of Health '
+        'and Aged Care, 2021):\n'
+        '- 150-300 minutes per week of moderate intensity physical activity (moderate '
+        'intensity can be identified by elevated breathing, but still being able to '
+        'hold a conversation)\n'
+        'Or\n'
+        '- 75-150 minutes of vigorous physical activity (where you should not quite be '
+        'able to hold a conversation)\n'
+        'Or\n'
+        '- A combination of the above two\n'
+        'And\n'
+        '- Resistance training (weights) is recommended at least 2 days '
+        'per week (I think 3-5 is effective for best results).\n\n'
+        'The mode of exercise you choose should be something you are capable of '
+        'enjoying, and can include an array of activities such as walking, jogging, '
+        'cycling, swimming, various sports, wood chopping, yoga, etc. Anything which '
+        'elevates your breath rate and heart rate should be effective.\n\n'
+        'The biggest tip I could give in your exercise journey is to experiment.\n\n'
+        'Try rock climbing, or hiking, or anything that gets your blood pumping.\n\n'
+        'The key is to find something you can enjoy so it will be sustainable.\n\n'
+        'Three 60 minute bouts of lawn bowls a week over 3 months is far more '
+        'effective than three high intensity training sessions in 3 months which you '
+        'don\'t enjoy (and are less likely to come back to).\n\n'
+        'The benefits of exercise extend far beyond weight loss. There are numerous '
+        'benefits including improvement of cognition, happiness and bone strength, '
+        'so exercise should be performed by everyone.\n\n\n'
+        'Department of Health and Aged Care (2021). Available at '
+        'https://www.health.gov.au/topics/physical-activity-and-exercise/physical-activity-and-exercise-guidelines-for-all-australians',
+  ),
+  Post(
     title: 'This Too Shall Pass',
     datePosted: DateTime(2024, 1, 26),
     image: 'images/1.png',
