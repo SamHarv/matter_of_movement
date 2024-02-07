@@ -2,6 +2,31 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Eat Well',
+    datePosted: DateTime(2024, 2, 2),
+    image: 'images/1.png',
+    id: '112',
+    body: 'Another of the most widely recognised contributors to health is '
+        'nutrition.\n\n'
+        'I am no expert on nutrition and would advise you to see a dietitian '
+        'if you are looking to make significant changes to your diet.\n\n'
+        'However, I can provide a couple of basic guidelines which are widely '
+        'accepted as beneficial for health.\n\n'
+        'Your diet should be diverse and include a variety of foods.\n\n'
+        'To maintain body mass, the energy you consume (food) should be equal to the energy '
+        'you expend (exercise + resting metabolic rate).\n\n'
+        'A teaching from the Okinawans, who are known for their longevity, is to eat '
+        'until you are 80% full.\n\n'
+        'Hara hachi bu - Eat until you are eight parts full.\n\n'
+        'This can be very challenging when our brains reward us '
+        'for eating calorie dense foods as a survival mechanism which no longer '
+        'serves us.\n\n'
+        'Food is no longer scarce, so we must consciously try to override these '
+        'cravings by being mindful when eating - being present and experiencing '
+        'our food with all our senses and all our attention.\n\n'
+        'I can attest that this is no easy task, but it is an admirable goal.',
+  ),
+  Post(
     title: 'Exercise',
     datePosted: DateTime(2024, 2, 2),
     image: 'images/1.png',
