@@ -3,7 +3,7 @@ import './models/post_model.dart';
 List<Post> postData = [
   Post(
     title: 'Eat Well',
-    datePosted: DateTime(2024, 2, 2),
+    datePosted: DateTime(2024, 2, 9),
     image: 'images/1.png',
     id: '112',
     body: 'Another of the most widely recognised contributors to health is '
