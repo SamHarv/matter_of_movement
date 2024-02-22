@@ -2,6 +2,21 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Cultivate Positive Social Relationships',
+    datePosted: DateTime(2024, 2, 23),
+    image: 'images/1.png',
+    id: '114',
+    body: 'Surround yourself with those who bring out the best in you.\n\n'
+        'Not just those who flatter you and make you feel special, but those who '
+        'encourage you to be the best version of yourself.\n\n'
+        'Those who challenge you, inspire you, and make you think '
+        'differently.\n\n'
+        'Some say your personality warps to become an average of the five '
+        'people with whom you spend the most time.\n\n'
+        'Keep an inner circle of few, but high quality people.\n\n'
+        'This will allow you to become the best version of yourself.',
+  ),
+  Post(
     title: 'Sleep',
     datePosted: DateTime(2024, 2, 16),
     image: 'images/1.png',
