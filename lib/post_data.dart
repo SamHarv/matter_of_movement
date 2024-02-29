@@ -2,6 +2,35 @@ import './models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Have Empathy',
+    datePosted: DateTime(2024, 3, 1),
+    image: 'images/1.png',
+    id: '115',
+    body: 'Empathy is perhaps the most important skill to enable positive '
+        'interactions with others.\n\n'
+        'It allows us to relate to one another.\n\n'
+        'To try and feel what others are feeling in an effort to understand their '
+        'perspective.\n\n'
+        'Empathy is a concept which pops up time and time again in religious '
+        'texts as a cornerstone of their values.\n\n'
+        'It is often referred to as the golden rule - treat others as you would '
+        'like to be treated.\n\n'
+        'Empathy is the practice of putting yourself in someone else\'s shoes.\n\n'
+        'Trying to understand their perspective, their feelings, and their '
+        'situation.\n\n'
+        'It is not to be confused with sympathy, which is feeling sorry for '
+        'someone.\n\n'
+        'When someone shares a tribulation with you, do not tell '
+        'them you know how they feel, or counter with a battle of your own '
+        'which you believe to be worse.\n\n'
+        'Listen, and try to understand their perspective.\n\n'
+        'Do not say "you poor thing", but rather "this must be very difficult for '
+        'you."\n\n'
+        'This skill is pivotal in getting along with others and helping them feel '
+        'heard and understood.\n\n'
+        'This in turn can make you a better person and a better friend.',
+  ),
+  Post(
     title: 'Cultivate Positive Social Relationships',
     datePosted: DateTime(2024, 2, 23),
     image: 'images/1.png',
