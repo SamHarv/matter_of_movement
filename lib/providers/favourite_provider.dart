@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../models/post_model.dart';
+import '/models/post_model.dart';
 
 class FavouriteProvider extends ChangeNotifier {
   bool _darkMode = false;

@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
+import '/constants.dart';
 
-class MyTextField extends StatelessWidget {
-  const MyTextField({
+class CustomTextFieldWidget extends StatelessWidget {
+  final double mediaWidth;
+  final TextEditingController controller;
+  final String hintText;
+  final bool obscure;
+
+  const CustomTextFieldWidget({
     Key? key,
     required this.mediaWidth,
     required this.controller,
     required this.hintText,
     required this.obscure,
   }) : super(key: key);
-
-  final double mediaWidth;
-  final TextEditingController controller;
-  final String hintText;
-  final bool obscure;
 
   @override
   Widget build(BuildContext context) {

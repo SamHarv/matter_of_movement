@@ -1,12 +1,12 @@
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
-import 'package:matterofmovement/providers/favourite_provider.dart';
 import 'package:provider/provider.dart';
 
-import '../constants.dart';
+import '/providers/favourite_provider.dart';
+import '/constants.dart';
 
-class AppDrawer extends StatelessWidget {
-  const AppDrawer({super.key});
+class AppDrawerWidget extends StatelessWidget {
+  const AppDrawerWidget({super.key});
 
   Widget buildListTile(String title, IconData icon, dynamic tapHandler,
       Color iconColour, Color textColour) {
@@ -35,7 +35,6 @@ class AppDrawer extends StatelessWidget {
     Color paleBlue = Colors.blueAccent;
 
     return Drawer(
-      //backgroundColor: thirdColor,
       child: SingleChildScrollView(
         child: Column(
           children: [
@@ -43,7 +42,6 @@ class AppDrawer extends StatelessWidget {
               width: double.infinity,
               padding: const EdgeInsets.all(20),
               alignment: Alignment.centerLeft,
-              //color: darkMode ? thirdColor : null,
               child: Image.asset(isDarkMode ? logo : fullLogo),
             ),
             const Divider(),

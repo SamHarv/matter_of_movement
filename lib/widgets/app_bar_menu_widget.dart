@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:matterofmovement/providers/favourite_provider.dart';
 import 'package:provider/provider.dart';
 
-import '../constants.dart';
+import '/providers/favourite_provider.dart';
+import '/constants.dart';
 
-class AppBarMenuItem extends StatelessWidget {
-  const AppBarMenuItem({
+class AppBarMenuWidget extends StatelessWidget {
+  final String title;
+  final dynamic onTap;
+
+  const AppBarMenuWidget({
     Key? key,
     required this.title,
-    required this.function,
+    required this.onTap,
   }) : super(key: key);
-
-  final String title;
-  final dynamic function;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class AppBarMenuItem extends StatelessWidget {
     return Padding(
       padding: kPadding,
       child: InkWell(
-        onTap: function,
+        onTap: onTap,
         child: Text(
           title,
           style: TextStyle(color: isDarkMode ? thirdColor : color),

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import '../constants.dart';
+import '/constants.dart';
 
-class PostTile extends StatelessWidget {
+class PostTileWidget extends StatelessWidget {
   final String title;
   final String image;
   final DateTime datePosted;
   final List<String>? tags;
-  final Function() onTap;
+  final VoidCallback onTap;
   final IconButton icon;
 
-  const PostTile({
+  const PostTileWidget({
     required this.title,
     required this.image,
     required this.datePosted,

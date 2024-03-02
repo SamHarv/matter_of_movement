@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:matterofmovement/providers/favourite_provider.dart';
 import 'package:provider/provider.dart';
 
-import '../constants.dart';
+import '/providers/favourite_provider.dart';
+import '/constants.dart';
+import '/widgets/custom_appbar_widget.dart';
 
-import '../widgets/custom_appbar.dart';
-
-class Subscribed extends StatefulWidget {
-  const Subscribed({super.key});
+class AlreadySubscribedPage extends StatefulWidget {
+  const AlreadySubscribedPage({super.key});
 
   @override
-  State<Subscribed> createState() => _SubscribedState();
+  State<AlreadySubscribedPage> createState() => _AlreadySubscribedPageState();
 }
 
-class _SubscribedState extends State<Subscribed> {
+class _AlreadySubscribedPageState extends State<AlreadySubscribedPage> {
   final user = FirebaseAuth.instance.currentUser!;
 
   void unsubscribe() {
@@ -32,7 +31,7 @@ class _SubscribedState extends State<Subscribed> {
 
   @override
   Widget build(BuildContext context) {
-    final double mediaWidth = MediaQuery.of(context).size.width;
+    final mediaWidth = MediaQuery.of(context).size.width;
     final darkModeProvider = Provider.of<FavouriteProvider>(context);
     final isDarkMode = darkModeProvider.darkMode;
     TextStyle headingStyle = TextStyle(
@@ -45,7 +44,7 @@ class _SubscribedState extends State<Subscribed> {
     );
     return Scaffold(
       drawer: appDrawer,
-      appBar: const CustomAppBar(id: '/subscribed'),
+      appBar: const CustomAppBarWidget(id: '/subscribed'),
       body: Center(
         child: SingleChildScrollView(
           child: Column(

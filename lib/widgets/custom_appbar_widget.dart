@@ -1,14 +1,14 @@
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
-import 'package:matterofmovement/providers/favourite_provider.dart';
 import 'package:provider/provider.dart';
 
-import '../constants.dart';
+import '/providers/favourite_provider.dart';
+import '/constants.dart';
+import 'app_bar_menu_widget.dart';
 
-import './app_bar_menu_item.dart';
-
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({
+class CustomAppBarWidget extends StatelessWidget
+    implements PreferredSizeWidget {
+  const CustomAppBarWidget({
     Key? key,
     required this.id,
   }) : super(key: key);
@@ -19,7 +19,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double mediaWidth = MediaQuery.of(context).size.width;
+    final mediaWidth = MediaQuery.of(context).size.width;
     final darkModeProvider = Provider.of<FavouriteProvider>(context);
     final isDarkMode = darkModeProvider.darkMode;
 
@@ -28,7 +28,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       iconTheme: IconThemeData(
         color: isDarkMode ? thirdColor : secondaryColor,
       ),
-      //backgroundColor: thirdColor,
       title: Center(
         child: mediaWidth < 750
             ? InkWell(
@@ -45,32 +44,30 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      AppBarMenuItem(
+                      AppBarMenuWidget(
                         title: 'Home',
-                        function: () => Beamer.of(context).beamToNamed('/home'),
+                        onTap: () => Beamer.of(context).beamToNamed('/home'),
                       ),
-                      AppBarMenuItem(
+                      AppBarMenuWidget(
                         title: 'Favourites',
-                        function: () =>
+                        onTap: () =>
                             Beamer.of(context).beamToNamed('/favourites'),
                       ),
-                      AppBarMenuItem(
+                      AppBarMenuWidget(
                         title: 'About',
-                        function: () =>
-                            Beamer.of(context).beamToNamed('/about'),
+                        onTap: () => Beamer.of(context).beamToNamed('/about'),
                       ),
-                      AppBarMenuItem(
+                      AppBarMenuWidget(
                         title: 'Book List',
-                        function: () =>
-                            Beamer.of(context).beamToNamed('/books'),
+                        onTap: () => Beamer.of(context).beamToNamed('/books'),
                       ),
-                      AppBarMenuItem(
+                      AppBarMenuWidget(
                         title: 'Subscribe',
-                        function: () => Beamer.of(context).beamToNamed('/auth'),
+                        onTap: () => Beamer.of(context).beamToNamed('/auth'),
                       ),
-                      AppBarMenuItem(
+                      AppBarMenuWidget(
                         title: isDarkMode ? 'Light Mode' : 'Dark Mode',
-                        function: () => darkModeProvider.toggleDarkMode(),
+                        onTap: () => darkModeProvider.toggleDarkMode(),
                       ),
                     ],
                   ),

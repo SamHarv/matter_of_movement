@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:matterofmovement/providers/favourite_provider.dart';
 import 'package:provider/provider.dart';
-import '../constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../widgets/custom_appbar.dart';
+import '/providers/favourite_provider.dart';
+import '/constants.dart';
+import '/widgets/custom_appbar_widget.dart';
 
-final Uri _url = Uri.parse('https://oxygentech.com.au');
+final _url = Uri.parse('https://oxygentech.com.au');
 
 Future<void> _launchUrl() async {
   if (!await launchUrl(_url)) {
@@ -14,14 +14,12 @@ Future<void> _launchUrl() async {
   }
 }
 
-//async after _sendMail()
 void _sendEmail() {
   final Uri emailLaunchUri = Uri(
     scheme: 'mailto',
     path: 'oxygentech@protonmail.com',
   );
   launchUrl(emailLaunchUri);
-  //await before launchUrl
 }
 
 class AboutPage extends StatelessWidget {
@@ -29,7 +27,7 @@ class AboutPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double mediaWidth = MediaQuery.of(context).size.width;
+    final mediaWidth = MediaQuery.of(context).size.width;
     final darkModeProvider = Provider.of<FavouriteProvider>(context);
     final isDarkMode = darkModeProvider.darkMode;
     TextStyle headingStyle = TextStyle(
@@ -42,7 +40,7 @@ class AboutPage extends StatelessWidget {
     );
     return Scaffold(
       drawer: appDrawer,
-      appBar: const CustomAppBar(
+      appBar: const CustomAppBarWidget(
         id: '/about',
       ),
       body: Center(

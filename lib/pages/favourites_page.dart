@@ -3,19 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
-import '../constants.dart';
-
-import '../providers/favourite_provider.dart';
-
-import '../widgets/custom_appbar.dart';
-import '../widgets/post_tile.dart';
+import '/constants.dart';
+import '/providers/favourite_provider.dart';
+import '/widgets/custom_appbar_widget.dart';
+import '/widgets/post_tile_widget.dart';
 
 class FavouritesPage extends StatelessWidget {
   const FavouritesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final double mediaWidth = MediaQuery.of(context).size.width;
+    final mediaWidth = MediaQuery.of(context).size.width;
     final darkModeProvider = Provider.of<FavouriteProvider>(context);
     final isDarkMode = darkModeProvider.darkMode;
     TextStyle headingStyle = TextStyle(
@@ -36,7 +34,7 @@ class FavouritesPage extends StatelessWidget {
 
     return Scaffold(
       drawer: appDrawer,
-      appBar: const CustomAppBar(id: '/favourites'),
+      appBar: const CustomAppBarWidget(id: '/favourites'),
       body: Container(
         padding: kPadding,
         child: CustomScrollView(
@@ -64,7 +62,7 @@ class FavouritesPage extends StatelessWidget {
                 childCount: favouritePosts.length,
                 (context, index) {
                   final post = favouritePosts[index];
-                  return PostTile(
+                  return PostTileWidget(
                     title: post!.title,
                     image: post.image,
                     datePosted: post.datePosted,

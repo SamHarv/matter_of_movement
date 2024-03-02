@@ -1,4 +1,4 @@
-import './models/post_model.dart';
+import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(

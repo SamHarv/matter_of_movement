@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:matterofmovement/providers/favourite_provider.dart';
 import 'package:provider/provider.dart';
 
-import '../constants.dart';
-
-import '../widgets/custom_appbar.dart';
+import '/constants.dart';
+import '/providers/favourite_provider.dart';
+import '/widgets/custom_appbar_widget.dart';
 
 class BookListPage extends StatelessWidget {
   const BookListPage({super.key});
-
-  //Makr into a row of 2 columns
-  // First column loop from 1 to 30 (Colour blue)
-  // Second column loop through Strings
 
   static const Map<int, String> bookList = <int, String>{
     1: 'Essentialism - Greg McKeown',
@@ -48,7 +43,7 @@ class BookListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double mediaWidth = MediaQuery.of(context).size.width;
+    final mediaWidth = MediaQuery.of(context).size.width;
     final darkModeProvider = Provider.of<FavouriteProvider>(context);
     final isDarkMode = darkModeProvider.darkMode;
     TextStyle headingStyle = TextStyle(
@@ -61,7 +56,7 @@ class BookListPage extends StatelessWidget {
     );
     return Scaffold(
       drawer: appDrawer,
-      appBar: const CustomAppBar(id: '/books'),
+      appBar: const CustomAppBarWidget(id: '/books'),
       body: Center(
         child: SingleChildScrollView(
           child: Column(

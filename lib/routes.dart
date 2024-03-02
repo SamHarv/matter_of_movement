@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:beamer/beamer.dart';
 
-import '../post_data.dart';
-
-import './pages/subscribed.dart';
-import './pages/auth_page.dart';
-import './pages/book_list.dart';
-import './pages/subscribe_page.dart';
-import './pages/home_page.dart';
-import './pages/about_page.dart';
-import './pages/favourites_page.dart';
-import './pages/article_page.dart';
+import 'post_data.dart';
+import 'pages/already_subscribed_page.dart';
+import 'pages/auth_page.dart';
+import 'pages/book_list_page.dart';
+import 'pages/subscribe_page.dart';
+import 'pages/home_page.dart';
+import 'pages/about_page.dart';
+import 'pages/favourites_page.dart';
+import 'pages/article_page.dart';
 
 final routerDelegate = BeamerDelegate(
   notFoundRedirectNamed: '/home',
@@ -70,7 +69,7 @@ final routerDelegate = BeamerDelegate(
           key: ValueKey('subscribed'),
           type: BeamPageType.fadeTransition,
           title: 'Subscribed - Matter of Movement',
-          child: Subscribed(),
+          child: AlreadySubscribedPage(),
         );
       },
       '/article/:id': (context, state, data) {

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:matterofmovement/providers/favourite_provider.dart';
 import 'package:provider/provider.dart';
 
-import '../constants.dart';
-
-import '../widgets/custom_appbar.dart';
-import '../widgets/text_field.dart';
+import '/constants.dart';
+import '/providers/favourite_provider.dart';
+import '/widgets/custom_appbar_widget.dart';
+import '/widgets/custom_text_field_widget.dart';
 
 class SubscribePage extends StatefulWidget {
   const SubscribePage({super.key});
@@ -64,7 +63,7 @@ class _SubscribePageState extends State<SubscribePage> {
 
   @override
   Widget build(BuildContext context) {
-    final double mediaWidth = MediaQuery.of(context).size.width;
+    final mediaWidth = MediaQuery.of(context).size.width;
     final darkModeProvider = Provider.of<FavouriteProvider>(context);
     final isDarkMode = darkModeProvider.darkMode;
     TextStyle headingStyle = TextStyle(
@@ -73,7 +72,7 @@ class _SubscribePageState extends State<SubscribePage> {
     );
     return Scaffold(
       drawer: appDrawer,
-      appBar: const CustomAppBar(id: '/subscribe'),
+      appBar: const CustomAppBarWidget(id: '/subscribe'),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
@@ -87,14 +86,14 @@ class _SubscribePageState extends State<SubscribePage> {
                 ),
               ),
               gapH35,
-              MyTextField(
+              CustomTextFieldWidget(
                 mediaWidth: mediaWidth,
                 controller: emailController,
                 hintText: 'Email Address',
                 obscure: false,
               ),
               gapH20,
-              MyTextField(
+              CustomTextFieldWidget(
                 mediaWidth: mediaWidth,
                 controller: nameController,
                 hintText: 'Create Password',

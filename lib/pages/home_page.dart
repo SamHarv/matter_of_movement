@@ -3,20 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/services.dart';
 
-import '../constants.dart';
-import '../post_data.dart';
-
-import '../providers/favourite_provider.dart';
-
-import '../widgets/custom_appbar.dart';
-import '../widgets/post_tile.dart';
+import '/constants.dart';
+import '/post_data.dart';
+import '/providers/favourite_provider.dart';
+import '/widgets/custom_appbar_widget.dart';
+import '/widgets/post_tile_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final double mediaWidth = MediaQuery.of(context).size.width;
+    final mediaWidth = MediaQuery.of(context).size.width;
     final provider = Provider.of<FavouriteProvider>(context);
 
     int adaptiveWidth() {
@@ -31,7 +29,7 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       drawer: appDrawer,
-      appBar: const CustomAppBar(id: '/'),
+      appBar: const CustomAppBarWidget(id: '/'),
       body: Container(
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
         child: CustomScrollView(
@@ -50,7 +48,7 @@ class HomePage extends StatelessWidget {
                 childCount: postData.length,
                 (context, index) {
                   final post = postData[index];
-                  return PostTile(
+                  return PostTileWidget(
                     title: post.title,
                     image: post.image,
                     datePosted: post.datePosted,

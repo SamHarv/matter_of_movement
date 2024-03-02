@@ -3,14 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
-import '../constants.dart';
-
-import '../models/post_model.dart';
-import '../providers/favourite_provider.dart';
-
-import '../post_data.dart';
-
-import '../widgets/custom_appbar.dart';
+import '/constants.dart';
+import '/models/post_model.dart';
+import '/providers/favourite_provider.dart';
+import '/post_data.dart';
+import '/widgets/custom_appbar_widget.dart';
 
 class ArticlePage extends StatefulWidget {
   final Post post;
@@ -29,7 +26,7 @@ class ArticlePage extends StatefulWidget {
 class _ArticlePageState extends State<ArticlePage> {
   @override
   Widget build(BuildContext context) {
-    final double mediaWidth = MediaQuery.of(context).size.width;
+    final mediaWidth = MediaQuery.of(context).size.width;
     final darkModeProvider = Provider.of<FavouriteProvider>(context);
     final isDarkMode = darkModeProvider.darkMode;
     TextStyle headingStyle = TextStyle(
@@ -62,7 +59,7 @@ class _ArticlePageState extends State<ArticlePage> {
     return GestureDetector(
       child: Scaffold(
         drawer: appDrawer,
-        appBar: const CustomAppBar(id: '/article'),
+        appBar: const CustomAppBarWidget(id: '/article'),
         body: Center(
           child: SingleChildScrollView(
             child: Column(
@@ -101,11 +98,8 @@ class _ArticlePageState extends State<ArticlePage> {
                                     provider.toggleFavourite(widget.post),
                               ),
                             );
-                            // WidgetsBinding.instance
-                            //     .addPostFrameCallback((timeStamp) {
                             ScaffoldMessenger.of(context)
                                 .showSnackBar(snackBar);
-                            //});
                           },
                           iconSize: 24,
                           padding: kPadding,
@@ -116,7 +110,6 @@ class _ArticlePageState extends State<ArticlePage> {
                             padding: kPadding,
                             child: Text(
                               favouritePost!.title,
-                              //post.title,
                               textAlign: TextAlign.center,
                               style: headingStyle,
                             ),
