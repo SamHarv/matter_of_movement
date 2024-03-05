@@ -2,6 +2,25 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Show Gratitude',
+    datePosted: DateTime(2024, 3, 8),
+    image: 'images/1.png',
+    id: '116',
+    body: 'It is important to remind ourselves every day of what we have.\n\n'
+        'What we have achieved.\n\n'
+        'It is easy to take what we have for granted and not appreciate our '
+        'circumstances.\n\n'
+        'We are often so focused on what we do not have, we forget to be '
+        'express gratitude for what we do.\n\n'
+        'Take the time each day to remind yourself of what you are grateful '
+        'for.\n\n'
+        'This will benefit both your mental health and overall '
+        'happiness.\n\n'
+        'It is equally important to express gratitude to others.\n\n'
+        'Show your gratitude, as this will have a positive impact on both '
+        'yourself and them.',
+  ),
+  Post(
     title: 'Have Empathy',
     datePosted: DateTime(2024, 3, 1),
     image: 'images/1.png',
