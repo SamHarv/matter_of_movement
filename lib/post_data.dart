@@ -2,6 +2,31 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Bathe in Nature',
+    datePosted: DateTime(2024, 3, 15),
+    image: 'images/1.png',
+    id: '117',
+    body: 'Forest bathing, or shinrin yoku, is a Japanese practice which '
+        'involves immersing oneself in nature.\n\n'
+        'It is not about hiking or exercising, but rather about being present in '
+        'nature.\n\n'
+        'It is about using all your senses to experience the forest.\n\n'
+        'It is about taking in the sights, sounds, smells, and textures of the '
+        'forest.\n\n'
+        'It is about being present in the moment.\n\n'
+        'The practice has been shown to have a number of health benefits, including '
+        'reduced stress, improved mood, and improved immune function.\n\n'
+        'The practice is not limited to forests, and can be done in any natural '
+        'environment.\n\n'
+        'It is important to note that the practice is not about achieving a goal, '
+        'but rather about being present in the moment.\n\n'
+        'Listen to the birds, smell the trees and vegetation, feel the breeze '
+        'and the terrain under your feet, notice the beams of sun shining '
+        'through the trees.\n\n'
+        'It is about taking the time to slow down and appreciate the natural '
+        'world while taking a break from our overstimulating world.',
+  ),
+  Post(
     title: 'Show Gratitude',
     datePosted: DateTime(2024, 3, 8),
     image: 'images/1.png',
