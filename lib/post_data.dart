@@ -20,7 +20,7 @@ List<Post> postData = [
         'environment.\n\n'
         'It is important to note that the practice is not about achieving a goal, '
         'but rather about being present in the moment.\n\n'
-        'Listen to the birds, smell the trees and vegetation, feel the breeze '
+        'Listen to the birds, smell the trees and vegetation, feel the breeze, '
         'and the terrain under your feet, notice the beams of sun shining '
         'through the trees.\n\n'
         'It is about taking the time to slow down and appreciate the natural '
