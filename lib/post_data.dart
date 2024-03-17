@@ -2,6 +2,33 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Delay Graitification',
+    datePosted: DateTime(2024, 3, 22),
+    image: 'images/1.png',
+    id: '118',
+    body: 'In 1970, a study was conducted at Stanford University which '
+        'involved a group of children and the temptation of a marshmallow.\n\n'
+        'The children were given a marshmallow and told they could eat it '
+        'immediately, or if they waited 15 minutes, they would be given a second '
+        'marshmallow.\n\n'
+        'The children who were able to delay gratification and wait for the second '
+        'marshmallow were found to have better life outcomes.\n\n'
+        'They had higher SAT scores, lower levels of substance abuse, lower likelihood '
+        'of obesity, better responses to stress, better social skills, and better '
+        'ability to cope with frustration.\n\n'
+        'They were able to prioritise long-term over short-term rewards.\n\n'
+        'When I initially read this, I assumed these children must have had '
+        'innately higher amount of willpower, but it turns out the ability to delay '
+        'gratification is a skill which can be developed.\n\n'
+        'The study demonstrated that effective delay of gratification is not '
+        'necessarily about willpower, but rather about the suppressive and '
+        'avoidance mechanisms we can use to reduce the frustration of waiting.\n\n'
+        'These children were able to remove the need for willpower through '
+        'distraction, or by reframing the situation.\n\n'
+        'The ability to delay gratification is challenging, but is a practice '
+        'which yields immense long-term benefits.',
+  ),
+  Post(
     title: 'Bathe in Nature',
     datePosted: DateTime(2024, 3, 15),
     image: 'images/1.png',
