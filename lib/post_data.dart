@@ -18,13 +18,13 @@ List<Post> postData = [
         'ability to cope with frustration.\n\n'
         'They were able to prioritise long-term over short-term rewards.\n\n'
         'When I initially read this, I assumed these children must have had '
-        'innately higher amounts of willpower, but it turns out the ability to delay '
-        'gratification is a skill which can be developed.\n\n'
+        'innately more willpower, but it turns out this is not the case.\n\n'
         'The study demonstrated that effective delay of gratification is not '
         'necessarily about willpower, but rather about the suppressive and '
         'avoidance mechanisms we can use to reduce the frustration of waiting.\n\n'
         'These children were able to remove the need for willpower through '
         'distraction, or by reframing the situation.\n\n'
+        'When we can change our focus, we remove the need for willpower.\n\n'
         'The ability to delay gratification is challenging, but is a practice '
         'which yields immense long-term benefits.',
   ),
