@@ -6,12 +6,12 @@ List<Post> postData = [
     datePosted: DateTime(2024, 3, 29),
     image: 'images/1.png',
     id: '119',
-    body: 'An often underrated and de-prioritised practice meditation holds '
+    body: 'An often underrated and de-prioritised practice, meditation holds '
         'the key to not only improving your concentration and performance '
-        'throughout the day, but to lowering your levels of stress as well.\n\n'
+        'throughout the day, but to also lowering your levels of stress.\n\n'
         'Meditation, in its essence, is active engagement in mindfulness.\n\n'
         'It is being present in the moment.\n\n'
-        'It is not about clearing your mind, but rather about noticing when your '
+        'It is not about clearing your mind, but rather noticing when your '
         'thoughts have wandered and gently guiding them back to the present.\n\n'
         'It is about noticing your thoughts and sensations non-judgementally.\n\n'
         'If you practice meditation even for 10 minutes a day, you will benefit.',
