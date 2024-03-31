@@ -2,6 +2,36 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Cold Water Immersion',
+    datePosted: DateTime(2024, 4, 5),
+    image: 'images/1.png',
+    id: '120',
+    body:
+        'Why would one submerge themselves in ice-cold water of their own volition?\n\n'
+        'There are many claimed benefits to cold water immersion - some of which have gained empirical evidence, including:\n\n'
+        '- Cooling for treatment of hyperthermia\n'
+        '- Pre-cooling to improve exercise performance in heat\n\n'
+        'In addition to this; there are many claimed benefits which are currently backed by only weak evidence, including:\n\n'
+        '- Upregulation in immune function\n'
+        '- Treatment of conditions related to inflammation\n'
+        '- Improved mood\n'
+        '- Exposure to eustress - which involves being exposed to a stressor in order to build resilience to stress\n'
+        '- Improved cardiovascular circulation\n'
+        '- Improved metabolic function\n'
+        '- Improved post-exercise recovery\n'
+        '- Improved hair and skin\n\n'
+        'I have been partaking in a daily cold shower for 3 years now.\n\n'
+        'The temperature varies throughout the year, but I have found it sufficient to yield the following subjective benefits:\n\n'
+        '- Invigoration - I find a cold shower a great way to start the day (ideally after exercise) as it increases my alertness\n'
+        '- Mood improvement - a sense of pleasure often accompanies my sense of invigoration\n'
+        '- It builds momentum - when I have a cold shower, I feel as though I am starting the day on a positive note and the positivity tends to build from there. It is an act of discipline.\n'
+        '- Improved resilience to the cold\n\n'
+        'If you are interested in cold water immersion or cold showers, I recommend you check out Wim Hof.\n\n'
+        'He is a madman, but I find him both entertaining and inspiring.\n\n'
+        '"The cold is my warm friend"\n\n'
+        '- Wim Hof whilst submerged in an ice bath',
+  ),
+  Post(
     title: 'Meditate',
     datePosted: DateTime(2024, 3, 29),
     image: 'images/1.png',
