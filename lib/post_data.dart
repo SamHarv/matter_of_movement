@@ -7,7 +7,7 @@ List<Post> postData = [
     image: 'images/1.png',
     id: '120',
     body:
-        'To most people, the thought of plunging into cold water is not appealing.\n\n'
+        'To most, the thought of plunging into cold water is not appealing.\n\n'
         'So, why would one put themselves through such a routine?\n\n'
         'There are many claimed benefits to cold water immersion - some of which have gained empirical evidence, including:\n\n'
         '- Cooling for treatment of hyperthermia\n'
@@ -28,12 +28,12 @@ List<Post> postData = [
         '- Mood improvement - a sense of pleasure often accompanies my sense of invigoration\n'
         '- It builds momentum - when I have a cold shower, I feel as though I am starting the day on a positive note and the positivity tends to build from there. It is an act of discipline.\n'
         '- Improved resilience to the cold\n\n'
-        'After a few weeks, I began to crave the feeling of a cold shower.\n\n'
-        'This sounds odd, and I cannot explain it, but the urge now presents itself '
+        'After the first few weeks of this practice, I began to crave the feeling of a cold shower.\n\n'
+        'This sounds odd, but the urge now presents itself '
         'any time I step into a warm shower.\n\n'
         'If you are interested in trying cold water immersion, I suggest taking '
         'it slow.\n\n'
-        'Begin by gradually turning the shower cold at the end of your warm '
+        'Begin by gradually turning the water cold at the end of your warm '
         'shower, and starting even with just 10 seconds.\n\n'
         'Over time, you can build up your tolerance.\n\n'
         'Some recommend 2 minutes, but I have found 100 seconds at the end of a '
