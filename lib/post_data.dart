@@ -6,9 +6,9 @@ List<Post> postData = [
     datePosted: DateTime(2024, 4, 12),
     image: 'images/1.png',
     id: '121',
-    body: 'Misinformation is more rampant, and more convincing than ever.\n\n'
+    body: 'Misinformation is more rampant and convincing than ever.\n\n'
         'Media outlets continue to push their agenda with the goal of keeping people '
-        'viewing or reading their content.\n\n'
+        'viewing, reading, or listening to their content.\n\n'
         'They dramatise events with imagery and prose, often leading us to believe '
         'the world is a more dangerous place than it is.\n\n'
         'Social media is prone to containing more misinformation than truth.\n\n'
@@ -19,6 +19,7 @@ List<Post> postData = [
         'most easily recall.\n\n'
         'What we can easily recall is what we constantly see, and in this day and '
         'age, is often misinformation.\n\n'
+        'We need to accept there is a lot of information we do not see.\n\n'
         'We should choose to subscribe to newsletters that report on positive news, '
         'which will give us a more positive outlook on the world.\n\n'
         'If we see something on social media, or even on the news, we should '
@@ -27,14 +28,14 @@ List<Post> postData = [
         'emotional response rather than inform.\n\n'
         'We should seek information from peer-reviewed journals, from books written '
         'by authors whose values align with our own, and from sources '
-        'which are not incentivised to push an agenda.\n\n'
-        'Perhaps the most beneficial thing we can do is to limit our exposure to '
+        'wnot incentivised to push an agenda.\n\n'
+        'Perhaps the most beneficial thing we can do to limit our exposure to '
         'misinformation and negatively skewed news is to limit our time on social '
         'media.\n\n'
         'Turn off the notifications for social media apps on your smart phone and '
         'check them when it suits you.\n\n'
         'If we can control our cognitive inputs, we can be less susceptible to '
-        'misnformation and manipulation, and we can be happier and healthier as a result.',
+        'misnformation and manipulation, and be happier and healthier as a result.',
   ),
   Post(
     title: 'Cold Water Immersion',
