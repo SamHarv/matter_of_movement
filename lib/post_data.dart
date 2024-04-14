@@ -1,6 +1,46 @@
 import 'models/post_model.dart';
 
 List<Post> postData = [
+  // Post(
+  //   title: 'What Would You Do if You Were Not Afraid?',
+  //   datePosted: DateTime(2024, 4, 19),
+  //   image: 'images/1.png',
+  //   id: '123',
+  //   body:
+  //       '',
+  // ),
+  Post(
+    title: 'Five Whys',
+    datePosted: DateTime(2024, 4, 19),
+    image: 'images/1.png',
+    id: '122',
+    body: 'When setting a goal, the following can be a useful exercise in '
+        'clarifying where your motivation for such a change may stem from.\n\n'
+        'If you have a goal in mind, ask yourself why.\n\n'
+        'When we think we have an answer, we can ask why again.\n\n'
+        'We can continue to do this until we have asked why five times.\n\n'
+        'This can help us to identify our core values and motivations.\n\n'
+        'It can help us see the big picture.\n\n'
+        'The concept of the five whys was developed for use by Toyota.\n\n'
+        'It was used as a problem-solving technique to identify the root cause '
+        'of a problem.\n\n'
+        'It can also be applied as a strategy to identify our root motivations.\n\n'
+        'For example, say I wanted to eat smaller food portions.\n\n'
+        '(1) Why?\n\n'
+        'So I consume less food overall.\n\n'
+        '(2) Why?\n\n'
+        'So I can control my body mass.\n\n'
+        '(3) Why?\n\n'
+        'So I can remain healthy as I age.\n\n'
+        '(4) Why?\n\n'
+        'To prolong my life.\n\n'
+        '(5) Why?\n\n'
+        'So I can see my children grow and learn.\n\n'
+        'This exercise can help us to see the bigger picture and understand '
+        'our motivations for change.\n\n'
+        'If we can keep this motivation at the forefront of our mind, we can '
+        'improve our chances of sustained success.',
+  ),
   Post(
     title: 'Choose Cognitive Inputs Wisely',
     datePosted: DateTime(2024, 4, 12),
