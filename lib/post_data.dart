@@ -14,17 +14,17 @@ List<Post> postData = [
     datePosted: DateTime(2024, 4, 19),
     image: 'images/1.png',
     id: '122',
-    body: 'When setting a goal, the following can be a useful exercise in '
-        'clarifying where your motivation for such a change may stem from.\n\n'
+    body: 'When setting a goal, this activity can be useful in clarifying '
+        'from where your motivation for change may stem.\n\n'
         'If you have a goal in mind, ask yourself why.\n\n'
         'When we think we have an answer, we can ask why again.\n\n'
         'We can continue to do this until we have asked why five times.\n\n'
         'This can help us to identify our core values and motivations.\n\n'
         'It can help us see the big picture.\n\n'
-        'The concept of the five whys was developed for use by Toyota.\n\n'
-        'It was used as a problem-solving technique to identify the root cause '
-        'of a problem.\n\n'
-        'It can also be applied as a strategy to identify our root motivations.\n\n'
+        'The concept of the five whys was developed by Toyota as a '
+        'problem-solving technique to identify the root cause of a problem.\n\n'
+        'It can also be applied as a strategy to identify our own root '
+        'motivations in setting goals.\n\n'
         'For example, say I wanted to eat smaller food portions.\n\n'
         '(1) Why?\n\n'
         'So I consume less food overall.\n\n'
