@@ -14,9 +14,11 @@ List<Post> postData = [
     datePosted: DateTime(2024, 4, 19),
     image: 'images/1.png',
     id: '122',
-    body: 'When setting a goal, this activity can be useful in clarifying '
+    body:
+        'When setting a goal, the following activity can be useful in clarifying '
         'from where your motivation for change may stem.\n\n'
         'If you have a goal in mind, ask yourself why.\n\n'
+        'Why would you like to achieve this goal?\n\n'
         'When we think we have an answer, we can ask why again.\n\n'
         'We can continue to do this until we have asked why five times.\n\n'
         'This can help us to identify our core values and motivations.\n\n'
@@ -36,7 +38,7 @@ List<Post> postData = [
         'To prolong my life.\n\n'
         '(5) Why?\n\n'
         'So I can see my children grow and learn.\n\n'
-        'This exercise can help us to see the bigger picture and understand '
+        'This exercise can help us to see the big picture and understand '
         'our motivations for change.\n\n'
         'If we can keep this motivation at the forefront of our mind, we can '
         'improve our chances of sustained success.',
