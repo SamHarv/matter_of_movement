@@ -1,14 +1,15 @@
 import 'models/post_model.dart';
 
 List<Post> postData = [
-  // Post(
-  //   title: 'What Would You Do if You Were Not Afraid?',
-  //   datePosted: DateTime(2024, 4, 19),
-  //   image: 'images/1.png',
-  //   id: '123',
-  //   body:
-  //       '',
-  // ),
+  Post(
+    title: 'What Would You Do if You Were Not Afraid?',
+    datePosted: DateTime(2024, 4, 26),
+    image: 'images/1.png',
+    id: '123',
+    body: 'If money were no object, if you knew you could not fail, what would '
+    'you do?\n\n'
+    ,
+  ),
   Post(
     title: 'Five Whys',
     datePosted: DateTime(2024, 4, 19),
