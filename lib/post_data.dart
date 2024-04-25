@@ -7,8 +7,7 @@ List<Post> postData = [
     image: 'images/1.png',
     id: '123',
     body: 'If money were no object, if you knew you could not fail, what would '
-    'you do?\n\n'
-    ,
+        'you do?',
   ),
   Post(
     title: 'Five Whys',
