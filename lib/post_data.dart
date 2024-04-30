@@ -6,15 +6,16 @@ List<Post> postData = [
     datePosted: DateTime(2024, 4, 26),
     image: 'images/1.png',
     id: '124',
-    body: 'Common themes continue to present itself to me as I read more on '
-        'philosophy, psychology, and religion.\n\n'
+    body: 'Common themes continue to present themselves as I read more on '
+        'philosophy, psychology, and ancient religion.\n\n'
         'One such theme is that of acceptance.\n\n'
         'Many texts report peace comes from acceptance.\n\n'
         'Acceptance of what is beyond our locus of control.\n\n'
-        'A key takeaway from this is that we should not stress about things we '
+        'Events which we cannot influence.\n\n'
+        'A key takeaway from this is we should not stress about things we '
         'cannot change.\n\n'
-        'Our efforts should be directed at what is within our control.\n\n'
-        'We should therefore focus on our behaviours rather than our outcomes to '
+        'Our efforts should be directed at what is within our locus of control.\n\n'
+        'We should therefore focus on our behaviours rather than outcomes to '
         'control what we can, while accepting what we cannot.',
   ),
   Post(
