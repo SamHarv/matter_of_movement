@@ -8,11 +8,9 @@ List<Post> postData = [
     id: '125',
     body: '"Our dispositions are created by the activities '
         'that correspond to them." - Aristotle\n\n'
-        'What does this mean?\n\n'
         'Our character traits are developed by the behaviours in which we engage.\n\n'
         'We are what we repeatedly do.\n\n'
-        'It is our habits, our behaviours, which shape who we are, rather than '
-        'what we say.\n\n'
+        'It is our habits, our behaviours, which shape who we are.\n\n'
         'If we wish to be a certain way, we must act in accordance with that '
         'desire.\n\n'
         'Our behaviour shapes who we are.',
