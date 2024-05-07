@@ -2,7 +2,7 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
-    title: 'Behaviour Shapes Who We Are',
+    title: 'Behaviour Shapes Us',
     datePosted: DateTime(2024, 5, 10),
     image: 'images/1.png',
     id: '125',
@@ -10,7 +10,7 @@ List<Post> postData = [
         'that correspond to them." - Aristotle\n\n'
         'Our character traits are developed by the behaviours in which we engage.\n\n'
         'We are what we repeatedly do.\n\n'
-        'It is our habits, our behaviours, which shape who we are.\n\n'
+        'It is our habits - our behaviours, which shape who we are.\n\n'
         'If we wish to be a certain way, we must act in accordance with that '
         'desire.\n\n'
         'Our behaviour shapes who we are.',
