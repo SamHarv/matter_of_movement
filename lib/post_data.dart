@@ -9,12 +9,13 @@ List<Post> postData = [
     body: 'If we would like to improve, we must reach.\n\n'
         'Many refuse to reach as they are afraid of failing or looking foolish.\n\n'
         'To reach is to try to achieve something beyond our current capabilities.\n\n'
-        'It is to step outside our comfort zone.\n\n'
+        'To step outside our comfort zone.\n\n'
         'Progression in exercise is a great example of reaching.\n\n'
         'We push ourselves just beyond our current capabilities, and we improve.\n\n'
         'This, in exercise is called progressive overload.\n\n'
+        'The same can be applied to any skill we wish to improve.\n\n'
         '"I am always doing what I can\'t do yet in order to learn how to do it." - Vincent Van Gogh\n\n'
-        'If we are willing to look a little foolish, to be refected, and to fail, we '
+        'If we are willing to look a little foolish, to be rejected, and to fail, we '
         'can vastly improve our rate of improvement.',
   ),
   Post(
