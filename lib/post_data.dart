@@ -11,7 +11,7 @@ List<Post> postData = [
         'To step outside our comfort zone.\n\n'
         'Many refuse to reach as they are afraid of failing or looking foolish.\n\n'
         'Progression in exercise is a great example of reaching.\n\n'
-        'We push ourselves just beyond our current capabilities, and we rest, repair, and improve.\n\n'
+        'We push ourselves just beyond our current capabilities, then we rest, repair, and improve.\n\n'
         'This, in exercise is called progressive overload.\n\n'
         'The same can be applied to any skill we wish to improve.\n\n'
         '"I am always doing what I can\'t do yet in order to learn how to do it." - Vincent Van Gogh\n\n'
