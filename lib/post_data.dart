@@ -2,6 +2,20 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Execution Over Strategy',
+    datePosted: DateTime(2024, 5, 24),
+    image: 'images/1.png',
+    id: '127',
+    body: 'Execution will always beat strategy.\n\n'
+        'We have a tendency to over-plan.\n\n'
+        'To over-analyse.\n\n'
+        'This can lead to analysis paralysis.\n\n'
+        'It is often best to show our work as soon as possible.\n\n'
+        'To execute.\n\n'
+        'This enables us to receive feedback in a tight loop and incrementally '
+        'improve our work with each iteration.',
+  ),
+  Post(
     title: 'Reach',
     datePosted: DateTime(2024, 5, 17),
     image: 'images/1.png',
