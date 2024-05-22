@@ -7,10 +7,10 @@ List<Post> postData = [
     image: 'images/1.png',
     id: '127',
     body: 'Execution will always beat strategy.\n\n'
-        'We have a tendency to over-plan.\n\n'
-        'To over-analyse.\n\n'
-        'This can lead to analysis paralysis - where we become stuck in a rut '
-        'and are afraid to take action.\n\n'
+        'We have a tendency to overplan.\n\n'
+        'To overanalyse.\n\n'
+        'This can lead to analysis paralysis - becoming stuck in a rut '
+        'and afraid to take action.\n\n'
         'It is often best to show our work as soon as possible.\n\n'
         'To execute.\n\n'
         'This enables us to receive feedback in a tight loop and incrementally '
