@@ -2,6 +2,30 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'The Batman Effect',
+    datePosted: DateTime(2024, 5, 31),
+    image: 'images/1.png',
+    id: '128',
+    body: 'The Batman Effect is a term coined by Rachel White, a psychologist '
+        'at Hamilton College.\n\n'
+        'It refers to the idea of taking on the persona of a character who is '
+        'more capable than you are.\n\n'
+        'The idea is to pretend you are Batman, or another superhero, and to '
+        'take on their characteristics.\n\n'
+        'This can help you to overcome challenges you may otherwise find '
+        'difficult.\n\n'
+        'It is a priming effect.\n\n'
+        'This can help you to see the situation more clearly and to act in a way '
+        'you may not have otherwise.\n\n'
+        'This is why visualisation is so powerful in sport and other areas of '
+        'performance.\n\n'
+        'The shift in mindset can make a drastic difference in your performance.\n\n'
+        'If I am trying to find a bug or improve my code when programming, I '
+        'often imagine myself the way hackers are depicted in movies, in a dark '
+        'room with a green-lit screen, absolutely focused.\n\n'
+        'It is amazing the difference this can make.',
+  ),
+  Post(
     title: 'Execution Over Strategy',
     datePosted: DateTime(2024, 5, 24),
     image: 'images/1.png',
