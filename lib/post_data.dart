@@ -6,23 +6,27 @@ List<Post> postData = [
     datePosted: DateTime(2024, 5, 31),
     image: 'images/1.png',
     id: '128',
-    body: 'The Batman Effect is a term coined by Rachel White, a psychologist '
-        'at Hamilton College.\n\n'
+    body:
+        'The Batman Effect is a term coined by psychologist, Rachel White.\n\n'
         'It refers to the idea of taking on the persona of a character who is '
-        'more capable than you are.\n\n'
+        'more capable than you are in a given domain.\n\n'
         'The idea is to pretend you are Batman, or another superhero, and to '
         'take on their characteristics.\n\n'
-        'This can help you to overcome challenges you may otherwise find '
+        'To embody their mindset.\n\n'
+        'This can help to overcome challenges you may otherwise find '
         'difficult.\n\n'
         'It is a priming effect.\n\n'
-        'This can help you to see the situation more clearly and to act in a way '
-        'you may not have otherwise.\n\n'
+        'This can enable you to act in a way you may not have otherwise.\n\n'
         'This is why visualisation is so powerful in sport and other areas of '
         'performance.\n\n'
         'The shift in mindset can make a drastic difference in your performance.\n\n'
         'If I am trying to find a bug or improve my code when programming, I '
         'often imagine myself the way hackers are depicted in movies, in a dark '
         'room with a green-lit screen, absolutely focused.\n\n'
+        'If I am going for a run, I might imagine myself as Eliud Kipchoge, '
+        'floating gracefully along the trail.\n\n'
+        'I am certain I do not look this way in reality, but it can have a '
+        'surprising effect.\n\n'
         'It is amazing the difference this can make.',
   ),
   Post(
