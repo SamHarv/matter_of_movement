@@ -16,7 +16,7 @@ List<Post> postData = [
         'This can help to overcome challenges you may otherwise find '
         'difficult.\n\n'
         'It is a priming effect.\n\n'
-        'It can enable you to act in a way you may not otherwise.\n\n'
+        'It can enable you to act in ways you may not otherwise.\n\n'
         'This is why visualisation is so powerful in sport and other areas of '
         'performance.\n\n'
         'The shift in mindset can make a drastic difference in your performance.\n\n'
