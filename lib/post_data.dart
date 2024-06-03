@@ -6,22 +6,21 @@ List<Post> postData = [
     datePosted: DateTime(2024, 6, 7),
     image: 'images/1.png',
     id: '129',
-    body:
-        'With technological advancements has come pressure to do more in less '
+    body: 'With technological progress has come pressure to do more in less '
         'time.\n\n'
-        'Whilst technology has made many aspects of our lives easier, it has also '
+        'Whilst technology has made much of our lives easier, it has also '
         'led to a culture of freneticism.\n\n'
         'One which rewards "multitasking" and busyness.\n\n'
         'Our social and work lives have been infiltrated by the expectation of constant '
         'availability.\n\n'
         'We are expected to respond to emails, messages, and calls immediately '
         'or be considered rude.\n\n'
-        'The problem with all this is the human brain is incapable of multitasking.\n\n'
+        'The problem with this is the human brain is incapable of multitasking.\n\n'
         'When one believes they are multitasking, they are actually rapidly task-switching.\n\n'
         'Every time we switch tasks, there is a delay whilst our brain adjusts.\n\n'
         'This leads to a reduction in productivity and an increase in stress.\n\n'
         'It is now our responsibility to take it upon ourselves to unplug, to '
-        'switch off, and to prioritise time where we are not available to others, '
+        'switch off, and to prioritise time where we are not available to others - '
         'time where we can think clearly or work deeply.',
   ),
   Post(
