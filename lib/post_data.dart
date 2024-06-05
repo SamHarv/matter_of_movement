@@ -18,9 +18,9 @@ List<Post> postData = [
         'When one believes they are multitasking, they are actually rapidly task-switching.\n\n'
         'Every time we switch tasks, there is a delay whilst our brain adjusts.\n\n'
         'This leads to a reduction in productivity and an increase in stress.\n\n'
-        'We must now take it upon ourselves to unplug, '
-        'switch off, and to prioritise time where we are not available to others - '
-        'time where we can think clearly and/ or work deeply.',
+        'We must take it upon ourselves to unplug, '
+        'switch off, and prioritise time where we are not available to others - '
+        'time where we can think clearly and work deeply.',
   ),
   Post(
     title: 'The Batman Effect',
