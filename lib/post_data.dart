@@ -9,14 +9,14 @@ List<Post> postData = [
     body: 'We tend to add to our lives when we are dissatisfied.\n\n'
         'Add another project.\n\n'
         'Add another car.\n\n'
-        'Add another of clothing.\n\n'
+        'Add another item of clothing.\n\n'
         'Add another social commitment.\n\n'
         'We rarely remove.\n\n'
         'We rarely subtract.\n\n'
         'Often, we would be better served by subtracting from our life.\n\n'
-        'Subtract a responsibility.\n\n'
-        'Subtract a commitment which brings us no benefit.\n\n'
-        'Subtract a toxic relationship.\n\n'
+        'Subtracting a responsibility.\n\n'
+        'Subtracting a commitment which brings us no benefit.\n\n'
+        'Subtracting a toxic relationship.\n\n'
         'If you feel the desire to add, consider subtracting.',
   ),
   Post(
