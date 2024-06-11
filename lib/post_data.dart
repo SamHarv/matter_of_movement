@@ -6,16 +6,16 @@ List<Post> postData = [
     datePosted: DateTime(2024, 6, 14),
     image: 'images/1.png',
     id: '130',
-    body: 'We tend to add to our life when we are dissatisfied.\n\n'
+    body: 'We tend to add to our lives when we are dissatisfied.\n\n'
         'Add another project.\n\n'
         'Add another car.\n\n'
-        'Add a new item of clothing.\n\n'
+        'Add another of clothing.\n\n'
         'Add another social commitment.\n\n'
         'We rarely remove.\n\n'
         'We rarely subtract.\n\n'
         'Often, we would be better served by subtracting from our life.\n\n'
         'Subtract a responsibility.\n\n'
-        'Subtract a commitment which brings you know benefit.\n\n'
+        'Subtract a commitment which brings us no benefit.\n\n'
         'Subtract a toxic relationship.\n\n'
         'If you feel the desire to add, consider subtracting.',
   ),
