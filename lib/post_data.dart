@@ -2,6 +2,25 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Willing to be Mediocre',
+    datePosted: DateTime(2024, 6, 21),
+    image: 'images/1.png',
+    id: '131',
+    body: 'We must be willing to be mediocre in some areas of life.\n\n'
+        'A constant striving for perfection can do more harm than good.\n\n'
+        'No single person can be perfect in all aspects of life.\n\n'
+        'We would be better served aiming for near perfection in a few select areas, '
+        'whilst being "good enough" in others.\n\n'
+        'A jack of all trades is a master of none.\n\n'
+        'We need only choose the areas in which we will aim for near perfection.\n\n'
+        'What is most important to us?\n\n'
+        'Where can we have the greatest impact?\n\n'
+        'Where can we do the most good?\n\n'
+        'Once we can answer these questions, we can be good enough in most areas, and '
+        'expend our energy being excellent in the areas which are most important to '
+        'us.',
+  ),
+  Post(
     title: 'Subtract Rather Than Add',
     datePosted: DateTime(2024, 6, 14),
     image: 'images/1.png',
