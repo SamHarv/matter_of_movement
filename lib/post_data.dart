@@ -11,7 +11,7 @@ List<Post> postData = [
         'No single person can be perfect in all aspects of life.\n\n'
         'We would be better served aiming for near perfection in a few select areas, '
         'whilst being "good enough" in others.\n\n'
-        'A jack of all trades is a master of none.\n\n'
+        '"A jack of all trades is a master of none".\n\n'
         'We need only choose the areas in which we will aim for near perfection.\n\n'
         'What is most important to us?\n\n'
         'Where can we have the greatest impact?\n\n'
