@@ -6,9 +6,9 @@ List<Post> postData = [
     datePosted: DateTime(2024, 6, 21),
     image: 'images/1.png',
     id: '131',
-    body: 'We must be willing to be mediocre in some areas of life.\n\n'
+    body: 'Be willing to be mediocre in some areas of life.\n\n'
         'A constant striving for perfection can do more harm than good.\n\n'
-        'No single person can be perfect in all aspects of life.\n\n'
+        'No single person can perfect all aspects of life.\n\n'
         'We would be better served aiming for near perfection in a few select areas, '
         'whilst being "good enough" in others.\n\n'
         '"A jack of all trades is a master of none".\n\n'
