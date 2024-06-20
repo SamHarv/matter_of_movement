@@ -17,8 +17,7 @@ List<Post> postData = [
         'Where can we have the greatest impact?\n\n'
         'Where can we do the most good?\n\n'
         'Once we can answer these questions, we can be good enough in most areas, and '
-        'expend our energy being excellent in the areas which are most important to '
-        'us.',
+        'expend our energy being excellent in the areas which are most important.',
   ),
   Post(
     title: 'Subtract Rather Than Add',
