@@ -2,6 +2,17 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Pundits and Bullshit',
+    datePosted: DateTime(2024, 6, 28),
+    image: 'images/1.png',
+    id: '132',
+    body: '"Do not mistake a confident explanation for an accurate prediction" '
+        '- James Clear\n\n'
+        'Be wary of those who publicly share their opinions as subject experts.\n\n'
+        'We have a tendancy to put faith in people who act confidently in their '
+        'opinion, when they, like everybody else are fallible.',
+  ),
+  Post(
     title: 'Willing to be Mediocre',
     datePosted: DateTime(2024, 6, 21),
     image: 'images/1.png',
