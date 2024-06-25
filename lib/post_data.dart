@@ -9,7 +9,7 @@ List<Post> postData = [
     body: '"Do not mistake a confident explanation for an accurate prediction" '
         '- James Clear\n\n'
         'Be wary of those who publicly share their opinions as subject experts.\n\n'
-        'We have a tendancy to put faith in people who act confidently when they, '
+        'We tend to put faith in those who act confidently when they, '
         'like everybody else are fallible.',
   ),
   Post(
