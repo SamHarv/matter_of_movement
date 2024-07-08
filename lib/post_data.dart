@@ -6,16 +6,16 @@ List<Post> postData = [
     datePosted: DateTime(2024, 7, 12),
     image: 'images/1.png',
     id: '134',
-    body:
-        'It can be overwhelming trying to learn something new and complex.\n\n'
-        'We experience fear and despair as we feel the knowledge we are trying to '
-        'acquire is insurmountable.\n\n'
-        'We feel we are incapable of learning this new skill.\n\n'
-        'This is common and is often when people give up on learning something new.\n\n'
+    body: 'Trying to learn something new and complex can be overwhelming.\n\n'
+        'We may experience fear and despair if we feel the knowledge we are '
+        'trying to acquire is insurmountable.\n\n'
+        'We may feel we are incapable of learning this new skill.\n\n'
+        'This is common and is often when people give up on learning something '
+        'new.\n\n'
         'If we have the fortitude to push through this initial phase of '
         'overwhelm, I believe we can learn anything we want to.\n\n'
         'When others may give up, we must persist.\n\n'
-        'Once the information clicks, things will go more smoothly.',
+        'Once the information clicks, any knowledge can be acquired.',
   ),
   Post(
     title: 'Try',
