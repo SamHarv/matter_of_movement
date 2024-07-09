@@ -6,7 +6,8 @@ List<Post> postData = [
     datePosted: DateTime(2024, 7, 12),
     image: 'images/1.png',
     id: '134',
-    body: 'Trying to learn something new and complex can be overwhelming.\n\n'
+    body:
+        'Initiating learning something new and complex can be overwhelming.\n\n'
         'We may experience fear and despair if we feel the knowledge we are '
         'trying to acquire is insurmountable.\n\n'
         'We may feel we are incapable of learning this new skill.\n\n'
