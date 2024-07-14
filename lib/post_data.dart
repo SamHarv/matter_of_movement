@@ -2,6 +2,21 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Lucidity',
+    datePosted: DateTime(2024, 7, 19),
+    image: 'images/1.png',
+    id: '135',
+    body: 'Maximising lucidity requires effort.\n\n'
+        'It requires concentration and focus.\n\n'
+        'We are more distracted than ever, and lucid thoughts have never been '
+        'more difficult to achieve.\n\n'
+        'To think and see clearly, we must remove distractions.\n\n'
+        'Put down our phone.\n\n'
+        'Turn off the TV.\n\n'
+        'Concentrate on the task at hand.\n\n'
+        'With distractions removed, we can think deeply and clearly.',
+  ),
+  Post(
     title: 'Beginner\'s Overwhelm',
     datePosted: DateTime(2024, 7, 12),
     image: 'images/1.png',
