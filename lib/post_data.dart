@@ -6,10 +6,10 @@ List<Post> postData = [
     datePosted: DateTime(2024, 7, 19),
     image: 'images/1.png',
     id: '135',
-    body: 'Maximising lucidity requires effort.\n\n'
+    body: 'Maximising lucidity demands effort.\n\n'
         'It requires concentration and focus.\n\n'
-        'We are more distracted than ever, and lucid thoughts have never been '
-        'more difficult to achieve.\n\n'
+        'Lucid thoughts have never been more difficult to achieve.\n\n'
+        'We are more distracted than ever.\n\n'
         'To think and see clearly, we must remove distractions.\n\n'
         'Put down our phone.\n\n'
         'Turn off the TV.\n\n'
