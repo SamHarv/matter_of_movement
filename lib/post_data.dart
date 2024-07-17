@@ -8,13 +8,14 @@ List<Post> postData = [
     id: '135',
     body: 'Maximising lucidity demands effort.\n\n'
         'It requires concentration and focus.\n\n'
-        'Lucid thoughts have never been more difficult to achieve.\n\n'
+        'Lucid thoughts have never felt more difficult to achieve.\n\n'
         'We are more distracted than ever.\n\n'
         'To think and see clearly, we must remove distractions.\n\n'
         'Put down our phone.\n\n'
         'Turn off the TV.\n\n'
         'Concentrate on the task at hand.\n\n'
-        'With distractions removed, we can think deeply and clearly.',
+        'With distractions removed, we can think deeply and clearly.\n\n'
+        'We can achieve lucidity.',
   ),
   Post(
     title: 'Beginner\'s Overwhelm',
