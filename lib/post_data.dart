@@ -2,11 +2,25 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
-    title: '',
+    title: 'Read Widely',
     datePosted: DateTime(2024, 7, 26),
     image: 'images/1.png',
     id: '136',
-    body: '',
+    body: 'Our core beliefs are often formed in childhood when we are most '
+        'malleable and open to ideas.\n\n'
+        'Many carry these beliefs through adulthood without challenging them.\n\n'
+        'Accepting them as fact.\n\n'
+        'It is important to try to disprove our core beliefs as a scientist would '
+        'try to disprove their hypothesis.\n\n'
+        'Question why they may be incorrect and why new beliefs may serve us '
+        'better.\n\n'
+        'We should run regular updates on our beliefs.\n\n'
+        'The best way to do this is to become aware of alternative beliefs.\n\n'
+        'Expose ourselves to material with which we may disagree.\n\n'
+        'Read widely.\n\n'
+        'This can be challenging as it is easy to dismiss information which does '
+        'not align with our beliefs, but it is extremely valuable and may unlock '
+        'insights we may otherwise miss.',
   ),
   Post(
     title: 'Lucidity',
