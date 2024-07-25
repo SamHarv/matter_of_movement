@@ -8,10 +8,10 @@ List<Post> postData = [
     id: '136',
     body: 'Our core beliefs are often formed in childhood when we are most '
         'malleable and open to ideas.\n\n'
-        'Many carry these beliefs through adulthood without challenging them.\n\n'
-        'Accepting them as fact.\n\n'
+        'Many carry these beliefs through adulthood without challenging them - '
+        'accepting them as fact.\n\n'
         'We become rigid in our beliefs.\n\n'
-        'It is important to try to disprove our core beliefs as a scientist would '
+        'It is important to attempt to disprove our core beliefs as a scientist would '
         'try to disprove their hypotheses.\n\n'
         'Question why they may be incorrect and why new beliefs may serve us '
         'better.\n\n'
