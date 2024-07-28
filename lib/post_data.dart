@@ -2,6 +2,14 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Long-term vs Short-term',
+    datePosted: DateTime(2024, 8, 2),
+    image: 'images/1.png',
+    id: '137',
+    body: 'Focus on your long-term aspirations, but be willing to make '
+        'adjustments in ther short-term to get there.',
+  ),
+  Post(
     title: 'Read Widely',
     datePosted: DateTime(2024, 7, 26),
     image: 'images/1.png',
