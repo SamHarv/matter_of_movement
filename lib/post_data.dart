@@ -6,11 +6,10 @@ List<Post> postData = [
     datePosted: DateTime(2024, 8, 2),
     image: 'images/1.png',
     id: '137',
-    body: 'When choosing how to spend our time, we can often be met with a '
-        'decision between what benefits us in the short-term, or what benefits us '
-        'in the long-term.\n\n'
-        'It is a trade-off between instant gratification and delayed '
-        'gratification.\n\n'
+    body: 'When choosing how we spend our time, we can often be met with a '
+        'decision between what benefits us in the short-term, or in the '
+        'long-term.\n\n'
+        'It is a trade-off between instant and delayed gratification.\n\n'
         'Focus on your long-term aspirations, but be willing to make '
         'adjustments in ther short-term to get there.',
   ),
