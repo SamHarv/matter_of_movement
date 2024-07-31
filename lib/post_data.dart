@@ -10,6 +10,10 @@ List<Post> postData = [
         'decision between what benefits us in the short-term, or in the '
         'long-term.\n\n'
         'It is a trade-off between instant and delayed gratification.\n\n'
+        'The human default favours the short-term.\n\n'
+        'We are wired to seek immediate rewards.\n\n'
+        'However, if we can overcome this and focus on the long-term, we can '
+        'achieve far greater things.\n\n'
         'Focus on your long-term aspirations, but be willing to make '
         'adjustments in ther short-term to get there.',
   ),
