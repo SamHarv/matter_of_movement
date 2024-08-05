@@ -2,6 +2,18 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Ego vs Progress',
+    datePosted: DateTime(2024, 8, 9),
+    image: 'images/1.png',
+    id: '138',
+    body: 'Many would rather not try than look foolish.\n\n'
+        'If we only concern ourselves with how we are perceived by others, '
+        'we will never improve.\n\n'
+        'We must set our ego aside and be willing to be a beginner if we wish '
+        'to learn something new.\n\n'
+        '"Don\'t show up to prove, show up to improve" - Simon Sinek',
+  ),
+  Post(
     title: 'Long-term vs Short-term',
     datePosted: DateTime(2024, 8, 2),
     image: 'images/1.png',
