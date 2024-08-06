@@ -7,8 +7,8 @@ List<Post> postData = [
     image: 'images/1.png',
     id: '138',
     body: 'Many would rather not try than look foolish.\n\n'
-        'If we only concern ourselves with how we are perceived by others, '
-        'we will never improve.\n\n'
+        'If we concern ourselves only with how others perceive us, '
+        'our rate of improvement will be diminished.\n\n'
         'We must set our ego aside and be willing to be a beginner if we wish '
         'to learn something new.\n\n'
         '"Don\'t show up to prove, show up to improve" - Simon Sinek',
