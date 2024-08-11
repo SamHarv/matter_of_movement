@@ -2,6 +2,17 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'The Illusion of Knowledge',
+    datePosted: DateTime(2024, 8, 16),
+    image: 'images/1.png',
+    id: '139',
+    body: 'We are far less likely to learn if we believe we already know.\n\n'
+        'We must remember that no one can know everything, regardless of '
+        'how convincing their conviction may be.\n\n'
+        '"The greatest obstacle to discovery is not ignorance - it is the '
+        'illusion of knowledge." - Daniel J. Boorstin',
+  ),
+  Post(
     title: 'Ego vs Progress',
     datePosted: DateTime(2024, 8, 9),
     image: 'images/1.png',
