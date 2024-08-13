@@ -7,7 +7,7 @@ List<Post> postData = [
     image: 'images/1.png',
     id: '139',
     body: 'We are less likely to learn if we believe we already know.\n\n'
-        'No one can know everything, regardless of how convincing their '
+        'No one can know everything, regardless of how strong their '
         'conviction may be.\n\n'
         '"The greatest obstacle to discovery is not ignorance - it is the '
         'illusion of knowledge." - Daniel J. Boorstin',
