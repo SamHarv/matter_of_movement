@@ -2,6 +2,25 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'The Centre of the Universe',
+    datePosted: DateTime(2024, 8, 23),
+    image: 'images/1.png',
+    id: '140',
+    body: 'Most people reach the stage in their life when they realise the '
+        'world does not revolve around them.\n\n'
+        'This typically happens in childhood, but for some, it may take longer, '
+        'while others may never come to this realisation.\n\n'
+        'When this realisation is delayed, a sense of entitlement follows, which '
+        'can be detrimental to relationships and personal growth.\n\n'
+        'The universe owes us nothing, and we are just a part of it.\n\n'
+        'A collection of sub-atomic particles arranged in a way which allows us '
+        'to think and feel.\n\n'
+        'This in and of itself is a miracle and something we should cherish.\n\n'
+        'The sooner we can realise we are not the centre of the universe, the '
+        'sooner we can improve each other\'s lives through true empathy and '
+        'compassion.',
+  ),
+  Post(
     title: 'The Illusion of Knowledge',
     datePosted: DateTime(2024, 8, 16),
     image: 'images/1.png',
