@@ -16,7 +16,7 @@ List<Post> postData = [
         'A collection of sub-atomic particles arranged in a way which allows us '
         'to think and feel.\n\n'
         'This in and of itself is a miracle and something we should cherish.\n\n'
-        'The sooner we can realise we are not the centre of the universe, the '
+        'The sooner we realise we are not the centre of the universe, the '
         'sooner we can improve each other\'s lives through true empathy and '
         'compassion.',
   ),
