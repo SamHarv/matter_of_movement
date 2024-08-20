@@ -8,11 +8,11 @@ List<Post> postData = [
     id: '140',
     body: 'Most people reach the stage in their life when they realise the '
         'world does not revolve around them.\n\n'
-        'This typically happens in childhood, but for some, it may take longer, '
+        'This typically occurs in childhood, but for some, it may take longer, '
         'while others may never come to this realisation.\n\n'
         'When this realisation is delayed, a sense of entitlement follows, which '
         'can be detrimental to relationships and personal growth.\n\n'
-        'The universe owes us nothing, and we are just a part of it.\n\n'
+        'The universe owes us nothing, we are just a part of it.\n\n'
         'A collection of sub-atomic particles arranged in a way which allows us '
         'to think and feel.\n\n'
         'This in and of itself is a miracle and something we should cherish.\n\n'
