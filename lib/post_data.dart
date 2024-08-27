@@ -6,13 +6,13 @@ List<Post> postData = [
     datePosted: DateTime(2024, 8, 30),
     image: 'images/1.png',
     id: '141',
-    body: 'Many blame their misfortune on dumb luck.\n\n'
-        'Luck will always pay a role in our life outcomes, but the odds can '
+    body: 'Many blame dumb luck for their misfortune.\n\n'
+        'Luck will always play a role in our life outcomes, but the odds can '
         'still be tilted in our favour if we act wisely.\n\n'
         'If we work to position ourselves where we can reap the rewards of '
         'opportunity, we can capitalise on good luck when it presents itself.\n\n'
         'If we complain of our misfortune and do nothing, we are far less '
-        'likely to see the benefits of good luck.',
+        'likely to be able to exploit our opportunities.',
   ),
   Post(
     title: 'The Centre of the Universe',
