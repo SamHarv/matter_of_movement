@@ -6,14 +6,14 @@ List<Post> postData = [
     datePosted: DateTime(2024, 9, 6),
     image: 'images/1.png',
     id: '142',
-    body: 'Before having children, I never gave much thought to my personal '
-        'values and my purpose in life.\n\n'
+    body: 'Prior to having children, I seldom gave much thought to my personal '
+        'values and purpose in life.\n\n'
         'Since having my beautiful daughters, my values and purpose have become '
         'clear.\n\n'
         'I aspire to be the best father I can be, and to provide the best '
         'opportunities I can for my children.\n\n'
         '"The true meaning of life is to plant trees under whose shade you do '
-        'not expect to sit." - Nelson Henderson',
+        'not expect to sit." - Nelson Henderson',    
   ),
   Post(
     title: 'Luck Favours the Prepared',
