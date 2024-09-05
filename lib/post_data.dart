@@ -10,7 +10,7 @@ List<Post> postData = [
         'values and purpose in life.\n\n'
         'Since having my beautiful daughters, my values and purpose have become '
         'clear.\n\n'
-        'I aspire to be the best father I can be, and to provide the best '
+        'I aspire to be the best father I can, and to provide the best '
         'opportunities I can for my children.\n\n'
         '"The true meaning of life is to plant trees under whose shade you do '
         'not expect to sit." - Nelson Henderson',
