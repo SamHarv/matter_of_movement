@@ -6,9 +6,11 @@ List<Post> postData = [
     datePosted: DateTime(2024, 9, 13),
     image: 'images/1.png',
     id: '143',
-    body: 'Planning is enjoyable. It is exciting.\n\n'
-        'It is easy to get lost in the planning phase and never move to action.\n\n'
+    body: 'Planning is enjoyable.\n\n'
+        'It is exciting.\n\n'
+        'It is easy to get stuck in the planning phase and never move to action.\n\n'
         'This is called analysis paralysis.\n\n'
+        'It is derived from fear of what may happen if we act.\n\n'
         'Planning delivers no concrete outcomes.\n\n'
         'The plan and the idea is useless until it is enacted.\n\n'
         '"Genius is in the idea. Impact comes from action" - Simon Sinek',
