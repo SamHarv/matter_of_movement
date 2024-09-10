@@ -7,12 +7,12 @@ List<Post> postData = [
     image: 'images/1.png',
     id: '143',
     body: 'Planning is enjoyable.\n\n'
-        'It is exciting.\n\n'
+        'Planning is exciting.\n\n'
         'It is easy to get stuck in the planning phase and never move to action.\n\n'
         'This is called analysis paralysis.\n\n'
         'It is derived from fear of what may happen if we act.\n\n'
         'Planning delivers no concrete outcomes.\n\n'
-        'The plan and the idea is useless until it is enacted.\n\n'
+        'The plan and the idea are useless until enacted.\n\n'
         '"Genius is in the idea. Impact comes from action" - Simon Sinek',
   ),
   Post(
