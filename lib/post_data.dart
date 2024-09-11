@@ -7,8 +7,8 @@ List<Post> postData = [
     image: 'images/1.png',
     id: '143',
     body: 'Planning is enjoyable.\n\n'
-        'Planning is exciting.\n\n'
-        'It is easy to get stuck in the planning phase and never move to action.\n\n'
+        'It is exciting.\n\n'
+        'We can easily get stuck in the planning phase and never move to action.\n\n'
         'This is called analysis paralysis.\n\n'
         'It is derived from fear of what may happen if we act.\n\n'
         'Planning delivers no concrete outcomes.\n\n'
