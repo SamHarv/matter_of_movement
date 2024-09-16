@@ -2,6 +2,25 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Life Will Teach You Patience',
+    datePosted: DateTime(2024, 9, 20),
+    image: 'images/1.png',
+    id: '144',
+    body: 'We have been conditioned to expect to receive thing when and where '
+        'we want them.\n\n'
+        'We can have food delivered to our door in minutes.\n\n'
+        'We can have a product delivered to our door the next day.\n\n'
+        'We can watch almost any movie or TV show on demand.\n\n'
+        'Our ability to wait has been diminished.\n\n'
+        'Because of this, we become frustrated when things are delayed, and we are '
+        'inclined to spend beyond our means to receive things more quickly.\n\n'
+        'There are things in life that cannot and should not be delivered on '
+        'demand.\n\n'
+        'Patience is a virtue.\n\n'
+        'Life will force us to be patient, and if we cannot accept this, we will '
+        'fail in our aspirations.',
+  ),
+  Post(
     title: 'Do',
     datePosted: DateTime(2024, 9, 13),
     image: 'images/1.png',
