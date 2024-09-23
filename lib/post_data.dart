@@ -6,7 +6,7 @@ List<Post> postData = [
     datePosted: DateTime(2024, 9, 27),
     image: 'images/1.png',
     id: '145',
-    body: 'Progressive steps in the wrong direction can be as harmful as those '
+    body: 'Steps in the wrong direction can be as harmful as those '
         'in the right direction can be beneficial.\n\n'
         'Over the last month, have your habits been helpful or harmful?.',
   ),
