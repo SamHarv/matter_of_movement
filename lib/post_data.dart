@@ -2,6 +2,15 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Progressive or Regressive Steps?',
+    datePosted: DateTime(2024, 9, 27),
+    image: 'images/1.png',
+    id: '145',
+    body: 'Progressive steps in the wrong direction can be as harmful as those '
+        'in the right direction can be beneficial.\n\n'
+        'Over the last month, have your habits been helpful or harmful?.',
+  ),
+  Post(
     title: 'Life Will Teach You Patience',
     datePosted: DateTime(2024, 9, 20),
     image: 'images/1.png',
