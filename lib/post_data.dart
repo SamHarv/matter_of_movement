@@ -2,7 +2,7 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
-    title: 'Progressive or Regressive Steps?',
+    title: 'Progressive or Regressive Steps',
     datePosted: DateTime(2024, 9, 27),
     image: 'images/1.png',
     id: '145',
