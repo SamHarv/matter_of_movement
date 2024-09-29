@@ -2,6 +2,15 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Live',
+    datePosted: DateTime(2024, 10, 4),
+    image: 'images/1.png',
+    id: '146',
+    body:
+        '"When death comes to find you, may it find you alive." - African Proverb\n\n'
+        'Live your life. Whatever that means for you.',
+  ),
+  Post(
     title: 'Progressive or Regressive Steps',
     datePosted: DateTime(2024, 9, 27),
     image: 'images/1.png',
