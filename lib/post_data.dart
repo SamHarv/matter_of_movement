@@ -7,6 +7,10 @@ List<Post> postData = [
     image: 'images/1.png',
     id: '146',
     body:
+        'It is easy to get caught up going through the motions of day to day life.\n\n'
+        'We stress about short term problems which really do not matter in the'
+        ' grand scheme of things.\n\n'
+        'We forget to live our life as best we can.\n\n'
         '"When death comes to find you, may it find you alive." - African Proverb\n\n'
         'Live your life. Whatever that means for you.',
   ),
