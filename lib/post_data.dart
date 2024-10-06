@@ -2,6 +2,15 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Greener Grass',
+    datePosted: DateTime(2024, 10, 11),
+    image: 'images/1.png',
+    id: '147',
+    body: 'The grass is not greener on the other side.\n\n'
+        'It is greener where you water it.\n\n'
+        'Work to build something of value rather than chasing the next best thing.',
+  ),
+  Post(
     title: 'Live',
     datePosted: DateTime(2024, 10, 4),
     image: 'images/1.png',
