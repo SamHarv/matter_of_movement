@@ -7,6 +7,8 @@ List<Post> postData = [
     image: 'images/1.png',
     id: '147',
     body: 'We are programmed to strive for something better.\n\n'
+        'To be dissatisfied with what we have.\n\n'
+        'This was helpful when our survival depended on it, but can now at times be harmful.\n\n'
         'The grass is not greener on the other side.\n\n'
         'It is greener where you water it.\n\n'
         'Work to build something of value rather than chasing the next best thing.',
