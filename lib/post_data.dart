@@ -3,14 +3,15 @@ import 'models/post_model.dart';
 List<Post> postData = [
   Post(
     title: 'Tradition',
-    datePosted: DateTime(2024, 10, 11),
+    datePosted: DateTime(2024, 10, 18),
     image: 'images/1.png',
     id: '148',
     body: 'Tradition is not a sufficient reason to do something.\n\n'
         'Many of our beliefs, biases, and actions are inherited through tradition.\n\n'
-        'Some traditions carry on for generations without someone questioning their validity.\n\n'
+        'Some traditions carry on for generations without anyone questioning their validity.\n\n'
         'If you ask someone why we take part in a specific behaviour or believe something, '
-        'and they respond with one of the following, have a deep think about whether this tradition should be adhered to:\n\n'
+        'and they respond with one of the following, have a deep think about whether this tradition '
+        'should be adhered to:\n\n'
         '"Because it is what we have always done."\n\n'
         '"This is the way things have always been done."\n\n'
         '"It is tradition!"\n\n'
