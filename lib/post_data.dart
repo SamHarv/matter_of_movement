@@ -12,8 +12,9 @@ List<Post> postData = [
         'If you ask someone why we take part in a specific behaviour or believe something, '
         'and they respond with one of the following, have a deep think about whether this tradition '
         'should be adhered to:\n\n'
-        '"Because it is what we have always done."\n\n'
+        '"Because it is what we do."\n\n'
         '"This is the way things have always been done."\n\n'
+        '"This is the way it is."\n\n'
         '"It is tradition!"\n\n'
         'If tradition is the only reason you are doing something, perhaps it is time for a change.',
   ),
