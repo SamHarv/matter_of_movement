@@ -2,6 +2,14 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Rigidity',
+    datePosted: DateTime(2024, 10, 25),
+    image: 'images/1.png',
+    id: '149',
+    body:
+        'Only humans form conscious beliefs and they have a hard time changing them.',
+  ),
+  Post(
     title: 'Tradition',
     datePosted: DateTime(2024, 10, 18),
     image: 'images/1.png',
