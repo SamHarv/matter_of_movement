@@ -7,7 +7,8 @@ List<Post> postData = [
     image: 'images/1.png',
     id: '149',
     body:
-        'Only humans form conscious beliefs and they have a hard time changing them.',
+        'Only humans form conscious beliefs and they have a hard time changing them.\n\n'
+        'We could all do with less rigidity in our beliefs.',
   ),
   Post(
     title: 'Tradition',
