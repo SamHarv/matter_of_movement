@@ -8,6 +8,8 @@ List<Post> postData = [
     id: '149',
     body:
         'Only humans form conscious beliefs and they have a hard time changing them.\n\n'
+        'Change enables progress.\n\n'
+        'Rigidity prevents change.\n\n'
         'We could all do with less rigidity in our beliefs.',
   ),
   Post(
