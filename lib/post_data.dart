@@ -2,6 +2,20 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Remember What is Important',
+    datePosted: DateTime(2024, 11, 1),
+    image: 'images/1.png',
+    id: '150',
+    body: 'Working toward an ambitious goal, one can lose track of '
+        'why they set the goal in the first place.\n\n'
+        'We must often remember our why.\n\n'
+        'Why we are putting our energy into this goal.\n\n'
+        'If your efforts are not aligned with your goals, you are wasting '
+        'time and energy.\n\n'
+        '"No wind is favourable to the sailor who does not know where they are going." - Seneca\n\n'
+        'The only people who will remember you worked late are your children.',
+  ),
+  Post(
     title: 'Rigidity',
     datePosted: DateTime(2024, 10, 25),
     image: 'images/1.png',
