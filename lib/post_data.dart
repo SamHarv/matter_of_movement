@@ -8,7 +8,7 @@ List<Post> postData = [
     id: '150',
     body: 'Working toward an ambitious goal, one can lose track of '
         'why they set the goal in the first place.\n\n'
-        'We must often remember our why.\n\n'
+        'We must often consider our why.\n\n'
         'Why we are putting our energy into this goal.\n\n'
         'If your efforts are not aligned with your goals, you are wasting '
         'time and energy.\n\n'
