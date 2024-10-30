@@ -10,10 +10,9 @@ List<Post> postData = [
         'why they set the goal in the first place.\n\n'
         'We must often consider our why.\n\n'
         'Why we are putting our energy into this goal.\n\n'
-        'If your efforts are not aligned with your goals, you are wasting '
+        'If our efforts are not aligned with our goals, we waste '
         'time and energy.\n\n'
-        '"No wind is favourable to the sailor who does not know where they are going." - Seneca\n\n'
-        'The only people who will remember you worked late are your children.',
+        '"No wind is favourable to the sailor who does not know where they are going." - Seneca',
   ),
   Post(
     title: 'Rigidity',
