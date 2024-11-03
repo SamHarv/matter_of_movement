@@ -2,6 +2,16 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Silence',
+    datePosted: DateTime(2024, 11, 8),
+    image: 'images/1.png',
+    id: '151',
+    body:
+        '"Wise men speak because they have something to say; fools because they have to say something." - Plato\n\n'
+        'This does not mean you should say nothing.\n\n'
+        'It means you should be aware of when and why you are speaking.',
+  ),
+  Post(
     title: 'Remember What is Important',
     datePosted: DateTime(2024, 11, 1),
     image: 'images/1.png',
