@@ -7,7 +7,7 @@ List<Post> postData = [
     image: 'images/1.png',
     id: '152',
     body:
-        'Taking a wrong turn allows you to see things you may not have otherwsie seen.\n\n'
+        'Taking a wrong turn allows us to see things we may not have otherwsie seen.\n\n'
         'It can lead to new discoveries and experiences.\n\n'
         'Do not be afraid to take a wrong turn.\n\n'
         'Do not be afraid to make mistakes.',
