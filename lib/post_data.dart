@@ -2,6 +2,17 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Detours',
+    datePosted: DateTime(2024, 11, 15),
+    image: 'images/1.png',
+    id: '152',
+    body:
+        'Taking a wrong turn allows you to see things you may not have otherwsie seen.\n\n'
+        'It can lead to new discoveries and experiences.\n\n'
+        'Do not be afraid to take a wrong turn.\n\n'
+        'Do not be afraid to make mistakes.',
+  ),
+  Post(
     title: 'Silence',
     datePosted: DateTime(2024, 11, 8),
     image: 'images/1.png',
