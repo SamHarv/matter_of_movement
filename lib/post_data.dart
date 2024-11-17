@@ -2,6 +2,19 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'We Have Time',
+    datePosted: DateTime(2024, 11, 22),
+    image: 'images/1.png',
+    id: '153',
+    body: 'We often feel as if we have no time.\n\n'
+        'We are always in a rush.\n\n'
+        'The average human life here in Australia, however, is 83.2 years.\n\n'
+        'This is a long time.\n\n'
+        'There is sufficient time to do anything you wish.\n\n'
+        'You must only have the discipline to make it so.\n\n'
+        '"It is not that we have a short time to live, but that we waste a lot of it." - Seneca',
+  ),
+  Post(
     title: 'Detours',
     datePosted: DateTime(2024, 11, 15),
     image: 'images/1.png',
