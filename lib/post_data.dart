@@ -6,9 +6,9 @@ List<Post> postData = [
     datePosted: DateTime(2024, 11, 22),
     image: 'images/1.png',
     id: '153',
-    body: 'We often feel we have no time.\n\n'
+    body: 'Often, we feel we have no time.\n\n'
         'We are always in a rush.\n\n'
-        'The average human life here in Australia is 83.2 years.\n\n'
+        'The average human life in Australia is 83.2 years.\n\n'
         'This is a long time.\n\n'
         'There is sufficient time to do anything we wish.\n\n'
         'We must only have the discipline to make it so.\n\n'
