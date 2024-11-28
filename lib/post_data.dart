@@ -10,7 +10,7 @@ List<Post> postData = [
         'People brought up in a totalitarian regigme are taught to believe questions lead to trouble.\n\n'
         'This is dangerous and stifles progress.\n\n'
         'People are inherently fallible and should be questioned.\n\n'
-        'Especially by children, who glean insights which adults miss as children have fewer deeply engrained biases and beliefs.\n\n'
+        'Especially by children, who glean insights which adults miss as they have fewer deeply engrained biases and beliefs.\n\n'
         'Question everything, change your mind, and use self-correctiing mechanisms to refine your thinking.',
   ),
   Post(
