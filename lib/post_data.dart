@@ -2,6 +2,14 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Regrets of Inaction',
+    datePosted: DateTime(2024, 12, 6),
+    image: 'images/1.png',
+    id: '155',
+    body: 'Regrets of inaction are far more common than regrets of action.\n\n'
+        'Take risks, take action, be prepared to fail and try again.',
+  ),
+  Post(
     title: 'Children Should be Seen AND Heard',
     datePosted: DateTime(2024, 11, 29),
     image: 'images/1.png',
