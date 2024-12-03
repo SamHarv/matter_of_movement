@@ -7,7 +7,7 @@ List<Post> postData = [
     image: 'images/1.png',
     id: '155',
     body: 'Many are risk averse.\n\n'
-        'We may avoid taking risks for fear of failure.\n\n'
+        'We avoid taking risks for fear of failure.\n\n'
         'Regrets of inaction are far more common than regrets of action.\n\n'
         'Take risks, take action.\n\n'
         'Be prepared to fail and try again.',
