@@ -6,8 +6,11 @@ List<Post> postData = [
     datePosted: DateTime(2024, 12, 6),
     image: 'images/1.png',
     id: '155',
-    body: 'Regrets of inaction are far more common than regrets of action.\n\n'
-        'Take risks, take action, be prepared to fail and try again.',
+    body: 'Many are risk averse.\n\n'
+        'We may avoid taking risks for fear of failure.\n\n'
+        'Regrets of inaction are far more common than regrets of action.\n\n'
+        'Take risks, take action.\n\n'
+        'Be prepared to fail and try again.',
   ),
   Post(
     title: 'Children Should be Seen AND Heard',
