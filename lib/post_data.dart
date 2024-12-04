@@ -10,7 +10,8 @@ List<Post> postData = [
         'We avoid taking risks for fear of failure.\n\n'
         'Regrets of inaction are far more common than regrets of action.\n\n'
         'Take risks, take action.\n\n'
-        'Be prepared to fail and try again.',
+        'Be prepared to fail.\n\n'
+        'Be prepared to learn.',
   ),
   Post(
     title: 'Children Should be Seen AND Heard',
