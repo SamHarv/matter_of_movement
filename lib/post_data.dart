@@ -15,7 +15,7 @@ List<Post> postData = [
         'have already invested time and money into it.\n\n'
         'The best course of action in this instance is to cut your losses.\n\n'
         'If you are unhappy in your current career, change it.\n\n'
-        'You may have to start from the bottom again, but you may find '
+        'You may have to start from the bottom again, but you will likely find '
         'many of your skills are transferable to your new career path.\n\n'
         'If you are not satisfied, make a change.',
   ),
