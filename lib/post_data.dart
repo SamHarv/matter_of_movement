@@ -9,17 +9,15 @@ List<Post> postData = [
     body:
         'The sunk cost fallacy is when one continues to invest in an endeavour '
         'simply because they have already invested time, money, or effort into it.\n\n'
-        'An example is when once completes a degree only to find they do not enjoy '
+        'An example is when one completes a degree only to find they do not enjoy '
         'the field in which they have studied.\n\n'
         'Some choose to continue on this path and be miserable simply because they '
-        'have already invested so much time and money into it.\n\n'
-        'This is a fallacy.\n\n'
-        'The time, money, and effort invested is gone.\n\n'
+        'have already invested time and money into it.\n\n'
         'The best course of action in this instance is to cut your losses.\n\n'
         'If you are unhappy in your current career, change it.\n\n'
-        'Yes, you may have to start from the bottom again, but you may find '
-        'many of your skills are transferable to your new career.\n\n'
-        'If you are not happy, make a change.',
+        'You may have to start from the bottom again, but you may find '
+        'many of your skills are transferable to your new career path.\n\n'
+        'If you are not satisfied, make a change.',
   ),
   Post(
     title: 'Regrets of Inaction',
