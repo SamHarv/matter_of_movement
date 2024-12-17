@@ -8,7 +8,7 @@ List<Post> postData = [
     id: '157',
     body: 'We regularly trade our time and expertise for money.\n\n'
         'This is how we make a living.\n\n'
-        'Some get so caught up in trading as much time as they can for money, that they forget to use the money to buy back time.\n\n'
+        'Some get so caught up in trading as much time as they can for money, they forget to use the money to buy back time.\n\n'
         '"Petrol is \$1.50 just around the corner, but if I drive 15 minutes down the road, I can get it for \$1.40!"\n\n'
         'This person, with their 60L fuel tank, just spent 30 minutes of their time driving to save \$6.\n\n'
         'You must consider how valuable your time is to you, and determine whether spending your time to make money is worth it in any '
