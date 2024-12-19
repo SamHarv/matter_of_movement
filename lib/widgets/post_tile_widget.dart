@@ -18,8 +18,8 @@ class PostTileWidget extends StatelessWidget {
     required this.onTap,
     required this.icon,
     this.tags,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class PostTileWidget extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Colors.black45.withOpacity(0.7),
+              Colors.black45,
               Colors.black54,
             ],
             begin: Alignment.topLeft,
@@ -45,8 +45,8 @@ class PostTileWidget extends StatelessWidget {
             Center(
               child: Image.asset(
                 image,
-                cacheHeight: 200,
-                cacheWidth: 200,
+                // cacheHeight: 200,
+                // cacheWidth: 200,
               ),
             ),
             Align(
