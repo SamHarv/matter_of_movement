@@ -2,6 +2,21 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Worries',
+    datePosted: DateTime(2024, 12, 27),
+    image: 'images/1.png',
+    id: '158',
+    body: '"We suffer more in imagination than in reality" - Seneca\n\n'
+        'We often worry about things which never come to pass.\n\n'
+        'About what others think of us.\n\n'
+        'About the future or the past.\n\n'
+        'We worry about things which are beyond our control.\n\n'
+        'Sometimes, we are correct to worry, but the vast majority of the time, '
+        'our worries are unfounded.\n\n'
+        'If we can focus intensely on the present moment, we can reduce our worry.\n\n'
+        'Be present.',
+  ),
+  Post(
     title: 'Many Value Money Over Time',
     datePosted: DateTime(2024, 12, 20),
     image: 'images/1.png',
