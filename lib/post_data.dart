@@ -8,8 +8,8 @@ List<Post> postData = [
     id: '158',
     body: '"We suffer more in imagination than in reality" - Seneca\n\n'
         'We often worry about things which never come to pass.\n\n'
-        'About what others think.\n\n'
         'About the future or the past.\n\n'
+        'About what others think.\n\n'
         'We worry about things which are beyond our control.\n\n'
         'Sometimes, we are correct to worry, but the majority of the time, '
         'our worries are unfounded.\n\n'
