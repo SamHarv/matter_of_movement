@@ -2,6 +2,17 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Appreciate What You Have',
+    datePosted: DateTime(2024, 1, 3),
+    image: 'images/1.png',
+    id: '159',
+    body:
+        '"Wealth consists not in having great possessions, but in having few wants." - Epictetus\n\n'
+        'We get caught up in the pursuit of more.\n\n'
+        'Always wanting the next new thing.\n\n'
+        'If we step back and appreciate what we have, we can find contentment.',
+  ),
+  Post(
     title: 'Worries',
     datePosted: DateTime(2024, 12, 27),
     image: 'images/1.png',
