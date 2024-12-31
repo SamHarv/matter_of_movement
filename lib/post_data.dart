@@ -2,7 +2,7 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
-    title: 'Appreciate What You Have',
+    title: 'Gratitude',
     datePosted: DateTime(2024, 1, 3),
     image: 'images/1.png',
     id: '159',
