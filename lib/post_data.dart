@@ -2,6 +2,21 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Busyness Clouds Creativity',
+    datePosted: DateTime(2025, 1, 10),
+    image: 'images/1.png',
+    id: '160',
+    body:
+        'We crave constant stimulus due to the nature of the modern world.\n\n'
+        'Constant stimulus is easy to come by due to the prevalence of smartphones and social media.\n\n'
+        'Many of us fear being "along with our thoughts", so never allow ourselves to be.\n\n'
+        'Being alone with our thoughts is where creativity happens.\n\n'
+        'It allows us to think deeply, consolodate learnings, and come up with new ideas.\n\n'
+        'If we can create space to sit in solitude, or to walk without headphones, we can '
+        'allow our brain to work its magic.\n\n'
+        'Do not aim to be busy, aim to be productive.',
+  ),
+  Post(
     title: 'Gratitude',
     datePosted: DateTime(2025, 1, 3),
     image: 'images/1.png',
