@@ -8,7 +8,7 @@ List<Post> postData = [
     id: '160',
     body: 'We crave constant stimuli due to the nature of the modern world.\n\n'
         'Constant stimuli are easy to come by with the prevalence of smartphones and social media.\n\n'
-        'Many of us fear being "along with our thoughts", so seldom allow ourselves to be.\n\n'
+        'Many of us fear being "alone with our thoughts", so seldom allow ourselves to be.\n\n'
         'Being alone with our thoughts is where creativity happens.\n\n'
         'It allows us to think deeply, consolodate learnings, and generate new ideas.\n\n'
         'If we can create space to sit in solitude, or to walk without headphones, we can '
