@@ -2,6 +2,23 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Make Mistakes - Learn',
+    datePosted: DateTime(2025, 1, 17),
+    image: 'images/1.png',
+    id: '161',
+    body: 'Many like to be perceived as infallible.\n\n'
+        'As if they cannot make a mistake and cannot be wrong.\n\n'
+        'They refuse to second-guess their perception of the world.\n\n'
+        'Ironically, these people tend to learn the least and therefore '
+        'be most fallible.\n\n'
+        'They are not open to new ideas and therefore gain no new '
+        'perspectives.\n\n'
+        'Everyone makes mistakes, whether they admit it or not.\n\n'
+        'If you are willing to make mistakes and to fail, you will learn.\n\n'
+        '"The only person who never makes a mistake is the person who never '
+        'does anything." - Theodore Roosevelt.',
+  ),
+  Post(
     title: 'Busyness Clouds Creativity',
     datePosted: DateTime(2025, 1, 10),
     image: 'images/1.png',
