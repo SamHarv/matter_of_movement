@@ -70,22 +70,6 @@ class AppDrawerWidget extends StatelessWidget {
             ),
             const Divider(),
             buildListTile(
-              'Book List',
-              Icons.book,
-              () => Beamer.of(context).beamToNamed('/books'),
-              isDarkMode ? paleBlue : color,
-              isDarkMode ? thirdColor : secondaryColor,
-            ),
-            const Divider(),
-            buildListTile(
-              'Subscribe',
-              Icons.email,
-              () => Beamer.of(context).beamToNamed('/auth'),
-              isDarkMode ? paleBlue : color,
-              isDarkMode ? thirdColor : secondaryColor,
-            ),
-            const Divider(),
-            buildListTile(
               isDarkMode ? 'Light Mode' : 'Dark Mode',
               isDarkMode ? Icons.wb_sunny : Icons.nightlight_round,
               () => darkModeProvider.toggleDarkMode(),

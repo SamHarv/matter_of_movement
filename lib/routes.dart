@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:beamer/beamer.dart';
 
 import 'post_data.dart';
-import 'pages/already_subscribed_page.dart';
-import 'pages/auth_page.dart';
-import 'pages/book_list_page.dart';
-import 'pages/subscribe_page.dart';
 import 'pages/home_page.dart';
 import 'pages/about_page.dart';
 import 'pages/favourites_page.dart';
@@ -40,38 +36,6 @@ final routerDelegate = BeamerDelegate(
           child: FavouritesPage(),
         );
       },
-      '/books': (context, state, data) {
-        return const BeamPage(
-          key: ValueKey('books'),
-          type: BeamPageType.fadeTransition,
-          title: 'Top 100 Books - Matter of Movement',
-          child: BookListPage(),
-        );
-      },
-      '/subscribe': (context, state, data) {
-        return const BeamPage(
-          key: ValueKey('subscribe'),
-          type: BeamPageType.fadeTransition,
-          title: 'Subscribe - Matter of Movement',
-          child: SubscribePage(),
-        );
-      },
-      '/auth': (context, state, data) {
-        return const BeamPage(
-          key: ValueKey('auth'),
-          type: BeamPageType.fadeTransition,
-          title: 'Subscribe - Matter of Movement',
-          child: AuthPage(),
-        );
-      },
-      '/subscribed': (context, state, data) {
-        return const BeamPage(
-          key: ValueKey('subscribed'),
-          type: BeamPageType.fadeTransition,
-          title: 'Subscribed - Matter of Movement',
-          child: AlreadySubscribedPage(),
-        );
-      },
       '/article/:id': (context, state, data) {
         final postId = state.pathParameters['id'];
         final post = postData.firstWhere((post) => post.id == postId);
@@ -83,5 +47,5 @@ final routerDelegate = BeamerDelegate(
         );
       },
     },
-  ),
+  ).call,
 );

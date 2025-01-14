@@ -9,9 +9,9 @@ import 'app_bar_menu_widget.dart';
 class CustomAppBarWidget extends StatelessWidget
     implements PreferredSizeWidget {
   const CustomAppBarWidget({
-    Key? key,
+    super.key,
     required this.id,
-  }) : super(key: key);
+  });
   @override
   Size get preferredSize => const Size.fromHeight(60.0);
 
@@ -28,70 +28,51 @@ class CustomAppBarWidget extends StatelessWidget
       iconTheme: IconThemeData(
         color: isDarkMode ? thirdColor : secondaryColor,
       ),
-      title: Center(
-        child: mediaWidth < 750
-            ? InkWell(
-                child: Image.asset(
-                  logo,
-                  fit: BoxFit.contain,
-                  height: 50.0,
-                ),
-                onTap: () => Beamer.of(context).beamToNamed('/home'),
-              )
-            : Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      AppBarMenuWidget(
-                        title: 'Home',
-                        onTap: () => Beamer.of(context).beamToNamed('/home'),
-                      ),
-                      AppBarMenuWidget(
-                        title: 'Favourites',
-                        onTap: () =>
-                            Beamer.of(context).beamToNamed('/favourites'),
-                      ),
-                      AppBarMenuWidget(
-                        title: 'About',
-                        onTap: () => Beamer.of(context).beamToNamed('/about'),
-                      ),
-                      AppBarMenuWidget(
-                        title: 'Book List',
-                        onTap: () => Beamer.of(context).beamToNamed('/books'),
-                      ),
-                      AppBarMenuWidget(
-                        title: 'Subscribe',
-                        onTap: () => Beamer.of(context).beamToNamed('/auth'),
-                      ),
-                      AppBarMenuWidget(
-                        title: isDarkMode ? 'Light Mode' : 'Dark Mode',
-                        onTap: () => darkModeProvider.toggleDarkMode(),
-                      ),
-                    ],
-                  ),
-                  InkWell(
-                    child: Image.asset(
-                      logo,
-                      fit: BoxFit.contain,
-                      height: 50.0,
-                    ),
-                    onTap: () => Beamer.of(context).beamToNamed('/home'),
-                  ),
-                ],
+      centerTitle: true,
+      title: mediaWidth < 750
+          ? InkWell(
+              child: Image.asset(
+                logo,
+                fit: BoxFit.contain,
+                height: 50.0,
               ),
-      ),
-      actions: [
-        Padding(
-          padding: const EdgeInsets.all(8),
-          child: IconButton(
-            onPressed: () => Beamer.of(context).beamToNamed('/about'),
-            icon: const Icon(Icons.info),
-            color: isDarkMode ? thirdColor : secondaryColor,
-          ),
-        ),
-      ],
+              onTap: () => Beamer.of(context).beamToNamed('/home'),
+            )
+          : Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    AppBarMenuWidget(
+                      title: 'Home',
+                      onTap: () => Beamer.of(context).beamToNamed('/home'),
+                    ),
+                    AppBarMenuWidget(
+                      title: 'Favourites',
+                      onTap: () =>
+                          Beamer.of(context).beamToNamed('/favourites'),
+                    ),
+                    AppBarMenuWidget(
+                      title: 'About',
+                      onTap: () => Beamer.of(context).beamToNamed('/about'),
+                    ),
+                    AppBarMenuWidget(
+                      title: isDarkMode ? 'Light Mode' : 'Dark Mode',
+                      onTap: () => darkModeProvider.toggleDarkMode(),
+                    ),
+                  ],
+                ),
+                InkWell(
+                  child: Image.asset(
+                    logo,
+                    fit: BoxFit.contain,
+                    height: 50.0,
+                  ),
+                  onTap: () => Beamer.of(context).beamToNamed('/home'),
+                ),
+              ],
+            ),
     );
   }
 }

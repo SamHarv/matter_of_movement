@@ -45,8 +45,6 @@ class PostTileWidget extends StatelessWidget {
             Center(
               child: Image.asset(
                 image,
-                // cacheHeight: 200,
-                // cacheWidth: 200,
               ),
             ),
             Align(
@@ -61,7 +59,7 @@ class PostTileWidget extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    overflow: TextOverflow.ellipsis,
+                    overflow: TextOverflow.fade,
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 20,
