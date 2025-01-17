@@ -5,7 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '/models/post_model.dart';
 
 class FavouriteProvider extends ChangeNotifier {
-  bool _darkMode = false;
+  bool _darkMode = true;
   bool get darkMode => _darkMode;
 
   void getMode() async {
