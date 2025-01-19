@@ -2,6 +2,20 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Opportunity',
+    datePosted: DateTime(2025, 1, 24),
+    image: 'images/1.png',
+    id: '162',
+    body: 'Challenges can often seem insurmountable - as if they cannot be '
+        'overcome.\n\n'
+        'In hindsight, such obstacles are often understood as opportunities for '
+        'growth and learning.\n\n'
+        'If you have a challenge that is overwhelming you, try to reframe the '
+        'problem as an opportunity.\n\n'
+        'You may fail or you may succeed, but you will learn.\n\n'
+        'Embrace the opportunity.',
+  ),
+  Post(
     title: 'Make Mistakes - Learn',
     datePosted: DateTime(2025, 1, 17),
     image: 'images/1.png',
