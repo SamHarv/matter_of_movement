@@ -1,13 +1,13 @@
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 import '/constants.dart';
 import '/models/post_model.dart';
 import '/providers/favourite_provider.dart';
 import '/post_data.dart';
-import '/widgets/custom_appbar_widget.dart';
 
 class ArticlePage extends StatefulWidget {
   final Post post;
@@ -26,24 +26,8 @@ class ArticlePage extends StatefulWidget {
 class _ArticlePageState extends State<ArticlePage> {
   @override
   Widget build(BuildContext context) {
-    final mediaWidth = MediaQuery.of(context).size.width;
-    final darkModeProvider = Provider.of<FavouriteProvider>(context);
-    final isDarkMode = darkModeProvider.darkMode;
-    TextStyle headingStyle = TextStyle(
-      fontSize: 30.0,
-      color: isDarkMode ? Colors.blueAccent : color,
-    );
-    TextStyle bodyStyle = TextStyle(
-      fontSize: 20.0,
-      color: isDarkMode ? thirdColor : secondaryColor,
-    );
     final provider = Provider.of<FavouriteProvider>(context);
     final favourites = provider.favouritePosts;
-
-    final favouritePost = favourites.firstWhere(
-      (post) => post!.title == widget.post.title,
-      orElse: () => widget.post,
-    );
     final currentIndex = postData.indexOf(widget.post);
     final prevPost = currentIndex > 0 ? postData[currentIndex - 1] : null;
     final nextPost =
@@ -56,186 +40,188 @@ class _ArticlePageState extends State<ArticlePage> {
         ? favourites[currentFavouriteIndex + 1]
         : null;
 
-    return GestureDetector(
-      child: Scaffold(
-        drawer: appDrawer,
-        appBar: const CustomAppBarWidget(id: '/article'),
-        body: Center(
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        IconButton(
-                          icon: provider.isInFavourites(widget.post)
-                              ? Icon(Icons.star,
-                                  color:
-                                      isDarkMode ? thirdColor : secondaryColor)
-                              : Icon(Icons.star_border,
-                                  color:
-                                      isDarkMode ? thirdColor : secondaryColor),
-                          onPressed: () {
-                            provider.toggleFavourite(widget.post);
-                            HapticFeedback.mediumImpact();
-                            final snackBar = SnackBar(
-                              content: Text(
-                                provider.isInFavourites(widget.post)
-                                    ? 'Removed from Favourites'
-                                    : 'Added to Favourites',
-                              ),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8)),
-                              backgroundColor: color,
-                              action: SnackBarAction(
-                                label: 'undo',
-                                textColor: Colors.white,
-                                onPressed: () =>
-                                    provider.toggleFavourite(widget.post),
-                              ),
-                            );
-                            ScaffoldMessenger.of(context)
-                                .showSnackBar(snackBar);
-                          },
-                          iconSize: 24,
-                          padding: kPadding,
-                          color: secondaryColor,
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('images/parchment.png'), fit: BoxFit.cover),
+        ),
+        padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+        child: CustomScrollView(
+          slivers: [
+            SliverAppBar(
+              backgroundColor: Colors.transparent,
+              leading: Padding(
+                padding: EdgeInsets.all(16),
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(80),
+                  onTap: () => Beamer.of(context).beamToNamed('/'),
+                  child: Icon(
+                    Icons.arrow_back,
+                    color: secondaryColor,
+                  ),
+                ),
+              ),
+              actions: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: IconButton(
+                    icon: provider.isInFavourites(widget.post)
+                        ? Icon(Icons.star, color: secondaryColor)
+                        : Icon(Icons.star_border, color: secondaryColor),
+                    onPressed: () {
+                      provider.toggleFavourite(widget.post);
+                      HapticFeedback.mediumImpact();
+                      final snackBar = SnackBar(
+                        content: Text(
+                          provider.isInFavourites(widget.post)
+                              ? 'Removed from Favourites'
+                              : 'Added to Favourites',
                         ),
-                        Expanded(
-                          child: Container(
-                            padding: kPadding,
-                            child: Text(
-                              favouritePost!.title,
-                              textAlign: TextAlign.center,
-                              style: headingStyle,
-                            ),
-                          ),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8)),
+                        backgroundColor: secondaryColor,
+                        action: SnackBarAction(
+                          label: 'undo',
+                          textColor: Colors.white,
+                          onPressed: () =>
+                              provider.toggleFavourite(widget.post),
                         ),
-                        const SizedBox(width: 56),
-                      ],
-                    ),
-                    Container(
-                      padding: kPadding,
-                      child: Text(
-                        favouritePost.body,
-                        style: bodyStyle,
-                      ),
-                    ),
-                    SizedBox(
-                      width: mediaWidth <= 750
-                          ? mediaWidth * 0.8
-                          : mediaWidth * 0.4,
-                      child: Padding(
-                        padding: kPadding,
-                        child: Image.asset(fullLogo),
-                      ),
-                    ),
-                  ],
+                      );
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                    },
+                    iconSize: 24,
+                    padding: kPadding,
+                    color: secondaryColor,
+                  ),
                 )
               ],
+              iconTheme: const IconThemeData(
+                color: secondaryColor,
+              ),
+              centerTitle: true,
+              title: Text(
+                widget.post.title,
+                style: GoogleFonts.patrickHand(
+                  textStyle: const TextStyle(
+                    color: Colors.black,
+                    fontSize: 26,
+                    fontFamily: 'Merienda',
+                  ),
+                ),
+              ),
             ),
-          ),
+            SliverList(
+              delegate: SliverChildListDelegate(
+                [
+                  Padding(
+                    padding: kPadding,
+                    child: Text(
+                      widget.post.body,
+                      style: GoogleFonts.patrickHand(
+                        textStyle: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 22,
+                          fontFamily: 'Merienda',
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        floatingActionButton: Padding(
-          padding: const EdgeInsets.all(32),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  provider.isInFavourites(widget.post)
-                      ? FloatingActionButton(
-                          onPressed: () {
-                            if (prevFavouritePost != null) {
-                              String location = prevFavouritePost.id;
-                              Beamer.of(context).beamToNamed(
-                                  '/article/$location',
-                                  data: prevFavouritePost);
-                            }
-                          },
-                          backgroundColor: secondaryColor,
-                          heroTag: null,
-                          child: const RotatedBox(
-                            quarterTurns: 3,
-                            child: Icon(
-                              Icons.star,
-                              color: thirdColor,
-                            ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                provider.isInFavourites(widget.post)
+                    ? IconButton(
+                        iconSize: 30,
+                        onPressed: () {
+                          if (prevFavouritePost != null) {
+                            String location = prevFavouritePost.id;
+                            Beamer.of(context).beamToNamed('/article/$location',
+                                data: prevFavouritePost);
+                          }
+                        },
+                        icon: const RotatedBox(
+                          quarterTurns: 3,
+                          child: Icon(
+                            Icons.star,
+                            color: secondaryColor,
                           ),
-                        )
-                      : const SizedBox(),
-                  provider.isInFavourites(widget.post)
-                      ? const SizedBox(height: 16)
-                      : const SizedBox(),
-                  FloatingActionButton(
-                    onPressed: () {
-                      if (prevPost != null) {
-                        String location = prevPost.id;
-                        Beamer.of(context)
-                            .beamToNamed('/article/$location', data: prevPost);
-                      }
-                    },
-                    backgroundColor: secondaryColor,
-                    heroTag: null,
-                    child: const Icon(
-                      Icons.navigate_before_rounded,
-                      color: thirdColor,
-                    ),
+                        ),
+                      )
+                    : const SizedBox(),
+                provider.isInFavourites(widget.post)
+                    ? const SizedBox(height: 16)
+                    : const SizedBox(),
+                IconButton(
+                  iconSize: 40,
+                  onPressed: () {
+                    if (prevPost != null) {
+                      String location = prevPost.id;
+                      Beamer.of(context)
+                          .beamToNamed('/article/$location', data: prevPost);
+                    }
+                  },
+                  icon: const Icon(
+                    Icons.navigate_before_rounded,
+                    color: secondaryColor,
                   ),
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  provider.isInFavourites(widget.post)
-                      ? FloatingActionButton(
-                          onPressed: () {
-                            if (nextFavouritePost != null) {
-                              String location = nextFavouritePost.id;
-                              Beamer.of(context).beamToNamed(
-                                  '/article/$location',
-                                  data: nextFavouritePost);
-                            }
-                          },
-                          backgroundColor: secondaryColor,
-                          heroTag: null,
-                          child: const RotatedBox(
-                            quarterTurns: 1,
-                            child: Icon(
-                              Icons.star,
-                              color: thirdColor,
-                            ),
+                ),
+              ],
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                provider.isInFavourites(widget.post)
+                    ? IconButton(
+                        iconSize: 30,
+                        onPressed: () {
+                          if (nextFavouritePost != null) {
+                            String location = nextFavouritePost.id;
+                            Beamer.of(context).beamToNamed('/article/$location',
+                                data: nextFavouritePost);
+                          }
+                        },
+                        icon: const RotatedBox(
+                          quarterTurns: 1,
+                          child: Icon(
+                            Icons.star,
+                            color: secondaryColor,
                           ),
-                        )
-                      : const SizedBox(),
-                  provider.isInFavourites(widget.post)
-                      ? const SizedBox(height: 16)
-                      : const SizedBox(),
-                  FloatingActionButton(
-                    onPressed: () {
-                      if (nextPost != null) {
-                        String location = nextPost.id;
-                        Beamer.of(context)
-                            .beamToNamed('/article/$location', data: nextPost);
-                      }
-                    },
-                    backgroundColor: secondaryColor,
-                    heroTag: null,
-                    child: const Icon(
-                      Icons.navigate_next_rounded,
-                      color: thirdColor,
-                    ),
+                        ),
+                      )
+                    : const SizedBox(),
+                provider.isInFavourites(widget.post)
+                    ? const SizedBox(height: 16)
+                    : const SizedBox(),
+                IconButton(
+                  iconSize: 40,
+                  onPressed: () {
+                    if (nextPost != null) {
+                      String location = nextPost.id;
+                      Beamer.of(context)
+                          .beamToNamed('/article/$location', data: nextPost);
+                    }
+                  },
+                  icon: const Icon(
+                    Icons.navigate_next_rounded,
+                    color: secondaryColor,
                   ),
-                ],
-              ),
-            ],
-          ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );

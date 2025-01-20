@@ -3,7 +3,6 @@ import 'package:beamer/beamer.dart';
 
 import 'post_data.dart';
 import 'pages/home_page.dart';
-import 'pages/about_page.dart';
 import 'pages/favourites_page.dart';
 import 'pages/article_page.dart';
 
@@ -16,23 +15,15 @@ final routerDelegate = BeamerDelegate(
         return const BeamPage(
           key: ValueKey('home'),
           type: BeamPageType.fadeTransition,
-          title: 'Matter of Movement',
+          title: 'Thoughts',
           child: HomePage(),
-        );
-      },
-      '/about': (context, state, data) {
-        return const BeamPage(
-          key: ValueKey('about'),
-          type: BeamPageType.fadeTransition,
-          title: 'About - Matter of Movement',
-          child: AboutPage(),
         );
       },
       '/favourites': (context, state, data) {
         return const BeamPage(
           key: ValueKey('favourites'),
           type: BeamPageType.fadeTransition,
-          title: 'Favourite Posts - Matter of Movement',
+          title: 'Thoughts',
           child: FavouritesPage(),
         );
       },
@@ -42,7 +33,7 @@ final routerDelegate = BeamerDelegate(
         return BeamPage(
           key: ValueKey('article-$postId'),
           type: BeamPageType.fadeTransition,
-          title: post.title,
+          title: 'Thoughts',
           child: ArticlePage(post: post, id: postId!),
         );
       },

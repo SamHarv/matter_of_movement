@@ -37,12 +37,14 @@ class MoM extends StatelessWidget {
             primaryColor: color,
             useMaterial3: true,
           ),
-          darkTheme: ThemeData.dark(useMaterial3: true),
+          darkTheme: ThemeData.dark(
+            useMaterial3: true,
+          ),
           themeMode: darkModeProvider.themeMode,
           routerDelegate: routerDelegate,
           routeInformationParser: BeamerParser(),
           debugShowCheckedModeBanner: false,
-          title: 'Matter of Movement',
+          title: 'Thoughts',
         );
       },
     );

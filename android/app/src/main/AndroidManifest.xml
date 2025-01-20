@@ -17,7 +17,7 @@
       </intent>
     </queries>
    <application
-        android:label="Matter of Movement"
+        android:label="Thoughts"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

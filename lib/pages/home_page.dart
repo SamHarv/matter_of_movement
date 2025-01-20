@@ -1,12 +1,12 @@
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/services.dart';
 
 import '/constants.dart';
 import '/post_data.dart';
 import '/providers/favourite_provider.dart';
-import '/widgets/custom_appbar_widget.dart';
 import '/widgets/post_tile_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -14,36 +14,60 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mediaWidth = MediaQuery.of(context).size.width;
     final provider = Provider.of<FavouriteProvider>(context);
-
-    int adaptiveWidth() {
-      if (mediaWidth <= 750) {
-        return 2;
-      } else if (mediaWidth > 750 && mediaWidth <= 1250) {
-        return 3;
-      } else {
-        return 4;
-      }
-    }
 
     return Scaffold(
       drawer: appDrawer,
-      appBar: const CustomAppBarWidget(id: '/'),
       body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('images/parchment.png'), fit: BoxFit.cover),
+        ),
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
         child: CustomScrollView(
           slivers: [
-            const SliverPadding(
-              padding: EdgeInsets.only(top: 16),
-            ),
-            SliverGrid(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: adaptiveWidth(),
-                mainAxisSpacing: 10,
-                crossAxisSpacing: 10,
-                childAspectRatio: 1.2,
+            SliverAppBar(
+              // pinned: true,
+              backgroundColor: Colors.transparent,
+              leading: Padding(
+                padding: EdgeInsets.all(16),
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(80),
+                  onTap: () => Beamer.of(context).beamToNamed('/'),
+                  child: Image.asset(
+                    'images/o2tech_black.png',
+                  ),
+                ),
               ),
+              actions: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(80),
+                    onTap: () => Beamer.of(context).beamToNamed('/favourites'),
+                    child: const Icon(
+                      Icons.star,
+                      color: secondaryColor,
+                    ),
+                  ),
+                )
+              ],
+              iconTheme: const IconThemeData(
+                color: secondaryColor,
+              ),
+              centerTitle: true,
+              title: Text(
+                'Thoughts',
+                style: GoogleFonts.patrickHand(
+                  textStyle: const TextStyle(
+                    color: Colors.black,
+                    fontSize: 26,
+                    fontFamily: 'Merienda',
+                  ),
+                ),
+              ),
+            ),
+            SliverList(
               delegate: SliverChildBuilderDelegate(
                 childCount: postData.length,
                 (context, index) {
@@ -51,6 +75,7 @@ class HomePage extends StatelessWidget {
                   return PostTileWidget(
                     title: post.title,
                     image: post.image,
+                    content: post.body,
                     datePosted: post.datePosted,
                     onTap: () {
                       String location = post.id;
@@ -59,8 +84,14 @@ class HomePage extends StatelessWidget {
                     },
                     icon: IconButton(
                       icon: provider.isInFavourites(post)
-                          ? const Icon(Icons.star)
-                          : const Icon(Icons.star_border),
+                          ? const Icon(
+                              Icons.star,
+                              color: secondaryColor,
+                            )
+                          : const Icon(
+                              Icons.star_border,
+                              color: secondaryColor,
+                            ),
                       onPressed: () {
                         provider.toggleFavourite(post);
                         //Animate icon
@@ -70,10 +101,11 @@ class HomePage extends StatelessWidget {
                             provider.isInFavourites(post)
                                 ? 'Removed from Favourites'
                                 : 'Added to Favourites',
+                            style: const TextStyle(color: Colors.white),
                           ),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8)),
-                          backgroundColor: color,
+                          backgroundColor: secondaryColor,
                           action: SnackBarAction(
                             label: 'undo',
                             textColor: Colors.white,
@@ -88,28 +120,7 @@ class HomePage extends StatelessWidget {
                 },
               ),
             ),
-            SliverList(
-              delegate: SliverChildListDelegate([
-                SizedBox(
-                  width:
-                      mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
-                  child: Padding(
-                    padding: kPadding,
-                    child: Image.asset(fullLogo),
-                  ),
-                ),
-              ]),
-            ),
           ],
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => Beamer.of(context).beamToNamed('/favourites'),
-        backgroundColor: secondaryColor,
-        child: const Icon(
-          Icons.star,
-          color: thirdColor,
         ),
       ),
     );
