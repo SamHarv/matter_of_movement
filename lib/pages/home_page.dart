@@ -9,6 +9,8 @@ import '/post_data.dart';
 import '/providers/favourite_provider.dart';
 import '/widgets/post_tile_widget.dart';
 
+// TODO: use flex to display the posts
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -26,43 +28,48 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
         child: CustomScrollView(
           slivers: [
-            SliverAppBar(
-              // pinned: true,
-              backgroundColor: Colors.transparent,
-              leading: Padding(
-                padding: EdgeInsets.all(16),
-                child: InkWell(
-                  borderRadius: BorderRadius.circular(80),
-                  onTap: () => Beamer.of(context).beamToNamed('/'),
-                  child: Image.asset(
-                    'images/o2tech_black.png',
-                  ),
-                ),
-              ),
-              actions: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24),
+            PreferredSize(
+              preferredSize: const Size.fromHeight(120),
+              child: SliverAppBar(
+                toolbarHeight: 120,
+                flexibleSpace: SizedBox(),
+                backgroundColor: Colors.transparent,
+                leading: Padding(
+                  padding: EdgeInsets.all(16),
                   child: InkWell(
                     borderRadius: BorderRadius.circular(80),
-                    onTap: () => Beamer.of(context).beamToNamed('/favourites'),
-                    child: const Icon(
-                      Icons.star,
-                      color: secondaryColor,
+                    onTap: () => Beamer.of(context).beamToNamed('/'),
+                    child: Image.asset(
+                      'images/o2tech_black.png',
                     ),
                   ),
-                )
-              ],
-              iconTheme: const IconThemeData(
-                color: secondaryColor,
-              ),
-              centerTitle: true,
-              title: Text(
-                'Thoughts',
-                style: GoogleFonts.patrickHand(
-                  textStyle: const TextStyle(
-                    color: Colors.black,
-                    fontSize: 26,
-                    fontFamily: 'Merienda',
+                ),
+                actions: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 24),
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(80),
+                      onTap: () =>
+                          Beamer.of(context).beamToNamed('/favourites'),
+                      child: const Icon(
+                        Icons.star,
+                        color: secondaryColor,
+                      ),
+                    ),
+                  )
+                ],
+                iconTheme: const IconThemeData(
+                  color: secondaryColor,
+                ),
+                centerTitle: true,
+                title: Text(
+                  'Thoughts',
+                  style: GoogleFonts.patrickHand(
+                    textStyle: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 26,
+                      fontFamily: 'Merienda',
+                    ),
                   ),
                 ),
               ),

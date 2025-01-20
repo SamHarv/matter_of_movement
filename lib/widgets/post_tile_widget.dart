@@ -104,10 +104,9 @@ class PostTileWidget extends StatelessWidget {
               alignment: Alignment.topLeft,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                // mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   SizedBox(
-                    width: mediaWidth * 0.8,
+                    width: mediaWidth * 0.7,
                     child: Text(
                       title,
                       overflow: TextOverflow.ellipsis,

@@ -49,64 +49,70 @@ class _ArticlePageState extends State<ArticlePage> {
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
         child: CustomScrollView(
           slivers: [
-            SliverAppBar(
-              backgroundColor: Colors.transparent,
-              leading: Padding(
-                padding: EdgeInsets.all(16),
-                child: InkWell(
-                  borderRadius: BorderRadius.circular(80),
-                  onTap: () => Beamer.of(context).beamToNamed('/'),
-                  child: Icon(
-                    Icons.arrow_back,
-                    color: secondaryColor,
+            PreferredSize(
+              preferredSize: const Size.fromHeight(120),
+              child: SliverAppBar(
+                toolbarHeight: 120,
+                flexibleSpace: SizedBox(),
+                backgroundColor: Colors.transparent,
+                leading: Padding(
+                  padding: EdgeInsets.all(16),
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(80),
+                    onTap: () => Beamer.of(context).beamToNamed('/'),
+                    child: Icon(
+                      Icons.arrow_back,
+                      color: secondaryColor,
+                    ),
                   ),
                 ),
-              ),
-              actions: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24),
-                  child: IconButton(
-                    icon: provider.isInFavourites(widget.post)
-                        ? Icon(Icons.star, color: secondaryColor)
-                        : Icon(Icons.star_border, color: secondaryColor),
-                    onPressed: () {
-                      provider.toggleFavourite(widget.post);
-                      HapticFeedback.mediumImpact();
-                      final snackBar = SnackBar(
-                        content: Text(
-                          provider.isInFavourites(widget.post)
-                              ? 'Removed from Favourites'
-                              : 'Added to Favourites',
-                        ),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8)),
-                        backgroundColor: secondaryColor,
-                        action: SnackBarAction(
-                          label: 'undo',
-                          textColor: Colors.white,
-                          onPressed: () =>
-                              provider.toggleFavourite(widget.post),
-                        ),
-                      );
-                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                    },
-                    iconSize: 24,
-                    padding: kPadding,
-                    color: secondaryColor,
-                  ),
-                )
-              ],
-              iconTheme: const IconThemeData(
-                color: secondaryColor,
-              ),
-              centerTitle: true,
-              title: Text(
-                widget.post.title,
-                style: GoogleFonts.patrickHand(
-                  textStyle: const TextStyle(
-                    color: Colors.black,
-                    fontSize: 26,
-                    fontFamily: 'Merienda',
+                actions: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 24),
+                    child: IconButton(
+                      icon: provider.isInFavourites(widget.post)
+                          ? Icon(Icons.star, color: secondaryColor)
+                          : Icon(Icons.star_border, color: secondaryColor),
+                      onPressed: () {
+                        provider.toggleFavourite(widget.post);
+                        HapticFeedback.mediumImpact();
+                        final snackBar = SnackBar(
+                          content: Text(
+                            provider.isInFavourites(widget.post)
+                                ? 'Removed from Favourites'
+                                : 'Added to Favourites',
+                          ),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8)),
+                          backgroundColor: secondaryColor,
+                          action: SnackBarAction(
+                            label: 'undo',
+                            textColor: Colors.white,
+                            onPressed: () =>
+                                provider.toggleFavourite(widget.post),
+                          ),
+                        );
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      },
+                      iconSize: 24,
+                      padding: kPadding,
+                      color: secondaryColor,
+                    ),
+                  )
+                ],
+                iconTheme: const IconThemeData(
+                  color: secondaryColor,
+                ),
+                centerTitle: true,
+                title: Text(
+                  widget.post.title,
+                  maxLines: 4,
+                  style: GoogleFonts.patrickHand(
+                    textStyle: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 26,
+                      fontFamily: 'Merienda',
+                    ),
                   ),
                 ),
               ),

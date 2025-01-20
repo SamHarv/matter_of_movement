@@ -26,31 +26,36 @@ class FavouritesPage extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
         child: CustomScrollView(
           slivers: [
-            SliverAppBar(
-              // pinned: true,
-              backgroundColor: Colors.transparent,
-              leading: Padding(
-                padding: EdgeInsets.all(16),
-                child: InkWell(
-                  borderRadius: BorderRadius.circular(80),
-                  onTap: () => Beamer.of(context).beamToNamed('/'),
-                  child: Icon(
-                    Icons.arrow_back,
-                    color: secondaryColor,
+            PreferredSize(
+              preferredSize: const Size.fromHeight(120),
+              child: SliverAppBar(
+                toolbarHeight: 120,
+                flexibleSpace: SizedBox(),
+                // pinned: true,
+                backgroundColor: Colors.transparent,
+                leading: Padding(
+                  padding: EdgeInsets.all(16),
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(80),
+                    onTap: () => Beamer.of(context).beamToNamed('/'),
+                    child: Icon(
+                      Icons.arrow_back,
+                      color: secondaryColor,
+                    ),
                   ),
                 ),
-              ),
-              iconTheme: const IconThemeData(
-                color: secondaryColor,
-              ),
-              centerTitle: true,
-              title: Text(
-                'Favourite Thoughts',
-                style: GoogleFonts.patrickHand(
-                  textStyle: const TextStyle(
-                    color: Colors.black,
-                    fontSize: 26,
-                    fontFamily: 'Merienda',
+                iconTheme: const IconThemeData(
+                  color: secondaryColor,
+                ),
+                centerTitle: true,
+                title: Text(
+                  'Favourite Thoughts',
+                  style: GoogleFonts.patrickHand(
+                    textStyle: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 26,
+                      fontFamily: 'Merienda',
+                    ),
                   ),
                 ),
               ),
