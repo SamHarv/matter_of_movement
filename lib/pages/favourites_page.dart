@@ -17,7 +17,6 @@ class FavouritesPage extends StatelessWidget {
     final favouritePosts = provider.favouritePosts;
 
     return Scaffold(
-      drawer: appDrawer,
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -85,6 +84,7 @@ class FavouritesPage extends StatelessWidget {
                             provider.isInFavourites(post)
                                 ? 'Removed from Favourites'
                                 : 'Added to Favourites',
+                            style: const TextStyle(color: Colors.white),
                           ),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8)),

@@ -81,6 +81,7 @@ class _ArticlePageState extends State<ArticlePage> {
                             provider.isInFavourites(widget.post)
                                 ? 'Removed from Favourites'
                                 : 'Added to Favourites',
+                            style: const TextStyle(color: Colors.white),
                           ),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8)),
@@ -133,6 +134,15 @@ class _ArticlePageState extends State<ArticlePage> {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    child: Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Image.asset(
+                        'images/o2tech_black.png',
+                        height: 80,
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -154,8 +164,13 @@ class _ArticlePageState extends State<ArticlePage> {
                         onPressed: () {
                           if (prevFavouritePost != null) {
                             String location = prevFavouritePost.id;
-                            Beamer.of(context).beamToNamed('/article/$location',
-                                data: prevFavouritePost);
+                            Beamer.of(context).beamToNamed(
+                              '/article/$location',
+                              data: {
+                                'post': prevFavouritePost,
+                                'isForward': false,
+                              },
+                            );
                           }
                         },
                         icon: const RotatedBox(
@@ -175,8 +190,13 @@ class _ArticlePageState extends State<ArticlePage> {
                   onPressed: () {
                     if (prevPost != null) {
                       String location = prevPost.id;
-                      Beamer.of(context)
-                          .beamToNamed('/article/$location', data: prevPost);
+                      Beamer.of(context).beamToNamed(
+                        '/article/$location',
+                        data: {
+                          'post': prevPost,
+                          'isForward': false,
+                        },
+                      );
                     }
                   },
                   icon: const Icon(
@@ -195,8 +215,13 @@ class _ArticlePageState extends State<ArticlePage> {
                         onPressed: () {
                           if (nextFavouritePost != null) {
                             String location = nextFavouritePost.id;
-                            Beamer.of(context).beamToNamed('/article/$location',
-                                data: nextFavouritePost);
+                            Beamer.of(context).beamToNamed(
+                              '/article/$location',
+                              data: {
+                                'post': nextFavouritePost,
+                                'isForward': true,
+                              },
+                            );
                           }
                         },
                         icon: const RotatedBox(
@@ -216,8 +241,13 @@ class _ArticlePageState extends State<ArticlePage> {
                   onPressed: () {
                     if (nextPost != null) {
                       String location = nextPost.id;
-                      Beamer.of(context)
-                          .beamToNamed('/article/$location', data: nextPost);
+                      Beamer.of(context).beamToNamed(
+                        '/article/$location',
+                        data: {
+                          'post': nextPost,
+                          'isForward': true,
+                        },
+                      );
                     }
                   },
                   icon: const Icon(

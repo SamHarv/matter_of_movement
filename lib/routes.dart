@@ -14,7 +14,7 @@ final routerDelegate = BeamerDelegate(
       '/home': (context, state, data) {
         return const BeamPage(
           key: ValueKey('home'),
-          type: BeamPageType.fadeTransition,
+          type: BeamPageType.slideLeftTransition,
           title: 'Thoughts',
           child: HomePage(),
         );
@@ -22,7 +22,7 @@ final routerDelegate = BeamerDelegate(
       '/favourites': (context, state, data) {
         return const BeamPage(
           key: ValueKey('favourites'),
-          type: BeamPageType.fadeTransition,
+          type: BeamPageType.slideRightTransition,
           title: 'Thoughts',
           child: FavouritesPage(),
         );
@@ -30,9 +30,14 @@ final routerDelegate = BeamerDelegate(
       '/article/:id': (context, state, data) {
         final postId = state.pathParameters['id'];
         final post = postData.firstWhere((post) => post.id == postId);
+        // Get the navigation direction from the data
+        final isForward =
+            data is Map ? data['isForward'] as bool? ?? true : true;
         return BeamPage(
           key: ValueKey('article-$postId'),
-          type: BeamPageType.fadeTransition,
+          type: isForward
+              ? BeamPageType.slideRightTransition
+              : BeamPageType.slideLeftTransition,
           title: 'Thoughts',
           child: ArticlePage(post: post, id: postId!),
         );

@@ -9,8 +9,6 @@ import '/post_data.dart';
 import '/providers/favourite_provider.dart';
 import '/widgets/post_tile_widget.dart';
 
-// TODO: use flex to display the posts
-
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -19,7 +17,6 @@ class HomePage extends StatelessWidget {
     final provider = Provider.of<FavouriteProvider>(context);
 
     return Scaffold(
-      drawer: appDrawer,
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
