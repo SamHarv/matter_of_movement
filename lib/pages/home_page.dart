@@ -1,5 +1,6 @@
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/services.dart';
@@ -9,8 +10,20 @@ import '/post_data.dart';
 import '/providers/favourite_provider.dart';
 import '/widgets/post_tile_widget.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(seconds: 3));
+    FlutterNativeSplash.remove();
+  }
 
   @override
   Widget build(BuildContext context) {
