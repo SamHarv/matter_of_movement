@@ -2,6 +2,22 @@ import 'models/post_model.dart';
 
 List<Post> postData = [
   Post(
+    title: 'Embrace Entropy',
+    datePosted: DateTime(2025, 1, 31),
+    image: 'images/1.png',
+    id: '163',
+    body: 'Things tend toward disorder, thus change is inevitable.\n\n'
+        'Central to the second law of thermodynamics, entropy is a measure of '
+        'disorder.\n\n'
+        'The second law states that the total entropy of an isolated system can '
+        'never decrease over time.\n\n'
+        'Therefore, the state of the universe is not constant - it is always '
+        'changing.\n\n'
+        'Becoming less ordered.\n\n'
+        'Resistance to this change is folly.\n\n'
+        'Embrace it, and you will find opportunity.',
+  ),
+  Post(
     title: 'Opportunity',
     datePosted: DateTime(2025, 1, 24),
     image: 'images/1.png',
