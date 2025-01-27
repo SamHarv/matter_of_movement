@@ -9,13 +9,14 @@ List<Post> postData = [
     body: 'Things tend toward disorder, thus change is inevitable.\n\n'
         'Central to the second law of thermodynamics, entropy is a measure of '
         'disorder.\n\n'
-        'The second law states that the total entropy of an isolated system can '
+        'The second law states the total entropy of an isolated system can '
         'never decrease over time.\n\n'
         'Therefore, the state of the universe is not constant - it is always '
         'changing.\n\n'
         'Becoming less ordered.\n\n'
-        'Resistance to this change is folly.\n\n'
-        'Embrace it, and you will find opportunity.',
+        'People tend to resist this change.\n\n'
+        'Resistance to natural progression is folly.\n\n'
+        'Embrace it, work with it, and you will find opportunity.',
   ),
   Post(
     title: 'Opportunity',
