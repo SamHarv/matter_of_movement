@@ -1,17 +1,23 @@
-# matterofmovement
+# Thoughts
 
-A new Flutter project.
+A Flutter web app to share philosophical musings on a weekly basis.
 
-## Getting Started
+## Supported Platforms
+- Web
 
-This project is a starting point for a Flutter application.
+## Installation
+1. Install Flutter SDK: [Installation Guide](https://flutter.dev/docs/get-started/install)
+2. Clone the repository:
+  ```bash
+  git clone https://github.com/SamHarv/thoughts.git
+  ```
+3. Navigate to the project folder and install dependencies:
+  ```bash
+  cd thoughts
+  flutter pub get
+  ```
+4. Run the app:
+  ```bash
+  flutter run -d chrome
+  ```
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# matter_of_movement
