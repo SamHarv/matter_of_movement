@@ -2,23 +2,21 @@ import 'models/post_model.dart';
 
 /// Hard-coded data for posts to be updated manually each week
 List<Post> postData = [
-  // Post(
-  //   title: 'Embrace Entropy',
-  //   datePosted: DateTime(2025, 1, 31),
-  //   image: 'images/1.png',
-  //   id: '163',
-  //   body: 'Things tend toward disorder, thus change is inevitable.\n\n'
-  //       'Central to the second law of thermodynamics, entropy is a measure of '
-  //       'disorder.\n\n'
-  //       'The second law states the total entropy of an isolated system can '
-  //       'never decrease over time.\n\n'
-  //       'Therefore, the state of the universe is not constant - it is always '
-  //       'changing.\n\n'
-  //       'Becoming less ordered.\n\n'
-  //       'People tend to resist this change.\n\n'
-  //       'Resistance to natural progression is folly.\n\n'
-  //       'Embrace it, work with it, and you will find opportunity.',
-  // ),
+  Post(
+    title: 'Embrace Entropy',
+    datePosted: DateTime(2025, 1, 31),
+    image: 'images/1.png',
+    id: '163',
+    body: 'Things tend toward disorder, thus change is inevitable.\n\n'
+        'Central to the second law of thermodynamics, entropy is a measure of '
+        'disorder.\n\n'
+        'The second law states the total entropy of an isolated system can '
+        'never decrease over time.\n\n'
+        'Therefore, the state of the universe will become less ordered.\n\n'
+        'People tend to resist this change.\n\n'
+        'Resistance to natural progression is folly.\n\n'
+        'Embrace it, work with it, and find opportunity.',
+  ),
   Post(
     title: 'Opportunity',
     datePosted: DateTime(2025, 1, 24),
