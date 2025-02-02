@@ -3,6 +3,22 @@ import 'models/post_model.dart';
 /// Hard-coded data for posts to be updated manually each week
 List<Post> postData = [
   Post(
+    title: 'The Lotto',
+    datePosted: DateTime(2025, 2, 7),
+    image: 'images/1.png',
+    id: '164',
+    body: 'What are the main things you would do if you were given '
+        '\$1,000,000?\n\n'
+        'Is there anything stopping you from doing some of these things now?\n\n'
+        'When I asked myself this question, I could name some things which I could '
+        'do now, and the other things were things I could do now, but in a '
+        'different geographical location.\n\n'
+        'Sometimes, we already have what we seek.\n\n'
+        'If we can accept what we have, we can find peace.\n\n'
+        '"It is not the person who has too little, but the one who craves '
+        'more, that is poor." - Seneca\n\n',
+  ),
+  Post(
     title: 'Embrace Entropy',
     datePosted: DateTime(2025, 1, 31),
     image: 'images/1.png',
